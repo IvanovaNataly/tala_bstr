@@ -13,15 +13,26 @@
     @include justify-content(space-between);
 
     .profile-item {
-        font-size: $font-size + 4px;
         text-align: center;
-        width: 255px;
-        height: 123px;
+        font-size: $font-size + 8px;
+        width: 256px;
+        height: 120px;
         margin-bottom: 20px;
         border: 1px solid $border-color;
-        @include flexbox;
-        @include flex-direction(column);
-        @include justify-content(space-between);
+
+        &-link {
+            color: $font-light;
+            height: 100%;
+            @include flexbox;
+            @include flex-direction(column);
+            @include justify-content(space-between);
+            &:hover{
+                text-decoration: none;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
 
         &-title {
             @include flex-grow(1);
@@ -40,11 +51,13 @@
         }
     }
 
-    .active {
-        color: $active-color;
+    .completed {
         border-bottom: $active-color;
+        .profile-item-link {
+            color: $active-color;
+        }
         .profile-item-border {
-            height: 2px;
+            height: 3px;
             background-color: $active-color;
         }
     }

@@ -1,5 +1,126 @@
+@import 'colors';
+@import 'variables.scss';
+@import 'mixins';
+
 @media (min-width: 1200px) {
     .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
         float: right;
+    }
+}
+@media (min-width: 768px) {
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+        float: right;
+    }
+}
+
+.modal-dialog {
+    width: $modal-width;
+    height: $modal-height;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.modal-content {
+    width: 100%;
+    height: 100%;
+    background-color: $modal-bg;
+    border: 1px solid $divider-color;
+    @include border-radius(0);
+    @include box-shadow(3.5px, 3.5px, 5px, 0, rgba(0, 0, 0, 0.14));
+}
+
+.modal-header {
+    height: $modal-header-height;
+    padding: 20px;
+    background-color: $light-color;
+    border-bottom: none;
+    @include box-shadow(0px, 2px, 5px, 0, rgba(0, 0, 0, 0.1));
+    .close {
+        float: left;
+    }
+}
+
+.modal-subtitle {
+    font-size: $font-size + 2px;
+    color: $font-light;
+}
+
+.modal-title {
+    font-size: $font-size + 14px;
+    color: $active-color;
+    line-height: unset;
+}
+
+.modal {
+    &-body {
+        padding: $modal-main-padding;
+    }
+    &-main {
+        height: $modal-main-height;
+        padding-right: 0;
+        padding-left: 0;
+        position: relative;
+        &-form {
+            height: 100%;
+        }
+        .row {
+            height: calc(100% - 60px - 20px);
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+    &-side {
+        height: $modal-main-height;
+        border-right: 1px solid $border-color;
+    }
+    &-field {
+        height: 100%;
+        padding-right: 0;
+        padding-left: 20px;
+        box-sizing: border-box;
+
+        &-wrapper {
+            height: 100%;
+            padding: 24px 20px;
+            background-color: $light-color;
+            @include box-shadow;
+        }
+        &-title {
+            font-size: $font-size + 8px;
+            color: $active-color;
+            margin-bottom: 13px;
+        }
+        &-text {
+            display: block;
+            height: calc(100% - 13px - 20px);
+            padding: 18px 15px;
+            border: 1px solid $border-color;
+        }
+    }
+    &-button-wrapper {
+        position: absolute;
+        bottom: 0;
+        .btn-save {
+            font-size: $font-size + 9px;
+            color: $light-color;
+            width: 200px;
+            height: 60px;
+            margin-left: 20px;
+            background-color: $active-color;
+            opacity: 0.7;
+            @include box-shadow;
+        }
+
+        .btn-cancel {
+            color: $font-light;
+            height: 60px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
     }
 }

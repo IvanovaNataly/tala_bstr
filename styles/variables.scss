@@ -2,3 +2,8 @@
 
 $width-container: 1140px;
 $font-size: 16px;
+$modal-width: 1003px;
+$modal-height: 604px;
+$modal-header-height: 86px;
+$modal-main-padding: 20px;
+$modal-main-height: $modal-height - $modal-header-height - $modal-main-padding*2 - 1px;

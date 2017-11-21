@@ -13,38 +13,42 @@
 <header class="header">
     <div class="wrapper">
         <div class="header-navbar">
-            <div class="logo">מדינת ישראל, משרד החינוך</div>
+            <!--<div class="logo">מדינת ישראל, משרד החינוך</div>-->
+            <img class="logo" alt="מדינת ישראל, משרד החינוך" src="../../img/Logo_Minister.png">
             <nav class="header-navigation">
                 <ul class="header-navigation-list">
                     <li class="header-navigation-item">חיפוש</li>
                     <li class="header-navigation-item">הזדהות</li>
                     <li class="header-navigation-item">العربية</li>
                     <li class="header-navigation-item">
-                        <span class="header-navigation-item-logo">משרד החינוך לשירותך</span>
+                        <!--<span class="header-navigation-item-logo">משרד החינוך לשירותך</span>-->
+                        <img class="header-navigation-item-logo" alt="משרד החינוך לשירותך" src="../../img/Logo_Minister_2.png">
                     </li>
                 </ul>
             </nav>
         </div>
 
         <h1 class="header-title">תוכנית אישית לתלמיד</h1>
+
         <div class="header-bar">
-            <button class="header-home">HOME</button>
+            <a class="header-home" href="../students-list/students-list.html"></a>
 
             <ul class="header-filters-list">
 
-                <li class="header-filters-item">
+                <li class="header-filters-item static">
                     <dl class="header-filters-item-group">
                         <dt class="header-filters-item-title">מוסד חינוכי:</dt>
-                        <dd class="header-filters-item-data">
-                            <ul class="select">
-                                <li class="option">בן גוריון</li>
-                                <li class="option">אופירה נבון</li>
-                                <li class="option">גולדה מאיר</li>
-                                <li class="option">אופישקין</li>
-                            </ul>
-                        </dd>
+                        <dd class="header-filters-item-data">בן גוריון</dd>
                     </dl>
                 </li>
+
+                <li class="header-filters-item static">
+                    <dl class="header-filters-item-group">
+                        <dt class="header-filters-item-title">סמל מוסד:</dt>
+                        <dd class="header-filters-item-data">12378</dd>
+                    </dl>
+                </li>
+
                 <li class="header-filters-item">
                     <dl class="header-filters-item-group">
                         <dt class="header-filters-item-title">שנת לימודים:</dt>
@@ -56,6 +60,7 @@
                         </dd>
                     </dl>
                 </li>
+
                 <li class="header-filters-item">
                     <dl class="header-filters-item-group">
                         <dt class="header-filters-item-title">כיתה:</dt>
@@ -69,13 +74,11 @@
                     </dl>
                 </li>
             </ul>
-
         </div>
-
     </div>
 </header>
 
-<div class="personal wrapper row">
+<section class="personal wrapper row">
     <aside class="side col-lg-3">
         <article class="summary profile-card">
 
@@ -130,7 +133,7 @@
             <div class="status">
                 <p class="status-title">:סטטוס תכנית לימודים לשנת תשע"ז</p>
                 <div class="status-wrapper">
-                    <div class="status-index done" data-tooltip="ממתין לאישור של מנהלת">1</div>
+                    <div class="status-index completed" data-tooltip="ממתין לאישור של מנהלת">1</div>
                     <div class="status-index active" data-tooltip="ממתין לאישור של מנהלת">2</div>
                     <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">3</div>
                     <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">4</div>
@@ -167,7 +170,7 @@
                 </li>
             </ul>
 
-            <button class="pdf-btn">להורדת קובץ סיכום ב-PDF</button>
+            <button type="button" class="btn-pdf">להורדת קובץ סיכום ב-PDF</button>
 
             <legend class="legend">
                 <p class="legend-line">עדכון אחרון ב-
@@ -189,65 +192,80 @@
 
         <ul class="profile-list">
             <li class="profile-item">
-                <h4 class="profile-item-title">
-                    <span class="profile-item-category">קוגניטיבי</span>
-                </h4>
-                <div class="profile-item-border"></div>
+                <a href="" class="profile-item-link" data-toggle="modal" data-target="#myModal">
+                    <h4 class="profile-item-title">
+                        <span class="profile-item-category">קוגניטיבי</span>
+                    </h4>
+                    <div class="profile-item-border"></div>
+                </a>
             </li>
-            <li class="profile-item active">
-                <h4 class="profile-item-title">
-                    <span class="profile-item-category">לימוד</span>
-                </h4>
-                <div class="profile-item-border"></div>
-            </li>
-            <li class="profile-item">
-                <h4 class="profile-item-title">
-                    <span class="profile-item-category">תקשורתי</span>
-                </h4>
-                <div class="profile-item-border"></div>
+            <li class="profile-item completed">
+                <a href="" class="profile-item-link" data-toggle="modal" data-target="#myModal">
+                    <h4 class="profile-item-title">
+                        <span class="profile-item-category">לימוד</span>
+                    </h4>
+                    <div class="profile-item-border"></div>
+                </a>
             </li>
             <li class="profile-item">
-                <h4 class="profile-item-title">
-                    <span class="profile-item-category">חברתי בין אישי</span>
-                </h4>
-                <div class="profile-item-border"></div>
+                <a href="" class="profile-item-link" data-toggle="modal" data-target="#myModal">
+                    <h4 class="profile-item-title">
+                        <span class="profile-item-category">תקשורתי</span>
+                    </h4>
+                    <div class="profile-item-border"></div>
+                </a>
             </li>
             <li class="profile-item">
-                <h4 class="profile-item-title">
-                    <span class="profile-item-category">התנהגותי רגשי</span>
-                </h4>
-                <div class="profile-item-border"></div>
+                <a href="" class="profile-item-link" data-toggle="modal" data-target="#myModal">
+                    <h4 class="profile-item-title">
+                        <span class="profile-item-category">חברתי<br/>בין אישי</span>
+                    </h4>
+                    <div class="profile-item-border"></div>
+                </a>
             </li>
             <li class="profile-item">
-                <h4 class="profile-item-title">
-                    <span class="profile-item-category">ייצוג / סנגור עצמי</span>
-                </h4>
-                <div class="profile-item-border"></div>
+                <a href="" class="profile-item-link" data-toggle="modal" data-target="#myModal">
+                    <h4 class="profile-item-title">
+                        <span class="profile-item-category">לימוד</span>
+                    </h4>
+                    <div class="profile-item-border"></div>
+                </a>
             </li>
             <li class="profile-item">
-                <h4 class="profile-item-title">
-                    <span class="profile-item-category">הרגלי למידה</span>
-                </h4>
-                <div class="profile-item-border"></div>
+                <a href="" class="profile-item-link" data-toggle="modal" data-target="#myModal">
+                    <h4 class="profile-item-title">
+                        <span class="profile-item-category">לימוד</span>
+                    </h4>
+                    <div class="profile-item-border"></div>
+                </a>
             </li>
             <li class="profile-item">
-                <h4 class="profile-item-title">
-                    <span class="profile-item-category">תנועתי מוטורי-חושי</span>
-                </h4>
-                <div class="profile-item-border"></div>
+                <a href="" class="profile-item-link" data-toggle="modal" data-target="#myModal">
+                    <h4 class="profile-item-title">
+                        <span class="profile-item-category">לימוד</span>
+                    </h4>
+                    <div class="profile-item-border"></div>
+                </a>
             </li>
             <li class="profile-item">
-                <h4 class="profile-item-title">
-                    <span class="profile-item-category">תפקיד במצבי חיים</span>
-                </h4>
-                <div class="profile-item-border"></div>
+                <a href="" class="profile-item-link" data-toggle="modal" data-target="#myModal">
+                    <h4 class="profile-item-title">
+                        <span class="profile-item-category">לימוד</span>
+                    </h4>
+                    <div class="profile-item-border"></div>
+                </a>
+            </li>
+            <li class="profile-item">
+                <a href="" class="profile-item-link" data-toggle="modal" data-target="#myModal">
+                    <h4 class="profile-item-title">
+                        <span class="profile-item-category">לימוד</span>
+                    </h4>
+                    <div class="profile-item-border"></div>
+                </a>
             </li>
         </ul>
-
     </main>
-</div>
-
-
+</section>
 
 <footer class="footer">
     <nav class="footer-nav wrapper">
@@ -296,8 +314,58 @@
         </ul>
 
     </div>
-
 </footer>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-subtitle">הערכת פרופיל</h2>
+                <h4 id="modalTitle" class="modal-title">לימודי</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="modal-main col-lg-8">
+                            <form action="" class="modal-main-form">
+                                <div class="row">
+                                    <div class="modal-field col-sm-6">
+                                        <div class="modal-field-wrapper">
+                                            <h3 class="modal-field-title">מוקדי הכח</h3>
+                                            <label class="modal-field-title sr-only">מוקדי הכח</label>
+                                            <text-area id="focus" name="focus" class="modal-field-text" aria-multiline="true" placeholder="כתבו כאן את מוקדי הכח בתחום הלימודי">כתבו כאן את מוקדי הכח בתחום הלימודי</text-area>
+                                        </div>
+                                    </div>
+                                    <div class="modal-field col-sm-6">
+                                        <div class="modal-field-wrapper">
+                                            <h3 for="enforcement" class="modal-field-title">מוקדי חיזוק</h3>
+                                            <label class="modal-field-title sr-only">מוקדי חיזוק</label>
+                                            <text-area id="enforcement" name="enforcement" class="modal-field-text" aria-multiline="true"  placeholder="כתבו כאן את מוקדי הכח בתחום הלימודי">כתבו כאן את מוקדי הכח בתחום הלימודי</text-area>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-button-wrapper">
+                                    <button id="save" class="btn-save" type="submit">שמור</button>
+                                    <button class="btn-cancel" type="button">ביטול</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-side col-lg-4">
+
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
 
 <script src="../../js/jquery-3.2.1.js"></script>
 <script src="../../js/bootstrap-3.3.7/bootstrap.js"></script>

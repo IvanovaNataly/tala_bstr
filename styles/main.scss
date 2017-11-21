@@ -71,6 +71,11 @@ a {
     }
 }
 
+button {
+    background-color: transparent;
+    border: none;
+}
+
 //common
 body {
     direction: rtl;
@@ -89,6 +94,17 @@ ul {
     display: block;
     width: $width-container;
     margin: 0 auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 //header
@@ -113,6 +129,7 @@ ul {
     }
 
     &-title {
+        font-size: $font-size + 18px;
         margin-bottom: 15px;
     }
 
@@ -124,15 +141,16 @@ ul {
     }
 
     &-home {
-        width: 52px;
+        width: 50px;
         height: 100%;
         margin-left: 3px;
-        background-color: $bg-home;
+        background-color: $bg-filters;
         border: none;
     }
 
     &-filters {
         &-list {
+            font-size: $font-size + 1 px;
             height: 100%;
             padding-right: 18px;
             padding-left: 18px;
@@ -147,12 +165,13 @@ ul {
             height: 100%;
             &-group {
                 @include selectLabelled;
-                margin-left: 30px;
+                margin-left: 28px;
             }
         }
+
+
     }
 }
-
 
 //footer
 .footer {
@@ -217,23 +236,26 @@ ul {
 //profile main
 .profile {
     //width: calc(100% - 262px - 30px );
-    padding: 30px 20px;
+    padding: 25px 20px;
     background-color: $light-color;
-    border: 1px solid $border-color;
+    @include box-shadow;
 }
 
 .title {
+    font-size: $font-size + 14px;
     margin-bottom: 20px;
-    padding-bottom: 15px;
+    padding-bottom: 19px;
     border-bottom: 1px solid $border-color;
 }
 
 .description {
-    font-weight: 700;
-    margin-bottom: 15px;
+    font-size: $font-size + 4px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .notice {
+    color: $font-light;
     margin-bottom: 20px;
 }
 
@@ -381,7 +403,7 @@ ul {
         }
     }
 
-    .done {
+    .completed {
         color: $light-color;
         background-color: $status-bg-done;
     }
@@ -434,7 +456,7 @@ ul {
     }
 }
 
-.pdf-btn {
+.btn-pdf {
     color: $active-color;
     width: 200px;
     height: 35px;
@@ -450,3 +472,4 @@ ul {
     padding: 20px;
     border-top: 1px solid $border-color;
 }
+
