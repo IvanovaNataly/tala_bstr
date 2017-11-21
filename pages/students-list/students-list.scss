@@ -1,0 +1,121 @@
+//Ministry of Education -Tala
+
+@import '../../styles/main';
+
+//main layout
+.students-main {
+
+}
+
+//section: manage
+.students-manage {
+    height: 155px;
+    margin-bottom: 30px;
+    padding: 30px 25px;
+    background-color: $light-color;
+    position: relative;
+
+    &-header {
+        display: block;
+        height: 40px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $border-color;
+        overflow-y: visible;
+        //position: relative;
+
+        &-group {
+            @include selectLabelled(2);
+        }
+    }
+
+    &-list {
+        margin-top: 20px;
+        @include flexbox;
+        @include flex-wrap(wrap);
+        @include justify-content(flex-start);
+    }
+
+    &-controls-item {
+        &:first-child {
+            width: 40px;
+        }
+        &:not(:last-child) {
+            margin-left: 20px;
+        }
+    }
+
+    &-filter {
+        &-group {
+            @include selectLabelled;
+            .option {
+                width: 140px;
+                padding-right: 10px;
+                padding-left: 10px;
+                background-color: $light-color;
+            }
+        }
+    }
+
+    &-status {
+        &-group {
+            @include selectLabelled;
+            height: 33px;
+            margin-left: 5px;
+            padding-right: 20px;
+            padding-left: 20px;
+            border: 1px solid $border-color;
+            .option {
+                padding-right: 10px;
+                padding-left: 10px;
+                &:not(:first-child) {
+                    background-color: $light-color;
+                }
+            }
+        }
+        &-btn {
+            display: inline-block;
+            width: 90px;
+            height: 33px;
+            color: $light-color;
+            background-color: $blue;
+            border: none;
+            cursor: pointer;
+            vertical-align: top;
+        }
+    }
+
+    &-search {
+        width: 500px;
+        height: 33px;
+        padding-right: 20px;
+        padding-left: 20px;
+        border: 1px solid $border-color;
+    }
+
+    &-view {
+        &-group {
+            @include selectLabelled;
+        }
+    }
+
+}
+
+.students-list {
+    margin: 0 auto;
+    @include flexbox;
+    @include flex-direction;
+    @include flex-wrap;
+    @include justify-content;
+}
+
+.students-card {
+    width: 275px;
+    height: 425px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: $light-color;
+    border: 1px solid $border-color;
+    overflow: hidden;
+    //@include flex-basis(275px); //IE issue, instead of flex-basis property width is added;
+    @include flex-shrink(0);
+}

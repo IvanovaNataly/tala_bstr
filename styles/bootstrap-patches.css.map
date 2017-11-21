@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,0BAA2B;EACvB,qIAAsI;IAClI,KAAK,EAAE,KAAK",
+"sources": ["bootstrap-patches.scss"],
+"names": [],
+"file": "bootstrap-patches.css"
+}

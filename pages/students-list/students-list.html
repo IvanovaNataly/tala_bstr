@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tala</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="students-list.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-navbar">
+                <div class="logo">מדינת ישראל, משרד החינוך</div>
+                <nav class="header-navigation">
+                    <ul class="header-navigation-list">
+                        <li class="header-navigation-item">חיפוש</li>
+                        <li class="header-navigation-item">הזדהות</li>
+                        <li class="header-navigation-item">العربية</li>
+                        <li class="header-navigation-item">
+                            <span class="header-navigation-item-logo">משרד החינוך לשירותך</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <h1 class="header-title">תוכנית אישית לתלמיד</h1>
+            <div class="header-bar">
+                <button class="header-home">HOME</button>
+
+                <ul class="header-filters-list">
+
+                    <li class="header-filters-item">
+                        <dl class="header-filters-item-group">
+                            <dt class="header-filters-item-title">מוסד חינוכי:</dt>
+                            <dd class="header-filters-item-data">
+                                <ul class="select">
+                                    <li class="option">בן גוריון</li>
+                                    <li class="option">אופירה נבון</li>
+                                    <li class="option">גולדה מאיר</li>
+                                    <li class="option">אופישקין</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="header-filters-item">
+                        <dl class="header-filters-item-group">
+                            <dt class="header-filters-item-title">שנת לימודים:</dt>
+                            <dd class="header-filters-item-data">
+                                <ul class="select">
+                                    <li class="option">תשע"ו</li>
+                                    <li class="option">תשע"ז</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="header-filters-item">
+                        <dl class="header-filters-item-group">
+                            <dt class="header-filters-item-title">כיתה:</dt>
+                            <dd class="header-filters-item-data">
+                                <ul class="select">
+                                    <li class="option">ב1</li>
+                                    <li class="option">ב2</li>
+                                    <li class="option">ב3</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </header>
+    <main class="students-main container">
+        <section class="students-manage">
+            <h2 class="students-manage-header">
+                <dl class="students-manage-header-group">
+                    <dt class="students-manage-header-title">כיתה:</dt>
+                    <dd class="students-manage-header-data">
+                        <ul class="select">
+                            <li class="option">ב1</li>
+                            <li class="option">ב2</li>
+                            <li class="option">ב3</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </h2>
+
+            <ul class="students-manage-list">
+                <li class="students-manage-controls-item">
+                    <dl class="students-manage-filter-group">
+                        <dt class="students-manage-filter-title"></dt>
+                        <dd class="students-manage-filter-data">
+                            <ul class="select">
+                                <li class="option">-</li>
+                                <li class="option">הכל</li>
+                                <li class="option">אף אחד</li>
+                                <li class="option">סטטוס ראשון</li>
+                                <li class="option">סטטוס שני</li>
+                                <li class="option">סטטוס שלילי</li>
+                                <li class="option">סטטוס רביעי</li>
+                                <li class="option">סטטוס חמישי</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+
+                <li class="students-manage-controls-item">
+                    <dl class="students-manage-status-group">
+                        <dt class="students-manage-status-title">שינוי סטטוס ל:</dt>
+                        <dd class="students-manage-status-data">
+                            <ul class="select">
+                                <li class="option">---בחירה---</li>
+                                <li class="option">עבור התלמידים:</li>
+                                <li class="option">סטטוס ראשון</li>
+                                <li class="option">סטטוס שני</li>
+                                <li class="option">סטטוס שלילי</li>
+                                <li class="option">סטטוס רביעי</li>
+                                <li class="option">סטטוס חמישי</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <button class="students-manage-status-btn">שמירה</button>
+                </li>
+
+                <li class="students-manage-controls-item">
+                    <input type="text" class="students-manage-search" placeholder="חופיש תלמיד/ה"/>
+                </li>
+
+                <li class="students-manage-controls-item">
+                    <dl class="students-manage-view-group">
+                        <dt class="students-manage-view-title">תצוגה:</dt>
+                        <dd class="students-manage-view-data">
+                            <ul class="select">
+                                <li class="option">כל הסטטוסים</li>
+                                <li class="option">סטטוס ראשון</li>
+                                <li class="option">סטטוס שני</li>
+                                <li class="option">סטטוס שלילי</li>
+                                <li class="option">סטטוס רביעי</li>
+                                <li class="option">סטטוס חמישי</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+
+
+            </ul>
+
+        </section>
+
+        <section class="students-flow">
+            <ul class="students-list">
+                <li class="students-card">
+                    <button class="students-card-btn">עריכה</button>
+                    <check-box class="students-card-check"></check-box>
+                    <div class="students-card-photo-container"></div>
+                    <h3 class="students-card-name"></h3>
+                    <p class="students-card-number-container"></p>
+                    <ul class="students-card-summary">
+                        <li class="students-card-summary-item"></li>
+                        <li class="students-card-summary-item"></li>
+                        <li class="students-card-summary-item"></li>
+                    </ul>
+                    <p class="students-card-status-title"></p>
+                    <div class="students-card-status-container"></div>
+                </li>
+
+                <li class="students-card">
+                    <button class="students-card-btn">עריכה</button>
+                    <check-box class="students-card-check"></check-box>
+                    <div class="students-card-photo-container"></div>
+                    <h3 class="students-card-name"></h3>
+                    <p class="students-card-number-container"></p>
+                    <ul class="students-card-summary">
+                        <li class="students-card-summary-item"></li>
+                        <li class="students-card-summary-item"></li>
+                        <li class="students-card-summary-item"></li>
+                    </ul>
+                    <p class="students-card-status-title"></p>
+                    <div class="students-card-status-container"></div>
+                </li>
+
+                <li class="students-card">
+                <button class="students-card-btn">עריכה</button>
+                <check-box class="students-card-check"></check-box>
+                <div class="students-card-photo-container"></div>
+                <h3 class="students-card-name"></h3>
+                <p class="students-card-number-container"></p>
+                <ul class="students-card-summary">
+                    <li class="students-card-summary-item"></li>
+                    <li class="students-card-summary-item"></li>
+                    <li class="students-card-summary-item"></li>
+                </ul>
+                <p class="students-card-status-title"></p>
+                <div class="students-card-status-container"></div>
+                </li>
+
+                <li class="students-card">
+                    <button class="students-card-btn">עריכה</button>
+                    <check-box class="students-card-check"></check-box>
+                    <div class="students-card-photo-container"></div>
+                    <h3 class="students-card-name"></h3>
+                    <p class="students-card-number-container"></p>
+                    <ul class="students-card-summary">
+                        <li class="students-card-summary-item"></li>
+                        <li class="students-card-summary-item"></li>
+                        <li class="students-card-summary-item"></li>
+                    </ul>
+                    <p class="students-card-status-title"></p>
+                    <div class="students-card-status-container"></div>
+                </li>
+
+                <li class="students-card">
+                    <button class="students-card-btn">עריכה</button>
+                    <check-box class="students-card-check"></check-box>
+                    <div class="students-card-photo-container"></div>
+                    <h3 class="students-card-name"></h3>
+                    <p class="students-card-number-container"></p>
+                    <ul class="students-card-summary">
+                        <li class="students-card-summary-item"></li>
+                        <li class="students-card-summary-item"></li>
+                        <li class="students-card-summary-item"></li>
+                    </ul>
+                    <p class="students-card-status-title"></p>
+                    <div class="students-card-status-container"></div>
+                </li>
+
+                <li class="students-card">
+                    <button class="students-card-btn">עריכה</button>
+                    <check-box class="students-card-check"></check-box>
+                    <div class="students-card-photo-container"></div>
+                    <h3 class="students-card-name"></h3>
+                    <p class="students-card-number-container"></p>
+                    <ul class="students-card-summary">
+                        <li class="students-card-summary-item"></li>
+                        <li class="students-card-summary-item"></li>
+                        <li class="students-card-summary-item"></li>
+                    </ul>
+                    <p class="students-card-status-title"></p>
+                    <div class="students-card-status-container"></div>
+                </li>
+
+                <li class="students-card">
+                    <button class="students-card-btn">עריכה</button>
+                    <check-box class="students-card-check"></check-box>
+                    <div class="students-card-photo-container"></div>
+                    <h3 class="students-card-name"></h3>
+                    <p class="students-card-number-container"></p>
+                    <ul class="students-card-summary">
+                        <li class="students-card-summary-item"></li>
+                        <li class="students-card-summary-item"></li>
+                        <li class="students-card-summary-item"></li>
+                    </ul>
+                    <p class="students-card-status-title"></p>
+                    <div class="students-card-status-container"></div>
+                </li>
+
+                <li class="students-card">
+                    <button class="students-card-btn">עריכה</button>
+                    <check-box class="students-card-check"></check-box>
+                    <div class="students-card-photo-container"></div>
+                    <h3 class="students-card-name"></h3>
+                    <p class="students-card-number-container"></p>
+                    <ul class="students-card-summary">
+                        <li class="students-card-summary-item"></li>
+                        <li class="students-card-summary-item"></li>
+                        <li class="students-card-summary-item"></li>
+                    </ul>
+                    <p class="students-card-status-title"></p>
+                    <div class="students-card-status-container"></div>
+                </li>
+            </ul>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer-nav container">
+            <ul class="footer-nav-list">
+                <ll class="footer-nav-item">
+                    <h4 class="footer-nav-item-title">כותרת</h4>
+                    <ul>
+                        <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                        <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                        <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                    </ul>
+                </ll>
+                <ll class="footer-nav-item">
+                    <h4 class="footer-nav-item-title">כותרת</h4>
+                    <ul>
+                        <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                        <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                        <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                    </ul>
+                </ll>
+                <ll class="footer-nav-item">
+                    <h4 class="footer-nav-item-title">כותרת</h4>
+                    <ul>
+                        <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                        <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                        <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                    </ul>
+                </ll>
+                <ll class="footer-nav-item">
+                    <h4 class="footer-nav-item-title">כותרת</h4>
+                    <ul>
+                        <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                        <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                        <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                    </ul>
+                </ll>
+            </ul>
+        </nav>
+        <div class="footer-legal">
+            <ul class="footer-legal-list container">
+                <li class="footer-legal-item">כל הזכויות שמורות למשרד החינוך</li>
+                <li class="footer-legal-item">חוק חופש המידע</li>
+                <li class="footer-legal-item">אקו"ם</li>
+                <li class="footer-legal-item">תנאי שומוש</li>
+                <li class="footer-legal-item">Terms of use</li>
+            </ul>
+
+        </div>
+
+    </footer>
+</body>
+</html>

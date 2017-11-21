@@ -1,0 +1,452 @@
+//Ministry of Education-Tala
+@import 'colors';
+@import 'variables';
+@import 'bootstrap-patches';
+@import 'mixins';
+
+//reset
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-weight: 400;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+dt, dd {
+    display: inline-block;
+}
+
+dt {
+    margin-left: 5px;
+}
+
+a {
+    color: $font-color;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+//common
+body {
+    direction: rtl;
+    font-family: 'Assistant', sans-serif;
+    font-size: $font-size;
+    text-align: right;
+    color: $font-color;
+    background-color: $bg-body;
+}
+
+ul {
+    list-style: none;
+}
+
+.wrapper {
+    display: block;
+    width: $width-container;
+    margin: 0 auto;
+}
+
+//header
+.header {
+    width: 100%;
+    height: 130px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $light-color;
+
+    &-navbar {
+        @include flexbox;
+        @include justify-content(space-between);
+    }
+
+    &-navigation {
+        &-item {
+            float: right;
+            @include navigationDivider;
+        }
+    }
+
+    &-title {
+        margin-bottom: 15px;
+    }
+
+    &-bar {
+        height: 33px;
+        @include flexbox;
+        @include flex-wrap(wrap);
+        @include justify-content(flex-start);
+    }
+
+    &-home {
+        width: 52px;
+        height: 100%;
+        margin-left: 3px;
+        background-color: $bg-home;
+        border: none;
+    }
+
+    &-filters {
+        &-list {
+            height: 100%;
+            padding-right: 18px;
+            padding-left: 18px;
+            background-color: $bg-filters;
+            @include flex-grow(1); //item in flex-box
+            @include flexbox;  //display: flex-box
+            @include flex-wrap(wrap);
+            @include justify-content(flex-start);
+            @include align-items(center);
+        }
+        &-item {
+            height: 100%;
+            &-group {
+                @include selectLabelled;
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+
+//footer
+.footer {
+    color: $light-color;
+    width: 100%;
+    height: 245px;
+    background-color: $bg-footer;
+    margin-top: 100px;
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content;
+
+    &-nav-list {
+        @include flexbox;
+        @include flex-direction;
+        @include flex-wrap;
+        @include justify-content;
+    }
+
+    &-nav-item {
+        margin-left: 20px;
+        padding-top: 40px;
+        @include flex-basis($width-container/4 - 20*3);
+        &:last-child {
+            margin-left: 0;
+        }
+        &-title {
+            margin-bottom: 20px;
+        }
+        &-link {
+            margin-bottom: 15px;
+        }
+    }
+
+    &-legal {
+        height: 65px;
+        background-color: $bg-legal;
+        &-list {
+            height: 100%;
+            line-height: 100%;
+            @include flexbox;
+            @include flex-direction;
+            @include justify-content(center);
+            @include align-items;
+        }
+        &-item {
+            @include navigationDivider;
+        }
+
+    }
+}
+
+//personal program area
+//common
+.personal {
+    //@include flexbox;
+    //@include justify-content(flex-start);
+    //@include align-items(flex-start);
+    //padding-bottom: 100px;
+}
+
+//profile main
+.profile {
+    //width: calc(100% - 262px - 30px );
+    padding: 30px 20px;
+    background-color: $light-color;
+    border: 1px solid $border-color;
+}
+
+.title {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $border-color;
+}
+
+.description {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.notice {
+    margin-bottom: 20px;
+}
+
+//aside
+.side {
+    //width: 262px;
+    padding-right: 0;
+    padding-left: 30px;
+    //box-sizing: content-box;
+    //@include flex-basis(262px); //IE issue, instead of flex-basis property width is added;
+    //@include flex-shrink(0);
+}
+
+.summary {
+    margin-bottom: 20px;
+    padding: 25px 20px;
+    background-color: $light-color;
+    @include box-shadow;
+}
+
+.navigation {
+    background-color: $light-color;
+    overflow: hidden;
+    @include box-shadow;
+}
+
+//profile student's card
+.profile-card {
+    &-head {
+        padding-bottom: 19px;
+        border-bottom: 1px solid $border-color;
+    }
+
+    &-name {
+        font-size: $font-size + 14px;
+        color: $active-color;
+        padding-bottom: 10px;
+    }
+
+    &-number {
+        font-size: $font-size - 2px;
+        &-data {
+            color: $font-color;
+        }
+    }
+
+    &-list {
+        padding-top: 20px;
+        padding-bottom: 19px;
+        border-bottom: 1px solid $border-color;
+        &-item:not(:last-child) {
+            padding-bottom: 17px;
+        }
+    }
+
+    &-data {
+        color: $font-light;
+    }
+}
+
+
+//status
+.status {
+    padding-top: 20px;
+
+    &-title {
+        margin-bottom: 15px;
+    }
+
+    &-wrapper {
+        height: 34px;
+        line-height: 34px;
+        position: relative;
+        @include flexbox;
+        @include justify-content(space-between);
+        @include align-items(center);
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $border-color;
+            position: absolute;
+            top: 17px;
+        }
+    }
+
+    &-index {
+        display: inline-block;
+        text-align: center;
+        font-size: $font-size - 3px;
+        color: $font-status;
+        width: 23px;
+        height: 23px;
+        line-height: 23px;
+        background-color: $border-color;
+        background-position: center center;
+        @include border-radius(50%);
+        position: relative;
+        overflow: visible;
+
+        &-tooltip,
+        &-arrow:after {
+            background: $light-color;
+            border: 1px solid $tooltip-border;
+            @include box-shadow(0, 2px, 5px, 0, rgba(0, 0, 0, 0.13));
+        }
+
+        &-tooltip {
+            display: inline-block;
+            text-align: center;
+            color: $font-light;
+            width: auto;
+            height: auto;
+            line-height: normal;
+            padding: 10px;
+            @include border-radius(3px);
+            white-space: nowrap;
+            position: absolute;
+            top: -52px;
+            right: -62px;
+        }
+
+        &-arrow {
+            width: 70px;
+            height: 16px;
+            overflow: hidden;
+            position: absolute;
+            left: 50%;
+            margin-left: -35px;
+            bottom: -16px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 20px;
+                top: -20px;
+                width: 25px;
+                height: 25px;
+                -webkit-box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+                -moz-box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+                box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+                @include transform(45deg);
+            }
+        }
+    }
+
+    .done {
+        color: $light-color;
+        background-color: $status-bg-done;
+    }
+
+    .active {
+        color: $light-color;
+        font-size: $font-size - 1px;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        background-color: $status-bg-active;
+        position: relative;
+        .status-index-tooltip {
+            top: -55px;
+            right: -66px;
+        }
+    }
+}
+
+//navigation
+.navigation-list {
+    .navigation-item {
+        height: 47px;
+        line-height: 47px;
+        padding-right: 20px;
+        padding-left: 17px;
+        border-right: 3px solid transparent;
+
+        a {
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid $border-color;
+        }
+
+        &:last-child a {
+            border-bottom-color: transparent;
+        }
+
+        &-status {
+            color: $font-light;
+        }
+    }
+
+    .active {
+        background-color: $active-bg;
+        border-right: 3px solid $active-color;
+        a {
+            border-bottom-color: transparent;
+        }
+    }
+}
+
+.pdf-btn {
+    color: $active-color;
+    width: 200px;
+    height: 35px;
+    line-height: 33px;
+    margin: 10px 20px 20px 20px;
+    background-color: $light-color;
+    border: 1px solid $active-color;
+}
+
+.legend {
+    text-align: center;
+    color: $font-light;
+    padding: 20px;
+    border-top: 1px solid $border-color;
+}
