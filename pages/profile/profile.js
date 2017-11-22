@@ -17,5 +17,4 @@ $(document).ready(function() {
 		$(this).parent().find('.collapsed, .expanded').toggleClass('collapsed').toggleClass('expanded');
 		$(this).toggleClass('modal-side-item-expand modal-side-item-collapse');
 	});
-
 });

@@ -12,26 +12,22 @@
 
 <header class="header">
     <div class="wrapper">
-        <div class="header-navbar">
-            <!--<div class="logo">מדינת ישראל, משרד החינוך</div>-->
-            <img class="logo" alt="מדינת ישראל, משרד החינוך" src="../../img/Logo_Minister.png">
-            <nav class="header-navigation">
-                <ul class="header-navigation-list">
-                    <li class="header-navigation-item">חיפוש</li>
-                    <li class="header-navigation-item">הזדהות</li>
-                    <li class="header-navigation-item">العربية</li>
-                    <li class="header-navigation-item">
-                        <!--<span class="header-navigation-item-logo">משרד החינוך לשירותך</span>-->
-                        <img class="header-navigation-item-logo" alt="משרד החינוך לשירותך" src="../../img/Logo_Minister_2.png">
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <img class="logo" alt="מדינת ישראל, משרד החינוך" src="../../img/Logo_Minister.png">
+        <nav class="header-navigation">
+            <ul class="header-navigation-list">
+                <li class="header-navigation-item">חיפוש</li>
+                <li class="header-navigation-item">הזדהות</li>
+                <li class="header-navigation-item">العربية</li>
+                <li class="header-navigation-item">
+                    <img class="header-navigation-item-logo" alt="משרד החינוך לשירותך" src="../../img/Logo_Minister_2.png">
+                </li>
+            </ul>
+        </nav>
 
         <h1 class="header-title">תוכנית אישית לתלמיד</h1>
 
         <div class="header-bar">
-            <a class="header-home" href="../students-list/students-list.html"></a>
+            <a class="header-home" href=""></a>
 
             <ul class="header-filters-list">
 
@@ -50,28 +46,21 @@
                 </li>
 
                 <li class="header-filters-item">
-                    <dl class="header-filters-item-group">
-                        <dt class="header-filters-item-title">שנת לימודים:</dt>
-                        <dd class="header-filters-item-data">
-                            <ul class="select">
-                                <li class="option">תשע"ו</li>
-                                <li class="option">תשע"ז</li>
-                            </ul>
-                        </dd>
-                    </dl>
+                    <label for="year" class="header-filters-item-title">שנת לימודים:</label>
+                    <select id="year" name="year" class="header-filters-item-data">
+                        <option value="1">תשע"ו</option>
+                        <option value="2">תשע"ז</option>
+                    </select>
                 </li>
 
                 <li class="header-filters-item">
-                    <dl class="header-filters-item-group">
-                        <dt class="header-filters-item-title">כיתה:</dt>
-                        <dd class="header-filters-item-data">
-                            <ul class="select">
-                                <li class="option">ב1</li>
-                                <li class="option">ב2</li>
-                                <li class="option">ב3</li>
-                            </ul>
-                        </dd>
-                    </dl>
+                    <label for="student" class="header-filters-item-title">התלמיד/ה:</label>
+                    <select id="student" name="student" class="header-filters-item-data">
+                        <option value="1">נדב אלון</option>
+                        <option value="2">נועם ברוך</option>
+                        <option value="3">נדב אלון</option>
+                        <!--<option value="4">ילד עם שם ארוך מאוד</option>-->
+                    </select>
                 </li>
             </ul>
         </div>
@@ -316,14 +305,14 @@
     </div>
 </footer>
 
-<!-- Modal -->
+ <!--Modal -->
 <div id="myModal" class="modal fade" role="dialog" aria-labelledby="modalTitle">
     <div class="modal-dialog">
 
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <button type="button" class="close" data-dismiss="modal"></button>
                 <h2 class="modal-subtitle">הערכת פרופיל</h2>
                 <h4 id="modalTitle" class="modal-title">לימודי</h4>
             </div>
@@ -331,6 +320,8 @@
             <div class="modal-body">
                 <div class="container-fluid">
                     <div class="row">
+
+                        <!--form with 2 textareas and 2 buttons-->
                         <div class="modal-main col-lg-8">
                             <form action="" class="modal-main-form">
                                 <div class="row">
@@ -338,17 +329,14 @@
                                         <div class="modal-field-wrapper">
                                             <h3 class="modal-field-title">מוקדי הכח</h3>
                                             <label for="focus" class="modal-field-title sr-only">מוקדי הכח</label>
-                                            <textarea id="focus" name="focus" class="modal-field-text" aria-multiline="true"
-                                                       placeholder="כתבו כאן את מוקדי הכח בתחום הלימודי"></textarea>
+                                            <textarea id="focus" name="focus" class="modal-field-text" aria-multiline="true" placeholder="כתבו כאן את מוקדי הכח בתחום הלימודי"></textarea>
                                         </div>
                                     </div>
                                     <div class="modal-field col-sm-6">
                                         <div class="modal-field-wrapper">
                                             <h3 class="modal-field-title">מוקדי חיזוק</h3>
                                             <label for="enforcement" class="modal-field-title sr-only">מוקדי חיזוק</label>
-                                            <textarea id="enforcement" name="enforcement" class="modal-field-text"
-                                                      aria-multiline="true"  placeholder="כתבו כאן את מוקדי הכח בתחום הלימודי">
-                                                כתבו כאן את מוקדי הכח בתחום הלימודי</textarea>
+                                            <textarea id="enforcement" name="enforcement" class="modal-field-text" aria-multiline="true"  placeholder="כתבו כאן את מוקדי הכח בתחום הלימודי"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -358,6 +346,8 @@
                                 </div>
                             </form>
                         </div>
+
+                        <!--sidebar-->
                         <div class="modal-side col-lg-4">
                             <h3 class="modal-field-title">היגדים!</h3>
                             <ul class="modal-side-list">
@@ -373,22 +363,31 @@
                                 </li>
                                 <li class="modal-side-item">
                                     <dl>
-                                        <dl class="modal-side-item-title">קריאה</dl>
-                                        <dd class="modal-side-item-data">קריאה באמצעות סמלים זיהוי עיצורים ותנועות</dd>
+                                        <dl class="modal-side-item-title">הבנת הנשמע</dl>
+                                        <dd class="modal-side-item-data">
+                                            <p>קריאה באמצעות סמלים זיהוי עיצורים ותנועות</p>
+                                            <p class="collapsed">קריאה באמצעות סמלים זיהוי עיצורים ותנועות קריאה באמצעות סמלים זיהוי עיצורים ותנועות קריאה באמצעות סמלים זיהוי עיצורים ותנועות קריאה באמצעות סמלים זיהוי עיצורים ותנועות </p>
+                                        </dd>
                                     </dl>
                                     <button class="modal-side-item-expand">הצג עוד</button>
                                 </li>
                                 <li class="modal-side-item">
                                     <dl>
-                                        <dl class="modal-side-item-title">קריאה</dl>
-                                        <dd class="modal-side-item-data">קריאה באמצעות סמלים זיהוי עיצורים ותנועות</dd>
+                                        <dl class="modal-side-item-title">כתיבה</dl>
+                                        <dd class="modal-side-item-data">
+                                            <p>קריאה באמצעות סמלים זיהוי עיצורים ותנועות</p>
+                                            <p class="collapsed">קריאה באמצעות סמלים זיהוי עיצורים ותנועות קריאה באמצעות סמלים זיהוי עיצורים ותנועות קריאה באמצעות סמלים זיהוי עיצורים ותנועות קריאה באמצעות סמלים זיהוי עיצורים ותנועות </p>
+                                        </dd>
                                     </dl>
                                     <button class="modal-side-item-expand">הצג עוד</button>
                                 </li>
                                 <li class="modal-side-item">
                                     <dl>
-                                        <dl class="modal-side-item-title">קריאה</dl>
-                                        <dd class="modal-side-item-data">קריאה באמצעות סמלים זיהוי עיצורים ותנועות</dd>
+                                        <dl class="modal-side-item-title">הבעה בעל פה</dl>
+                                        <dd class="modal-side-item-data">
+                                            <p>קריאה באמצעות סמלים זיהוי עיצורים ותנועות</p>
+                                            <p class="collapsed">קריאה באמצעות סמלים זיהוי עיצורים ותנועות קריאה באמצעות סמלים זיהוי עיצורים ותנועות קריאה באמצעות סמלים זיהוי עיצורים ותנועות קריאה באמצעות סמלים זיהוי עיצורים ותנועות </p>
+                                        </dd>
                                     </dl>
                                     <button class="modal-side-item-expand">הצג עוד</button>
                                 </li>

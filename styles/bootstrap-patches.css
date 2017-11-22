@@ -36,7 +36,14 @@
   -moz-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.1); }
   .modal-header .close {
-    float: left; }
+    float: left;
+    width: 37px;
+    height: 100%;
+    margin-left: 5px;
+    background-image: url("../../img/close_modal.png");
+    background-size: 37px;
+    background-repeat: no-repeat;
+    background-position-y: center; }
 
 .modal-subtitle {
   font-size: 18px;
@@ -82,6 +89,7 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1); }
   .modal-field-text {
     display: block;
+    width: 100%;
     height: calc(100% - 13px - 20px);
     padding: 18px 15px;
     border: 1px solid #e2e2e2; }
@@ -105,21 +113,34 @@
     padding-right: 20px;
     padding-left: 20px; }
 
-.modal-side-item {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #e2e2e2; }
-  .modal-side-item-title {
-    padding-top: 20px; }
-  .modal-side-item-data {
-    font-size: 15px;
-    color: #74818a; }
-  .modal-side-item-expand, .modal-side-item-collapse {
-    color: #3a95c4; }
+.modal-side {
+  padding-top: 24px;
+  padding-right: 18px;
+  padding-left: 0;
+  overflow-y: auto; }
+  .modal-side .modal-field-title {
+    margin-bottom: 10px; }
+  .modal-side-item {
+    padding-top: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e2e2e2; }
+    .modal-side-item:first-child {
+      padding-top: 0; }
+    .modal-side-item-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #74818a;
+      margin-bottom: 10px; }
+    .modal-side-item-data {
+      margin-bottom: 8px;
+      color: #74818a;
+      overflow: hidden; }
+    .modal-side-item-expand, .modal-side-item-collapse {
+      color: #3a95c4; }
 
 .collapsed {
-  display: none;
   height: 0;
-  opacity: 0.3;
+  opacity: 0;
   -webkit-transition: all 0.8s ease-out;
   -moz-transition: all 0.8s ease-out;
   -ms-transition: all 0.8s ease-out;
@@ -127,8 +148,7 @@
   transition: all 0.8s ease-out; }
 
 .expanded {
-  display: block;
-  height: 50px;
+  height: 65px;
   opacity: 1;
   -webkit-transition: all 0.8s ease-out;
   -moz-transition: all 0.8s ease-out;
