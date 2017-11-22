@@ -56,6 +56,12 @@
     line-height: unset;
 }
 
+.modal-field-title {
+    font-size: $font-size + 8px;
+    color: $active-color;
+    margin-bottom: 13px;
+}
+
 .modal {
     &-body {
         padding: $modal-main-padding;
@@ -90,11 +96,7 @@
             background-color: $light-color;
             @include box-shadow;
         }
-        &-title {
-            font-size: $font-size + 8px;
-            color: $active-color;
-            margin-bottom: 13px;
-        }
+
         &-text {
             display: block;
             height: calc(100% - 13px - 20px);
@@ -123,4 +125,36 @@
             padding-left: 20px;
         }
     }
+}
+
+.modal-side {
+    &-item {
+        padding-bottom: 10px;
+        border-bottom: 1px solid $border-color;
+        &-title {
+            padding-top: 20px;
+        }
+        &-data {
+            font-size: $font-size - 1;
+            color: $font-light;
+        }
+        &-expand,
+        &-collapse {
+            color: $active-color;
+        }
+    }
+}
+
+.collapsed {
+    display: none;
+    height: 0;
+    opacity: 0.3;
+    @include transition(0.8s);
+}
+
+.expanded {
+    display: block;
+    height: 50px;
+    opacity: 1;
+    @include transition(0.8s);
 }
