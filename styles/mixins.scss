@@ -149,3 +149,10 @@
     -ms-transform: rotate($deg);
     -o-transform: rotate($deg);
 }
+
+@mixin area($padding-top: 25px, $padding-right: 20px) {
+    padding: $padding-top $padding-right;
+    margin-bottom: 20px;
+    background-color: $light-color;
+    @include box-shadow;
+}

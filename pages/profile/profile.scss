@@ -19,6 +19,16 @@
         height: 120px;
         margin-bottom: 20px;
         border: 1px solid $border-color;
+        &:hover {
+            border-bottom: $active-color;
+            .profile-item-link {
+                color: $active-color;
+            }
+            .profile-item-border {
+                height: 3px;
+                background-color: $active-color;
+            }
+        }
 
         &-link {
             color: $font-light;
@@ -26,11 +36,13 @@
             @include flexbox;
             @include flex-direction(column);
             @include justify-content(space-between);
+            position: relative;
             &:hover{
                 text-decoration: none;
             }
             &:focus {
                 outline: none;
+                text-decoration: none;
             }
         }
 
@@ -46,20 +58,59 @@
             background-color: transparent;
         }
 
-        :hover {
-            cursor: pointer;
+        &-completed {
+            display: none;
         }
     }
 
-    .completed {
-        border-bottom: $active-color;
-        .profile-item-link {
-            color: $active-color;
-        }
-        .profile-item-border {
-            height: 3px;
+    .profile-item.completed {
+        border: 1px solid $active-color;
+        .profile-item-completed {
+            display: block;
+            width: 20px;
+            height: 20px;
             background-color: $active-color;
+            border-radius: 50%;
+            background-image: url('../../img/success.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: absolute;
+            top: 10px;
+            right: 10px;
         }
+    }
+}
+
+.profile-fields {
+    padding: 25px 20px;
+    background-color: $light-color;
+    @include box-shadow;
+
+    .profile-item-title {
+        font-size: $font-size + 8px;
+        color: $active-color;
+        margin-bottom: 18px;
+    }
+
+    &-item {
+        display: inline-block;
+        width: calc(100% / 3);
+        margin-left: -3px;
+        padding-left: 30px;
+        vertical-align: top;
+    }
+
+
+    &-title {
+        font-size: $font-size + 2px;
+        font-weight: 600;
+        color: $font-light;
+        margin-bottom: 10px;
+    }
+    &-data {
+        margin-bottom: 8px;
+        color: $font-light;
+        overflow: hidden;
     }
 }
 
