@@ -221,9 +221,11 @@ body {
     }
 
     &-nav-item {
+        width: (($width-container - 20*3) / 4);
+        //float: right;
         margin-left: 20px;
         padding-top: 40px;
-        @include flex-basis($width-container/4 - 20*3);
+        @include flex-basis(($width-container - 20*3) / 4);
         &:last-child {
             margin-left: 0;
         }
