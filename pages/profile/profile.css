@@ -749,6 +749,7 @@ body {
   .profile-fields-item {
     display: inline-block;
     width: calc(100% / 3);
+    height: 100%;
     margin-left: -3px;
     padding-left: 30px;
     vertical-align: top; }
