@@ -209,9 +209,9 @@ body {
     height: 246px;
     background-color: $bg-footer;
     margin-top: 100px;
-    //@include flexbox;
-    //@include flex-direction(column);
-    //@include justify-content;
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content;
 
     &-nav-list {
         @include flexbox;
@@ -223,7 +223,6 @@ body {
     &-nav-item {
         display: inline-block;
         width: (($width-container - 20*3) / 4);
-        //float: right;
         margin-left: 15px;
         padding-top: 40px;
         @include flex-basis(($width-container - 20*3) / 4);
