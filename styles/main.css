@@ -137,24 +137,22 @@
       overflow: hidden; }
     .modal-side-item-expand, .modal-side-item-collapse {
       color: #3a95c4; }
-
-.collapsed {
-  height: 0;
-  opacity: 0;
-  -webkit-transition: all 0.8s ease-out;
-  -moz-transition: all 0.8s ease-out;
-  -ms-transition: all 0.8s ease-out;
-  -o-transition: all 0.8s ease-out;
-  transition: all 0.8s ease-out; }
-
-.expanded {
-  height: 65px;
-  opacity: 1;
-  -webkit-transition: all 0.8s ease-out;
-  -moz-transition: all 0.8s ease-out;
-  -ms-transition: all 0.8s ease-out;
-  -o-transition: all 0.8s ease-out;
-  transition: all 0.8s ease-out; }
+  .modal-side .collapsed {
+    height: 0;
+    opacity: 0;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    -ms-transition: all 0.8s ease-out;
+    -o-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out; }
+  .modal-side .expanded {
+    height: 65px;
+    opacity: 1;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    -ms-transition: all 0.8s ease-out;
+    -o-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out; }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -225,7 +223,8 @@ body {
   font-size: 16px;
   text-align: right;
   color: #000000;
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  overflow-x: hidden; }
 
 .wrapper {
   display: block;
@@ -639,5 +638,42 @@ body {
   color: #74818a;
   padding: 20px;
   border-top: 1px solid #e2e2e2; }
+
+.instructions {
+  position: absolute;
+  top: 160px;
+  left: -268px;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
+  .instructions .flag {
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    width: 87px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #74818a;
+    position: absolute;
+    right: -87px;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1); }
+  .instructions-list {
+    color: #74818a;
+    width: 268px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-right: 5px solid #74818a;
+    background-color: #ffffff; }
+  .instructions-item {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    .instructions-item:not(:last-child) {
+      border-bottom: 1px solid #e2e2e2; }
+  .instructions.expanded {
+    left: 0px; }
 
 /*# sourceMappingURL=main.css.map */

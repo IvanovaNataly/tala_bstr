@@ -17,4 +17,12 @@ $(document).ready(function() {
 		$(this).parent().find('.collapsed, .expanded').toggleClass('collapsed').toggleClass('expanded');
 		$(this).toggleClass('modal-side-item-expand modal-side-item-collapse');
 	});
+
+    //toggle collapse istructions list on the left side
+    $('.instructions').find('.flag').on('click', function(event) {
+        $(this).attr('aria-expanded', function(_, attr){
+            return !(attr == 'true')
+        });
+        $(this).closest('.instructions').toggleClass('expanded');
+    });
 });

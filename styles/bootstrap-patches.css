@@ -137,23 +137,21 @@
       overflow: hidden; }
     .modal-side-item-expand, .modal-side-item-collapse {
       color: #3a95c4; }
-
-.collapsed {
-  height: 0;
-  opacity: 0;
-  -webkit-transition: all 0.8s ease-out;
-  -moz-transition: all 0.8s ease-out;
-  -ms-transition: all 0.8s ease-out;
-  -o-transition: all 0.8s ease-out;
-  transition: all 0.8s ease-out; }
-
-.expanded {
-  height: 65px;
-  opacity: 1;
-  -webkit-transition: all 0.8s ease-out;
-  -moz-transition: all 0.8s ease-out;
-  -ms-transition: all 0.8s ease-out;
-  -o-transition: all 0.8s ease-out;
-  transition: all 0.8s ease-out; }
+  .modal-side .collapsed {
+    height: 0;
+    opacity: 0;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    -ms-transition: all 0.8s ease-out;
+    -o-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out; }
+  .modal-side .expanded {
+    height: 65px;
+    opacity: 1;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    -ms-transition: all 0.8s ease-out;
+    -o-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out; }
 
 /*# sourceMappingURL=bootstrap-patches.css.map */

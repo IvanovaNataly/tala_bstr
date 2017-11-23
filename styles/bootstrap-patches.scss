@@ -166,16 +166,16 @@
             color: $active-color;
         }
     }
+    .collapsed {
+        height: 0;
+        opacity: 0;
+        @include transition(0.8s);
+    }
+
+    .expanded {
+        height: 65px;
+        opacity: 1;
+        @include transition(0.8s);
+    }
 }
 
-.collapsed {
-    height: 0;
-    opacity: 0;
-    @include transition(0.8s);
-}
-
-.expanded {
-    height: 65px;
-    opacity: 1;
-    @include transition(0.8s);
-}
