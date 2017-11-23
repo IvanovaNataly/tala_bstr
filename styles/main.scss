@@ -503,7 +503,7 @@ body {
     position: absolute;
     top: 160px;
     left: -268px;
-    @include transition(0.5s, ease-out);
+    @include transition(0.8s, ease-out);
     .flag {
         text-align: center;
         font-size: $font-size + 2px;
@@ -513,9 +513,11 @@ body {
         padding-bottom: 20px;
         background-color: $font-light;
         position: absolute;
-        //top: 160px;
         right: -87px;
         @include box-shadow;
+    }
+    .ready-to-open {
+        background-color: $contrast-color;
     }
     &-list {
         color: $font-light;
@@ -524,10 +526,6 @@ body {
         padding-left: 20px;
         border-right: 5px solid $font-light;
         background-color: $light-color;
-
-        //position: absolute;
-        //top: 160px;
-        //left: 0px;
     }
     &-item {
         padding-top: 30px;
@@ -536,7 +534,6 @@ body {
             border-bottom: 1px solid $border-color;
         }
     }
-
     &.expanded {
         left: 0px;
     }

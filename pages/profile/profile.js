@@ -20,9 +20,18 @@ $(document).ready(function() {
 
     //toggle collapse istructions list on the left side
     $('.instructions').find('.flag').on('click', function(event) {
-        $(this).attr('aria-expanded', function(_, attr){
+        var $this = $(this);
+        $this.attr('aria-expanded', function(_, attr){
             return !(attr == 'true')
         });
-        $(this).closest('.instructions').toggleClass('expanded');
+        $this.closest('.instructions').toggleClass('expanded');
+        if ( $this.hasClass('ready-to-open') ) {
+            $this.removeClass('ready-to-open');
+        }
+        else {
+            setTimeout(function () {
+                $this.addClass('ready-to-open');
+            }, 800)
+        }
     });
 });

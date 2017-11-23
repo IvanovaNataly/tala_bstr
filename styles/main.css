@@ -643,11 +643,11 @@ body {
   position: absolute;
   top: 160px;
   left: -268px;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -ms-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out; }
+  -webkit-transition: all 0.8s ease-out;
+  -moz-transition: all 0.8s ease-out;
+  -ms-transition: all 0.8s ease-out;
+  -o-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out; }
   .instructions .flag {
     text-align: center;
     font-size: 18px;
@@ -661,6 +661,8 @@ body {
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1); }
+  .instructions .ready-to-open {
+    background-color: #f7ba45; }
   .instructions-list {
     color: #74818a;
     width: 268px;
