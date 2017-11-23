@@ -223,7 +223,7 @@ body {
     &-nav-item {
         display: inline-block;
         width: (($width-container - 20*3) / 4);
-        margin-left: 15px;
+        margin-left: 18px;
         padding-top: 40px;
         @include flex-basis(($width-container - 20*3) / 4);
         &:last-child {
