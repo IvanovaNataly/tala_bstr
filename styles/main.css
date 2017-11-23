@@ -395,12 +395,13 @@ body {
     -moz-justify-content: space-between;
     justify-content: space-between; }
   .footer-nav-item {
+    width: 270px;
     margin-left: 20px;
     padding-top: 40px;
-    -webkit-flex-basis: 225px;
-    -moz-flex-basis: 225px;
-    -ms-flex-preferred-size: 225px;
-    flex-basis: 225px; }
+    -webkit-flex-basis: 270px;
+    -moz-flex-basis: 270px;
+    -ms-flex-preferred-size: 270px;
+    flex-basis: 270px; }
     .footer-nav-item:last-child {
       margin-left: 0; }
     .footer-nav-item-title {
