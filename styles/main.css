@@ -200,9 +200,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-dt, dd {
-  display: inline-block; }
-
 dt {
   margin-left: 5px; }
 
@@ -346,8 +343,10 @@ body {
     line-height: 33px;
     margin-left: 28px; }
     .header-filters-item-title {
+      display: inline-block;
       margin-left: 5px; }
     .header-filters-item-data {
+      display: inline-block;
       color: #3a95c4;
       border: none; }
 
@@ -496,7 +495,10 @@ body {
   border-bottom: 1px solid #e2e2e2; }
   .profile-card-list-item:not(:last-child) {
     padding-bottom: 17px; }
+.profile-card-title {
+  display: inline-block; }
 .profile-card-data {
+  display: inline-block;
   color: #74818a; }
 
 .status {

@@ -56,10 +56,6 @@ table {
     border-spacing: 0;
 }
 
-dt, dd {
-    display: inline-block;
-}
-
 dt {
     margin-left: 5px;
 }
@@ -192,9 +188,11 @@ body {
             line-height: 33px;
             margin-left: 28px;
             &-title {
+                display: inline-block;
                 margin-left: 5px;
             }
             &-data {
+                display: inline-block;
                 color: $active-color;
                 border: none;
             }
@@ -332,7 +330,12 @@ body {
         }
     }
 
+    &-title {
+        display: inline-block;
+    }
+
     &-data {
+        display: inline-block;
         color: $font-light;
     }
 }

@@ -86,21 +86,46 @@
     background-color: $light-color;
     @include box-shadow;
 
+    &-line {
+        &:not(:first-child) {
+            padding-top: 20px;
+        }
+        &:not(:last-child) {
+            padding-bottom: 28px;
+            border-bottom: 1px solid $border-color;
+        }
+    }
+
     .profile-item-title {
         font-size: $font-size + 8px;
         color: $active-color;
         margin-bottom: 18px;
     }
 
+    &-list {
+        @include flexbox;
+        @include align-items(stretch);
+    }
+
     &-item {
         display: inline-block;
         width: calc(100% / 3);
-        height: 100%;
-        margin-left: -3px;
         padding-left: 30px;
         vertical-align: top;
     }
 
+    .first-item {
+        color: $font-light;
+        position: relative;
+    }
+
+    &-button-wrapper {
+        width: calc(100% - 30px);
+        @include flexbox;
+        @include justify-content;
+        position: absolute;
+        bottom: 0;
+    }
 
     &-title {
         font-size: $font-size + 2px;
@@ -108,10 +133,18 @@
         color: $font-light;
         margin-bottom: 10px;
     }
-    &-data {
-        margin-bottom: 8px;
-        color: $font-light;
-        overflow: hidden;
+
+    .last-item {
+        position: relative;
+        .field-fulledit {
+            color: $active-color;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .profile-fields-data {
+            padding-bottom: 30px;
+        }
     }
 }
 

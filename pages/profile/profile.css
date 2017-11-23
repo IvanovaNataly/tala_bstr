@@ -200,9 +200,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-dt, dd {
-  display: inline-block; }
-
 dt {
   margin-left: 5px; }
 
@@ -346,8 +343,10 @@ body {
     line-height: 33px;
     margin-left: 28px; }
     .header-filters-item-title {
+      display: inline-block;
       margin-left: 5px; }
     .header-filters-item-data {
+      display: inline-block;
       color: #3a95c4;
       border: none; }
 
@@ -496,7 +495,10 @@ body {
   border-bottom: 1px solid #e2e2e2; }
   .profile-card-list-item:not(:last-child) {
     padding-bottom: 17px; }
+.profile-card-title {
+  display: inline-block; }
 .profile-card-data {
+  display: inline-block;
   color: #74818a; }
 
 .status {
@@ -744,25 +746,61 @@ body {
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1); }
+  .profile-fields-line:not(:first-child) {
+    padding-top: 20px; }
+  .profile-fields-line:not(:last-child) {
+    padding-bottom: 28px;
+    border-bottom: 1px solid #e2e2e2; }
   .profile-fields .profile-item-title {
     font-size: 24px;
     color: #3a95c4;
     margin-bottom: 18px; }
+  .profile-fields-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    align-items: stretch; }
   .profile-fields-item {
     display: inline-block;
     width: calc(100% / 3);
-    height: 100%;
-    margin-left: -3px;
     padding-left: 30px;
     vertical-align: top; }
+  .profile-fields .first-item {
+    color: #74818a;
+    position: relative; }
+  .profile-fields-button-wrapper {
+    width: calc(100% - 30px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0; }
   .profile-fields-title {
     font-size: 18px;
     font-weight: 600;
     color: #74818a;
     margin-bottom: 10px; }
-  .profile-fields-data {
-    margin-bottom: 8px;
-    color: #74818a;
-    overflow: hidden; }
+  .profile-fields .last-item {
+    position: relative; }
+    .profile-fields .last-item .field-fulledit {
+      color: #3a95c4;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+    .profile-fields .last-item .profile-fields-data {
+      padding-bottom: 30px; }
 
 /*# sourceMappingURL=profile.css.map */
