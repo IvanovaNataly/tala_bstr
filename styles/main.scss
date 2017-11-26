@@ -434,8 +434,7 @@ body {
         width: 100%;
         margin-top: 20px;
         padding: 20px;
-        background-color: $active-color;
-        opacity: 0.4;
+        background-color: $bg-button-container;
         .btn-save {
             display: inline-block;
             font-size: $font-size + 7px;
@@ -447,7 +446,7 @@ body {
         }
         .btn-cancel {
             font-size: $font-size + 2px;
-            //color: $active-secondary;
+            color: $active-secondary;
             height: 33px;
             margin-right: 20px;
             padding-right: 18px;

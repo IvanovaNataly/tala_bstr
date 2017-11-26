@@ -484,8 +484,7 @@ body {
     width: 100%;
     margin-top: 20px;
     padding: 20px;
-    background-color: #3a95c4;
-    opacity: 0.4; }
+    background-color: #b0d5e7; }
     .item-on-edit .profile-card-controls .btn-save {
       display: inline-block;
       font-size: 23px;
@@ -496,6 +495,7 @@ body {
       background-color: #2c7095; }
     .item-on-edit .profile-card-controls .btn-cancel {
       font-size: 18px;
+      color: #2c7095;
       height: 33px;
       margin-right: 20px;
       padding-right: 18px;
