@@ -14,11 +14,17 @@ $(document).ready(function() {
 
     //modal side bar expand and collapse
 	$('.modal-side-item-expand').on('click', function(event) {
-		$(this).parent().find('.collapsed, .expanded').toggleClass('collapsed').toggleClass('expanded');
-		$(this).toggleClass('modal-side-item-expand modal-side-item-collapse');
-	});
+        $(this).parent().find('.collapsed, .expanded').toggleClass('collapsed').toggleClass('expanded');
+        $(this).toggleClass('modal-side-item-expand modal-side-item-collapse');
+    });
 
-    //toggle collapse istructions list on the left side
+	//right sidebar profile card - expand and collapse students details
+    $('.profile-card-expand').on('click', function(event) {
+        $(this).closest('.profile-card').find('.collapsed, .expanded').toggleClass('collapsed').toggleClass('expanded');
+        $(this).toggleClass('profile-card-expand profile-card-collapse');
+    });
+
+    //toggle collapse instructions list on the left side
     $('.instructions').find('.flag').on('click', function(event) {
         var $this = $(this);
         $this.attr('aria-expanded', function(_, attr){
@@ -34,4 +40,6 @@ $(document).ready(function() {
             }, 800)
         }
     });
+
+
 });

@@ -4,7 +4,6 @@
 @import 'colors';
 @import 'variables';
 @import 'bootstrap-patches';
-@import 'modal';
 @import 'mixins';
 
 //reset
@@ -119,6 +118,11 @@ body {
 
 .area {
     @include area;
+}
+
+.btn-edit {
+    display: inline-block;
+    color: $font-light;
 }
 
 //header
@@ -320,17 +324,25 @@ body {
 
     &-number {
         font-size: $font-size - 2px;
-        &-data {
+        .profile-card-data {
             color: $font-color;
         }
     }
 
+    &-expand,
+    &-collapse {
+        font-size: $font-size - 4px;
+        color: $active-color;
+        margin-top: 15px;
+    }
+
     &-list {
-        padding-top: 20px;
-        padding-bottom: 19px;
         border-bottom: 1px solid $border-color;
         &-item:not(:last-child) {
             padding-bottom: 17px;
+        }
+        &-item:first-child {
+            padding-top: 20px;
         }
     }
 
@@ -341,6 +353,40 @@ body {
     &-data {
         display: inline-block;
         color: $font-light;
+    }
+
+    .collapsed {
+        height: 0;
+        opacity: 0;
+        -webkit-transition: height 0.8s ease-out, opacity 0.3s ease-out;
+        -moz-transition: height 0.8s ease-out, opacity 0.3s ease-out;
+        -ms-transition: height 0.8s ease-out, opacity 0.3s ease-out;
+        -o-transition: height 0.8s ease-out, opacity 0.3s ease-out;
+        transition: height 0.8s ease-out, opacity 0.3s ease-out;
+    }
+
+    .expanded {
+        height: 254px;
+        padding-bottom: 20px;
+        opacity: 1;
+        -webkit-transition: height 0.8s ease-out, opacity 0.5s ease-out 0.3s;
+        -moz-transition: height 0.8s ease-out, opacity 0.5s ease-out 0.3s;
+        -ms-transition: height 0.8s ease-out, opacity 0.5s ease-out 0.3s;
+        -o-transition: height 0.8s ease-out, opacity 0.5s ease-out 0.3s;
+        transition: height 0.8s ease-out, opacity 0.5s ease-out 0.3s;
+    }
+
+    .editable {
+        @include flexbox;
+        @include flex-wrap(nowrap);
+        @include justify-content;
+        dl {
+            display: inline-block;
+        }
+        .profile-card-data {
+            color: $active-color;
+            text-decoration: underline;
+        }
     }
 }
 

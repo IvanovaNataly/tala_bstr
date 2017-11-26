@@ -117,12 +117,12 @@
     }
 }
 
-@mixin transition($duration: 0.3s, $type: ease-out) {
-    -webkit-transition: all $duration $type;
-    -moz-transition: all $duration $type;
-    -ms-transition: all $duration $type;
-    -o-transition: all $duration $type;
-    transition: all $duration $type;
+@mixin transition($duration: 0.3s, $type: ease-out, $property: all) {
+    -webkit-transition: $property $duration $type;
+    -moz-transition: $property $duration $type;
+    -ms-transition: $property $duration $type;
+    -o-transition: $property $duration $type;
+    transition: $property $duration $type;
 }
 
 @mixin box-shadow($top: 0, $left: 2px, $blur: 5px, $spread: 0, $color: rgba(0,0,0,0.1),  $inset: false) {
