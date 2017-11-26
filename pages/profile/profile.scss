@@ -88,12 +88,19 @@
     @include box-shadow;
 
     &-line {
+        position: relative;
         &:not(:first-child) {
             padding-top: 20px;
         }
         &:not(:last-child) {
-            padding-bottom: 28px;
+            padding-bottom: 55px;
             border-bottom: 1px solid $border-color;
+        }
+        .field-full-edit {
+            color: $active-color;
+            position: absolute;
+            bottom: 30px;
+            left: 0;
         }
     }
 
@@ -104,8 +111,14 @@
     }
 
     &-list {
+        height: 124px;
+        overflow-y: hidden;
         @include flexbox;
         @include align-items(stretch);
+    }
+
+    .expanded {
+        height: auto;
     }
 
     &-item {
@@ -135,17 +148,8 @@
         margin-bottom: 10px;
     }
 
-    .last-item {
-        position: relative;
-        .field-fulledit {
-            color: $active-color;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
-        .profile-fields-data {
-            padding-bottom: 30px;
-        }
+    .profile-fields-line {
+
     }
 }
 

@@ -24,6 +24,11 @@ $(document).ready(function() {
         $(this).toggleClass('profile-card-expand profile-card-collapse');
     });
 
+    //profile fields area - expand and collapse lines in the table
+    $('.field-full-edit').on('click', function(event) {
+        $(this).closest('.profile-fields-line').find('.profile-fields-list').toggleClass('expanded');
+    });
+
     //toggle collapse instructions list on the left side
     $('.instructions').find('.flag').on('click', function(event) {
         var $this = $(this);
