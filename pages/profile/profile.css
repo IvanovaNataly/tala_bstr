@@ -456,6 +456,8 @@ body {
     .profile-card .editable .profile-card-data {
       color: #3a95c4;
       text-decoration: underline; }
+  .profile-card .profile-card-controls {
+    display: none; }
 
 .item-on-edit {
   border: 1px solid #3a95c4; }
@@ -474,10 +476,11 @@ body {
         height: 33px;
         line-height: 33px;
         border: none;
-        background-color: inherit; }
+        background-color: #ebf4f9; }
   .item-on-edit .status {
     display: none; }
   .item-on-edit .profile-card-controls {
+    display: block;
     width: 100%;
     margin-top: 20px;
     padding: 20px;
