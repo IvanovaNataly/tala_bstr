@@ -1,0 +1,231 @@
+//Ministry of Education-Tala
+@import 'colors';
+@import 'variables.scss';
+@import 'mixins';
+
+.modal-dialog {
+    width: $modal-width;
+    height: $modal-height;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.modal-content {
+    width: 100%;
+    height: 100%;
+    background-color: $modal-bg;
+    border: 1px solid $divider-color;
+    @include border-radius(0);
+    @include box-shadow(3.5px, 3.5px, 5px, 0, rgba(0, 0, 0, 0.14));
+}
+
+.modal-header {
+    height: $modal-header-height;
+    padding: 20px;
+    background-color: $light-color;
+    border-bottom: none;
+    @include box-shadow(0px, 2px, 5px, 0, rgba(0, 0, 0, 0.1));
+    .close {
+        float: left;
+        width: 37px;
+        height: 100%;
+        margin-left: 5px;
+        background-image: url('../../img/close_modal.png');
+        background-size: 37px;
+        background-repeat: no-repeat;
+        background-position-y: center;
+    }
+}
+
+.modal-subtitle {
+    font-size: $font-size + 2px;
+    color: $font-light;
+}
+
+.modal-title {
+    font-size: $font-size + 14px;
+    color: $active-color;
+    line-height: unset;
+}
+
+.modal-field-title {
+    font-size: $font-size + 8px;
+    color: $active-color;
+    margin-bottom: 13px;
+}
+
+.modal {
+    &-body {
+        padding: $modal-main-padding;
+    }
+    &-main {
+        height: $modal-main-height;
+        padding-right: 0;
+        padding-left: 0;
+        position: relative;
+        &-form {
+            height: 100%;
+        }
+        .row {
+            height: calc(100% - 60px - 20px);
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+    &-side {
+        height: $modal-main-height;
+        border-right: 1px solid $border-color;
+    }
+    &-field {
+        height: 100%;
+        padding-right: 0;
+        padding-left: 20px;
+        box-sizing: border-box;
+
+        &-wrapper {
+            height: 100%;
+            padding: 24px 20px;
+            background-color: $light-color;
+            @include box-shadow;
+        }
+
+        &-text {
+            display: block;
+            width: 100%;
+            height: calc(100% - 13px - 20px);
+            padding: 18px 15px;
+            border: 1px solid $border-color;
+        }
+    }
+    &-button-wrapper {
+        position: absolute;
+        bottom: 0;
+        .btn-save {
+            font-size: $font-size + 9px;
+            color: $light-color;
+            width: 200px;
+            height: 60px;
+            margin-left: 20px;
+            background-color: $active-color;
+            opacity: 0.7;
+            @include box-shadow;
+        }
+
+        .btn-cancel {
+            color: $font-light;
+            height: 60px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    }
+}
+
+.modal-side {
+    padding-top: 24px;
+    padding-right: 18px;
+    padding-left: 0;
+    overflow-y: auto;
+    .modal-field-title {
+        margin-bottom: 10px;
+    }
+    &-item {
+        padding-top: 20px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid $border-color;
+        &:first-child {
+            padding-top: 0;
+        }
+        &-title {
+            font-size: $font-size + 2px;
+            font-weight: 600;
+            color: $font-light;
+            margin-bottom: 10px;
+        }
+        &-data {
+            margin-bottom: 8px;
+            color: $font-light;
+            overflow: hidden;
+        }
+        &-expand,
+        &-collapse {
+            color: $active-color;
+        }
+    }
+    .collapsed {
+        height: 0;
+        opacity: 0;
+        @include transition(0.8s);
+    }
+
+    .expanded {
+        height: 65px;
+        opacity: 1;
+        @include transition(0.8s);
+    }
+}
+
+.modal-result {
+    width: $result-modal-width;
+    height: $result-modal-height;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    .modal-content {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        background-color: $modal-bg;
+        border: 1px solid $divider-color;
+        @include border-radius(0);
+        @include box-shadow(3.5px, 3.5px, 5px, 0, rgba(0, 0, 0, 0.14));
+        overflow: hidden;
+    }
+
+    .modal-body {
+        padding-top: 48px;
+        padding-bottom: 30px;
+    }
+
+    &-indication {
+        margin-bottom: 15px;
+    }
+
+    &-field{
+        font-size: $font-size + 14px;
+        color: $font-light;
+        line-height: 37px;
+    }
+
+    &-message {
+        font-size: $font-size + 14px;
+        color: $modal-success;
+        line-height: 37px;
+    }
+
+    &-link {
+        display: block;
+        margin-top: 29px;
+
+        a {
+            font-size: $font-size + 2px;
+            color: $active-color;
+            border-bottom: 1px solid transparent;
+            &:hover {
+                border-bottom: 1px solid $active-color;
+            }
+        }
+    }
+}
+
+
+
