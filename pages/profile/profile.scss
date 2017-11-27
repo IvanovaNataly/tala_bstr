@@ -104,14 +104,16 @@
     }
 
     &-list {
-        height: 124px;
+        max-height: 124px;
         overflow-y: hidden;
         @include flexbox;
         @include align-items(stretch);
+        @include transition(1s, linear);
     }
 
     .expanded {
-        height: auto;
+        height: 400auto;
+        max-height: 300px;
     }
 
     &-item {

@@ -176,10 +176,9 @@ body {
   .header-navigation {
     float: left; }
     .header-navigation-item {
-      font-weight: 600;
+      float: right;
       height: 33px;
-      line-height: 31px;
-      float: right; }
+      line-height: 31px; }
       .header-navigation-item:hover {
         cursor: pointer; }
       .header-navigation-item:not(:last-child):after {
@@ -215,8 +214,6 @@ body {
     height: 100%;
     margin-left: 3px;
     background-color: #e5ebf1;
-    background-image: url("../../img/home.png");
-    background-position: center center;
     border: none; }
   .header-filters-list {
     font-size: 17px px;
@@ -408,17 +405,7 @@ body {
   .profile-card-expand, .profile-card-collapse {
     font-size: 12px;
     color: #3a95c4;
-    height: 15px;
-    line-height: 15px;
-    margin-top: 15px;
-    padding-right: 24px;
-    background-size: 15px;
-    background-repeat: no-repeat;
-    background-position: right center; }
-  .profile-card-expand {
-    background-image: url("../../img/show_more.png"); }
-  .profile-card-collapse {
-    background-image: url("../../img/show_less.png"); }
+    margin-top: 15px; }
   .profile-card-list {
     margin-right: 20px;
     margin-left: 20px;
@@ -605,8 +592,7 @@ body {
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg); }
+        -o-transform: rotate(45deg); }
   .status .completed {
     color: #ffffff;
     background-color: #b8d592; }

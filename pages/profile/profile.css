@@ -1024,7 +1024,7 @@ body {
     color: #3a95c4;
     margin-bottom: 18px; }
   .profile-fields-list {
-    height: 124px;
+    max-height: 124px;
     overflow-y: hidden;
     display: -webkit-box;
     display: -webkit-flex;
@@ -1035,9 +1035,15 @@ body {
     -ms-flex-align: stretch;
     -webkit-align-items: stretch;
     -moz-align-items: stretch;
-    align-items: stretch; }
+    align-items: stretch;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear; }
   .profile-fields .expanded {
-    height: auto; }
+    height: 400auto;
+    max-height: 300px; }
   .profile-fields-item {
     display: inline-block;
     width: calc(100% / 3);
