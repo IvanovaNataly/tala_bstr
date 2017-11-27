@@ -130,7 +130,17 @@
       color: #74818a;
       overflow: hidden; }
     .modal-side-item-expand, .modal-side-item-collapse {
-      color: #3a95c4; }
+      color: #3a95c4;
+      height: 17px;
+      line-height: 17px;
+      padding-right: 17px;
+      background-size: 17px;
+      background-repeat: no-repeat;
+      background-position: right center; }
+    .modal-side-item-expand {
+      background-image: url("../../img/show_more.png"); }
+    .modal-side-item-collapse {
+      background-image: url("../../img/show_less.png"); }
   .modal-side .collapsed {
     height: 0;
     opacity: 0;

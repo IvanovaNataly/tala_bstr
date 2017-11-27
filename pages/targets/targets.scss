@@ -1,0 +1,89 @@
+//Ministry of Education -Tala
+
+@import '../../styles/main';
+@import '../../styles/modal';
+
+@mixin target($color: $green) {
+    .profile-target-head {
+        @include flexbox;
+        @include align-items(flex-end);
+    }
+    .profile-target-title {
+        width: calc(100% / 3);
+        flex-basis:  calc(100% / 3);
+        &-number {
+            color: $color;
+            font-weight: 600;
+        }
+        &-name {
+            font-size: $font-size + 8px;
+            color: $font-light;
+        }
+    }
+    .target-summary {
+        color: $color;
+        font-weight: 600;
+    }
+
+    .profile-target-add {
+        color: $color;
+        padding-top: 15px;
+    }
+
+    //table
+    .target-calendar {
+        margin-top: 20px;
+        &-line {
+            @include flexbox;
+            @include flex-wrap(no-wrap);
+            @include justify-content(flex-start);
+        }
+
+        &-cell:not(.line-header) {
+            width: 60px;
+            height: 60px;
+            border: 1px solid $border-color;
+        }
+
+        .line-header {
+            text-align: center;
+            color: $color;
+            font-weight: 600;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+        }
+
+        .filled {
+            border: none;
+            background-color: $color;
+        }
+
+        &-month {
+            text-align: center;
+            color: $font-light;
+            width: 60px;
+            height: 30px;
+            line-height: 30px;
+        }
+    }
+}
+
+.profile-target.green{
+    @include target($green);
+}
+.profile-target.crimson{
+    @include target($crimson);
+}
+.profile-target.yellow{
+    @include target($yellow);
+}
+
+.profile-new-target {
+    width: 138px;
+    height: 40px;
+    line-height: 40px;
+    color: $font-light;
+    margin-top: 24px;
+    background-color: $border-color;
+}

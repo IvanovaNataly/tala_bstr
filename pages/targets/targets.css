@@ -915,220 +915,204 @@ body {
       .modal-result-link a:hover {
         border-bottom: 1px solid #3a95c4; }
 
-.top {
-  height: 20px;
-  border: 1px solid #e2e2e2; }
-
-.profile-list {
+.profile-target.green .profile-target-head {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  justify-content: space-between; }
-  .profile-list .profile-item {
-    text-align: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  align-items: flex-end; }
+.profile-target.green .profile-target-title {
+  width: calc(100% / 3);
+  flex-basis: calc(100% / 3); }
+  .profile-target.green .profile-target-title-number {
+    color: #84b750;
+    font-weight: 600; }
+  .profile-target.green .profile-target-title-name {
     font-size: 24px;
-    width: 256px;
-    height: 120px;
-    margin-bottom: 20px;
-    border: 1px solid #e2e2e2; }
-    .profile-list .profile-item:hover {
-      border-bottom: #3a95c4; }
-      .profile-list .profile-item:hover .profile-item-link {
-        color: #3a95c4; }
-      .profile-list .profile-item:hover .profile-item-border {
-        height: 3px;
-        background-color: #3a95c4; }
-    .profile-list .profile-item-link {
-      color: #74818a;
-      height: 100%;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-direction: normal;
-      -webkit-box-orient: vertical;
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-      justify-content: space-between;
-      position: relative; }
-      .profile-list .profile-item-link:hover {
-        text-decoration: none; }
-      .profile-list .profile-item-link:focus {
-        outline: none;
-        text-decoration: none; }
-    .profile-list .profile-item-title {
-      -webkit-box-flex: 1;
-      -webkit-flex-grow: 1;
-      -moz-flex-grow: 1;
-      -ms-flex-positive: 1;
-      flex-grow: 1;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-direction: normal;
-      -webkit-box-orient: vertical;
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      -moz-justify-content: center;
-      justify-content: center; }
-    .profile-list .profile-item-border {
-      height: 2px;
-      background-color: transparent; }
-    .profile-list .profile-item-completed {
-      display: none; }
-  .profile-list .profile-item.completed {
-    border: 1px solid #3a95c4; }
-    .profile-list .profile-item.completed .profile-item-completed {
-      display: block;
-      width: 20px;
-      height: 20px;
-      background-color: #3a95c4;
-      border-radius: 50%;
-      background-image: url("../../img/success.png");
-      background-repeat: no-repeat;
-      background-position: center center;
-      position: absolute;
-      top: 10px;
-      right: 10px; }
-
-.profile-fields {
-  padding: 25px 20px;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1); }
-  .profile-fields-line:not(:first-child) {
-    padding-top: 20px; }
-  .profile-fields-line:not(:last-child) {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #e2e2e2; }
-  .profile-fields .profile-item-title {
-    font-size: 24px;
-    color: #3a95c4;
-    margin-bottom: 18px; }
-  .profile-fields-list {
-    max-height: 124px;
-    overflow-y: hidden;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    -webkit-align-items: stretch;
-    -moz-align-items: stretch;
-    align-items: stretch;
-    -webkit-transition: all 1s linear;
-    -moz-transition: all 1s linear;
-    -ms-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear; }
-  .profile-fields .expanded {
-    height: 400auto;
-    max-height: 300px; }
-  .profile-fields-item {
-    display: inline-block;
-    width: calc(100% / 3);
-    padding-left: 30px;
-    vertical-align: top; }
-  .profile-fields .first-item {
     color: #74818a; }
-  .profile-fields-buttons {
-    margin-top: 20px;
+.profile-target.green .target-summary {
+  color: #84b750;
+  font-weight: 600; }
+.profile-target.green .profile-target-add {
+  color: #84b750;
+  padding-top: 15px; }
+.profile-target.green .target-calendar {
+  margin-top: 20px; }
+  .profile-target.green .target-calendar-line {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    justify-content: space-between; }
-    .profile-fields-buttons-right {
-      color: #74818a;
-      width: calc(100% / 3 - 30px);
-      display: -webkit-inline-box;
-      display: -webkit-inline-flex;
-      display: -moz-inline-flex;
-      display: -ms-inline-flexbox;
-      display: inline-flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-      justify-content: space-between; }
-    .profile-fields-buttons-left {
-      display: inline-block;
-      text-align: left;
-      width: calc(100% / 3 * 2);
-      color: #3a95c4; }
-  .profile-fields-full {
-    padding-left: 24px;
-    position: relative;
-    overflow: hidden; }
-    .profile-fields-full:before {
-      content: "";
-      width: 20px;
-      height: 20px;
-      background-size: 20px 20px;
-      background: url("../../img/arrow.png") 0 0 no-repeat;
-      background-position: center center;
-      -webkit-transform: rotate(90deg);
-      -moz-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-      -o-transform: rotate(90deg);
-      transform: rotate(90deg);
-      position: absolute;
-      top: 0;
-      left: 0; }
-  .profile-fields .full-up:before {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg); }
-  .profile-fields-edit {
-    padding-right: 15px;
-    background-image: url("../../img/edit.png");
-    background-size: 13px;
-    background-repeat: no-repeat;
-    background-position: right center; }
-  .profile-fields-remove {
-    padding-right: 15px;
-    background-image: url("../../img/remove.png");
-    background-size: 13px;
-    background-repeat: no-repeat;
-    background-position: right center; }
-  .profile-fields-title {
-    font-size: 18px;
+    -webkit-flex-wrap: no-wrap;
+    -moz-flex-wrap: no-wrap;
+    -ms-flex-wrap: no-wrap;
+    flex-wrap: no-wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    justify-content: flex-start; }
+  .profile-target.green .target-calendar-cell:not(.line-header) {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #e2e2e2; }
+  .profile-target.green .target-calendar .line-header {
+    text-align: center;
+    color: #84b750;
     font-weight: 600;
+    width: 60px;
+    height: 60px;
+    line-height: 60px; }
+  .profile-target.green .target-calendar .filled {
+    border: none;
+    background-color: #84b750; }
+  .profile-target.green .target-calendar-month {
+    text-align: center;
     color: #74818a;
-    margin-bottom: 10px; }
+    width: 60px;
+    height: 30px;
+    line-height: 30px; }
 
-/*# sourceMappingURL=profile.css.map */
+.profile-target.crimson .profile-target-head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  align-items: flex-end; }
+.profile-target.crimson .profile-target-title {
+  width: calc(100% / 3);
+  flex-basis: calc(100% / 3); }
+  .profile-target.crimson .profile-target-title-number {
+    color: #ba6485;
+    font-weight: 600; }
+  .profile-target.crimson .profile-target-title-name {
+    font-size: 24px;
+    color: #74818a; }
+.profile-target.crimson .target-summary {
+  color: #ba6485;
+  font-weight: 600; }
+.profile-target.crimson .profile-target-add {
+  color: #ba6485;
+  padding-top: 15px; }
+.profile-target.crimson .target-calendar {
+  margin-top: 20px; }
+  .profile-target.crimson .target-calendar-line {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: no-wrap;
+    -moz-flex-wrap: no-wrap;
+    -ms-flex-wrap: no-wrap;
+    flex-wrap: no-wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    justify-content: flex-start; }
+  .profile-target.crimson .target-calendar-cell:not(.line-header) {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #e2e2e2; }
+  .profile-target.crimson .target-calendar .line-header {
+    text-align: center;
+    color: #ba6485;
+    font-weight: 600;
+    width: 60px;
+    height: 60px;
+    line-height: 60px; }
+  .profile-target.crimson .target-calendar .filled {
+    border: none;
+    background-color: #ba6485; }
+  .profile-target.crimson .target-calendar-month {
+    text-align: center;
+    color: #74818a;
+    width: 60px;
+    height: 30px;
+    line-height: 30px; }
+
+.profile-target.yellow .profile-target-head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  align-items: flex-end; }
+.profile-target.yellow .profile-target-title {
+  width: calc(100% / 3);
+  flex-basis: calc(100% / 3); }
+  .profile-target.yellow .profile-target-title-number {
+    color: #d49e32;
+    font-weight: 600; }
+  .profile-target.yellow .profile-target-title-name {
+    font-size: 24px;
+    color: #74818a; }
+.profile-target.yellow .target-summary {
+  color: #d49e32;
+  font-weight: 600; }
+.profile-target.yellow .profile-target-add {
+  color: #d49e32;
+  padding-top: 15px; }
+.profile-target.yellow .target-calendar {
+  margin-top: 20px; }
+  .profile-target.yellow .target-calendar-line {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: no-wrap;
+    -moz-flex-wrap: no-wrap;
+    -ms-flex-wrap: no-wrap;
+    flex-wrap: no-wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    justify-content: flex-start; }
+  .profile-target.yellow .target-calendar-cell:not(.line-header) {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #e2e2e2; }
+  .profile-target.yellow .target-calendar .line-header {
+    text-align: center;
+    color: #d49e32;
+    font-weight: 600;
+    width: 60px;
+    height: 60px;
+    line-height: 60px; }
+  .profile-target.yellow .target-calendar .filled {
+    border: none;
+    background-color: #d49e32; }
+  .profile-target.yellow .target-calendar-month {
+    text-align: center;
+    color: #74818a;
+    width: 60px;
+    height: 30px;
+    line-height: 30px; }
+
+.profile-new-target {
+  width: 138px;
+  height: 40px;
+  line-height: 40px;
+  color: #74818a;
+  margin-top: 24px;
+  background-color: #e2e2e2; }
+
+/*# sourceMappingURL=targets.css.map */

@@ -160,13 +160,19 @@ body {
   display: inline-block;
   color: #74818a; }
 
+.content {
+  padding-top: 160px; }
+
 .header {
   width: 100%;
   height: 130px;
   margin-bottom: 30px;
   padding-top: 8px;
   padding-bottom: 10px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 900; }
   .header .wrapper {
     position: relative; }
   .header .logo {
@@ -176,9 +182,10 @@ body {
   .header-navigation {
     float: left; }
     .header-navigation-item {
-      float: right;
+      font-weight: 600;
       height: 33px;
-      line-height: 31px; }
+      line-height: 31px;
+      float: right; }
       .header-navigation-item:hover {
         cursor: pointer; }
       .header-navigation-item:not(:last-child):after {
@@ -214,6 +221,8 @@ body {
     height: 100%;
     margin-left: 3px;
     background-color: #e5ebf1;
+    background-image: url("../../img/home.png");
+    background-position: center center;
     border: none; }
   .header-filters-list {
     font-size: 17px px;
@@ -361,6 +370,7 @@ body {
 
 .title {
   font-size: 30px;
+  font-weight: 300;
   margin-bottom: 20px;
   padding-bottom: 19px;
   border-bottom: 1px solid #e2e2e2; }
@@ -405,7 +415,17 @@ body {
   .profile-card-expand, .profile-card-collapse {
     font-size: 12px;
     color: #3a95c4;
-    margin-top: 15px; }
+    height: 15px;
+    line-height: 15px;
+    margin-top: 15px;
+    padding-right: 24px;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: right center; }
+  .profile-card-expand {
+    background-image: url("../../img/show_more.png"); }
+  .profile-card-collapse {
+    background-image: url("../../img/show_less.png"); }
   .profile-card-list {
     margin-right: 20px;
     margin-left: 20px;
@@ -592,7 +612,8 @@ body {
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
-        -o-transform: rotate(45deg); }
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg); }
   .status .completed {
     color: #ffffff;
     background-color: #b8d592; }
