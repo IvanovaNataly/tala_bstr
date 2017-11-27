@@ -78,10 +78,10 @@
                     <dd class="profile-card-data">33266889</dd>
                 </dl>
 
-                <button class="profile-card-expand">עוד פרטים אישיים</button>
+                <button class="profile-card-expand" aria-expanded="false" aria-controls="studentDetails">עוד פרטים אישיים</button>
             </div>
 
-            <ul class="profile-card-list collapsed">
+            <ul id="studentDetails" class="profile-card-list collapsed">
                 <li class="profile-card-list-item">
                     <dl>
                         <dt class="profile-card-title">גיל:</dt>
@@ -303,21 +303,22 @@
                 <li class="profile-fields-line">
                     <h4 class="profile-item-title">לימודי</h4>
 
-                    <ul class="profile-fields-list">
+                    <ul id="line1" class="profile-fields-list">
 
                         <li class="profile-fields-item first-item">
                             <time class="profile-fields-date">20 ביולי 2017 כ"ז בתמוז תשע"ז 10:31</time>
                             <p class="profile-fields-tutor">ישראל כהן, מחנך הכיתה</p>
-                            <div class="profile-fields-button-wrapper">
-                                <button class="btn-edit">עריכה</button>
-                                <button class="btn-remove">מחיקה</button>
-                            </div>
                         </li>
 
                         <li class="profile-fields-item">
                             <dl>
                                 <dt class="profile-fields-title">מוקדי כוח</dt>
                                 <dd class="profile-fields-data">
+                                    <p>שטף ודיוק בקריאה</p>
+                                    <p>הפקת משמעות ברמה הגלויה</p>
+                                    <p>הפקת משמעות ברמה הסמויה</p>
+                                    <p>הבנת הוראות כתובות</p>
+                                    <p>הבעה בכתב- כתיבת סיכום, תמצית, תשובה מלאה, חיבור.</p>
                                     <p>שטף ודיוק בקריאה</p>
                                     <p>הפקת משמעות ברמה הגלויה</p>
                                     <p>הפקת משמעות ברמה הסמויה</p>
@@ -334,32 +335,46 @@
                                     <p>הבנת הראות בעל פה</p>
                                     <p>פיתוח שאלה</p>
                                     <p>הבעה בעל פה</p>
+                                    <p>שטף ודיוק בקריאה</p>
+                                    <p>הפקת משמעות ברמה הגלויה</p>
+                                    <p>הפקת משמעות ברמה הסמויה</p>
+                                    <p>הבנת הוראות כתובות</p>
+                                    <p>הבעה בכתב- כתיבת סיכום, תמצית, תשובה מלאה, חיבור.</p>
                                 </dd>
                             </dl>
-                            <a href="" class="field-fulledit">להערכה המלאה</a>
                         </li>
-                    </ul>
+                     </ul>
+                    <div class="profile-fields-buttons">
+                        <div class="profile-fields-buttons-right">
+                            <button class="profile-fields-edit">עריכה</button>
+                            <button class="profile-fields-remove">מחיקה</button>
+                        </div>
+                        <div class="profile-fields-buttons-left">
+                            <button class="profile-fields-full" aria-expanded="false" aria-controls="line1">להערכה המלאה</button>
+                        </div>
+                    </div>
                 </li>
 
                 <!--line in the table-->
                 <li class="profile-fields-line">
                     <h4 class="profile-item-title">לימודי</h4>
 
-                    <ul class="profile-fields-list">
+                    <ul id="line2" class="profile-fields-list">
 
                         <li class="profile-fields-item first-item">
                             <time class="profile-fields-date">20 ביולי 2017 כ"ז בתמוז תשע"ז 10:31</time>
                             <p class="profile-fields-tutor">ישראל כהן, מחנך הכיתה</p>
-                            <div class="profile-fields-button-wrapper">
-                                <button class="profile-fields-edit">עריכה</button>
-                                <button class="profile-fields-remove">מחיקה</button>
-                            </div>
                         </li>
 
                         <li class="profile-fields-item">
                             <dl>
                                 <dt class="profile-fields-title">מוקדי כוח</dt>
                                 <dd class="profile-fields-data">
+                                    <p>שטף ודיוק בקריאה</p>
+                                    <p>הפקת משמעות ברמה הגלויה</p>
+                                    <p>הפקת משמעות ברמה הסמויה</p>
+                                    <p>הבנת הוראות כתובות</p>
+                                    <p>הבעה בכתב- כתיבת סיכום, תמצית, תשובה מלאה, חיבור.</p>
                                     <p>שטף ודיוק בקריאה</p>
                                     <p>הפקת משמעות ברמה הגלויה</p>
                                     <p>הפקת משמעות ברמה הסמויה</p>
@@ -376,32 +391,46 @@
                                     <p>הבנת הראות בעל פה</p>
                                     <p>פיתוח שאלה</p>
                                     <p>הבעה בעל פה</p>
+                                    <p>שטף ודיוק בקריאה</p>
+                                    <p>הפקת משמעות ברמה הגלויה</p>
+                                    <p>הפקת משמעות ברמה הסמויה</p>
+                                    <p>הבנת הוראות כתובות</p>
+                                    <p>הבעה בכתב- כתיבת סיכום, תמצית, תשובה מלאה, חיבור.</p>
                                 </dd>
                             </dl>
-                            <a href="" class="field-fulledit">להערכה המלאה</a>
                         </li>
                     </ul>
+                    <div class="profile-fields-buttons">
+                        <div class="profile-fields-buttons-right">
+                            <button class="profile-fields-edit">עריכה</button>
+                            <button class="profile-fields-remove">מחיקה</button>
+                        </div>
+                        <div class="profile-fields-buttons-left">
+                            <button class="profile-fields-full" aria-expanded="false" aria-controls="line2">להערכה המלאה</button>
+                        </div>
+                    </div>
                 </li>
 
                 <!--line in the table-->
                 <li class="profile-fields-line">
                     <h4 class="profile-item-title">לימודי</h4>
 
-                    <ul class="profile-fields-list">
+                    <ul id="line3" class="profile-fields-list">
 
                         <li class="profile-fields-item first-item">
                             <time class="profile-fields-date">20 ביולי 2017 כ"ז בתמוז תשע"ז 10:31</time>
                             <p class="profile-fields-tutor">ישראל כהן, מחנך הכיתה</p>
-                            <div class="profile-fields-button-wrapper">
-                                <button class="profile-fields-edit">עריכה</button>
-                                <button class="profile-fields-remove">מחיקה</button>
-                            </div>
                         </li>
 
                         <li class="profile-fields-item">
                             <dl>
                                 <dt class="profile-fields-title">מוקדי כוח</dt>
                                 <dd class="profile-fields-data">
+                                    <p>שטף ודיוק בקריאה</p>
+                                    <p>הפקת משמעות ברמה הגלויה</p>
+                                    <p>הפקת משמעות ברמה הסמויה</p>
+                                    <p>הבנת הוראות כתובות</p>
+                                    <p>הבעה בכתב- כתיבת סיכום, תמצית, תשובה מלאה, חיבור.</p>
                                     <p>שטף ודיוק בקריאה</p>
                                     <p>הפקת משמעות ברמה הגלויה</p>
                                     <p>הפקת משמעות ברמה הסמויה</p>
@@ -418,11 +447,24 @@
                                     <p>הבנת הראות בעל פה</p>
                                     <p>פיתוח שאלה</p>
                                     <p>הבעה בעל פה</p>
+                                    <p>שטף ודיוק בקריאה</p>
+                                    <p>הפקת משמעות ברמה הגלויה</p>
+                                    <p>הפקת משמעות ברמה הסמויה</p>
+                                    <p>הבנת הוראות כתובות</p>
+                                    <p>הבעה בכתב- כתיבת סיכום, תמצית, תשובה מלאה, חיבור.</p>
                                 </dd>
                             </dl>
-                            <a href="" class="field-fulledit">להערכה המלאה</a>
                         </li>
                     </ul>
+                    <div class="profile-fields-buttons">
+                        <div class="profile-fields-buttons-right">
+                            <button class="profile-fields-edit">עריכה</button>
+                            <button class="profile-fields-remove">מחיקה</button>
+                        </div>
+                        <div class="profile-fields-buttons-left">
+                            <button class="profile-fields-full" aria-expanded="false" aria-controls="line3">להערכה המלאה</button>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </section>
@@ -501,7 +543,7 @@
 <!--Side instructions-->
 <article class="instructions" id="insrtuctions">
     <!--Flag-->
-    <button class="flag ready-to-open" type="button" aria-expanded="false" aria-controls="insrtuctions">דגשים<br/>לכתיבת<br/>פרופיל<br/></button>
+    <button class="flag ready-to-open" type="button" aria-expanded="false" aria-controls="instructions">דגשים<br/>לכתיבת<br/>פרופיל<br/></button>
 
     <!--Instructions list-->
     <ul class="instructions-list">

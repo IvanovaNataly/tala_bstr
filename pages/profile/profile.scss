@@ -88,19 +88,12 @@
     @include box-shadow;
 
     &-line {
-        position: relative;
         &:not(:first-child) {
             padding-top: 20px;
         }
         &:not(:last-child) {
-            padding-bottom: 55px;
+            padding-bottom: 20px;
             border-bottom: 1px solid $border-color;
-        }
-        .field-full-edit {
-            color: $active-color;
-            position: absolute;
-            bottom: 30px;
-            left: 0;
         }
     }
 
@@ -130,15 +123,24 @@
 
     .first-item {
         color: $font-light;
-        position: relative;
     }
 
-    &-button-wrapper {
-        width: calc(100% - 30px);
+    &-buttons {
+        margin-top: 20px;
         @include flexbox;
         @include justify-content;
-        position: absolute;
-        bottom: 0;
+        &-right {
+            color: $font-light;
+            width: calc(100% / 3 - 30px);
+            @include inline-flex;
+            @include justify-content;
+        }
+        &-left {
+            display: inline-block;
+            text-align: left;
+            width: calc(100% / 3 * 2);
+            color: $active-color;
+        }
     }
 
     &-title {
@@ -146,10 +148,6 @@
         font-weight: 600;
         color: $font-light;
         margin-bottom: 10px;
-    }
-
-    .profile-fields-line {
-
     }
 }
 

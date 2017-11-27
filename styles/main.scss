@@ -636,6 +636,7 @@ body {
         position: absolute;
         right: -87px;
         @include box-shadow;
+        @include border-radius(0);
     }
     .ready-to-open {
         background-color: $contrast-color;

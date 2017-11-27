@@ -667,7 +667,10 @@ body {
     right: -87px;
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1); }
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0; }
   .instructions .ready-to-open {
     background-color: #f7ba45; }
   .instructions-list {
@@ -987,18 +990,11 @@ body {
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1); }
-  .profile-fields-line {
-    position: relative; }
-    .profile-fields-line:not(:first-child) {
-      padding-top: 20px; }
-    .profile-fields-line:not(:last-child) {
-      padding-bottom: 55px;
-      border-bottom: 1px solid #e2e2e2; }
-    .profile-fields-line .field-full-edit {
-      color: #3a95c4;
-      position: absolute;
-      bottom: 30px;
-      left: 0; }
+  .profile-fields-line:not(:first-child) {
+    padding-top: 20px; }
+  .profile-fields-line:not(:last-child) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e2e2; }
   .profile-fields .profile-item-title {
     font-size: 24px;
     color: #3a95c4;
@@ -1024,10 +1020,9 @@ body {
     padding-left: 30px;
     vertical-align: top; }
   .profile-fields .first-item {
-    color: #74818a;
-    position: relative; }
-  .profile-fields-button-wrapper {
-    width: calc(100% - 30px);
+    color: #74818a; }
+  .profile-fields-buttons {
+    margin-top: 20px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
@@ -1037,9 +1032,25 @@ body {
     -ms-flex-pack: justify;
     -webkit-justify-content: space-between;
     -moz-justify-content: space-between;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0; }
+    justify-content: space-between; }
+    .profile-fields-buttons-right {
+      color: #74818a;
+      width: calc(100% / 3 - 30px);
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -moz-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      justify-content: space-between; }
+    .profile-fields-buttons-left {
+      display: inline-block;
+      text-align: left;
+      width: calc(100% / 3 * 2);
+      color: #3a95c4; }
   .profile-fields-title {
     font-size: 18px;
     font-weight: 600;

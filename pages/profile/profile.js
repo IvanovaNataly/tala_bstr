@@ -14,18 +14,27 @@ $(document).ready(function() {
 
     //modal side bar expand and collapse
 	$('.modal-side-item-expand').on('click', function(event) {
+		$(this).attr('aria-expanded', function(_, attr){
+			return !(attr == 'true')
+		});
         $(this).parent().find('.collapsed, .expanded').toggleClass('collapsed').toggleClass('expanded');
         $(this).toggleClass('modal-side-item-expand modal-side-item-collapse');
     });
 
 	//right sidebar profile card - expand and collapse students details
     $('.profile-card-expand').on('click', function(event) {
+		$(this).attr('aria-expanded', function(_, attr){
+			return !(attr == 'true')
+		});
         $(this).closest('.profile-card').find('.collapsed, .expanded').toggleClass('collapsed').toggleClass('expanded');
         $(this).toggleClass('profile-card-expand profile-card-collapse');
     });
 
     //profile fields area - expand and collapse lines in the table
-    $('.field-full-edit').on('click', function(event) {
+    $('.profile-fields-full').on('click', function(event) {
+		$(this).attr('aria-expanded', function(_, attr){
+			return !(attr == 'true')
+		});
         $(this).closest('.profile-fields-line').find('.profile-fields-list').toggleClass('expanded');
     });
 
