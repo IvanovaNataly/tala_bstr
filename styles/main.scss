@@ -125,6 +125,10 @@ body {
     color: $font-light;
 }
 
+.content {
+    padding-top: 160px;
+}
+
 //header
 .header {
     width: 100%;
@@ -133,6 +137,9 @@ body {
     padding-top: 8px;
     padding-bottom: 10px;
     background-color: $light-color;
+    position: fixed;
+    top: 0;
+    z-index: 900;
     .wrapper {
         position: relative;
     }
