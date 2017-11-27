@@ -146,9 +146,10 @@ body {
     &-navigation {
         float: left;
         &-item {
-            float: right;
+            font-weight: 600;
             height: 33px;
             line-height: 31px;
+            float: right;
             @include navigationDivider;
         }
     }

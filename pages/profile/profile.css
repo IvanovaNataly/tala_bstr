@@ -176,9 +176,10 @@ body {
   .header-navigation {
     float: left; }
     .header-navigation-item {
-      float: right;
+      font-weight: 600;
       height: 33px;
-      line-height: 31px; }
+      line-height: 31px;
+      float: right; }
       .header-navigation-item:hover {
         cursor: pointer; }
       .header-navigation-item:not(:last-child):after {
