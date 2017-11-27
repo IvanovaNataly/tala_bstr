@@ -154,6 +154,20 @@
         &-expand,
         &-collapse {
             color: $active-color;
+            height: 17px;
+            line-height: 17px;
+            padding-right: 17px;
+            background-size: 17px;
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+
+        &-expand {
+            background-image: url('../../img/show_more.png');
+        }
+
+        &-collapse {
+            background-image: url('../../img/show_less.png');
         }
     }
     .collapsed {

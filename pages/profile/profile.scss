@@ -143,6 +143,44 @@
         }
     }
 
+    &-full {
+        padding-left: 24px;
+        position: relative;
+        overflow: hidden;
+        &:before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-size: 20px 20px;
+            background: url('../../img/arrow.png') 0 0 no-repeat;
+            background-position: center center;
+            @include transform(90deg);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .full-up:before {
+        @include transform(180deg);
+    }
+
+    &-edit {
+        padding-right: 15px;
+        background-image: url('../../img/edit.png');
+        background-size: 13px;
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+
+    &-remove {
+        padding-right: 15px;
+        background-image: url('../../img/remove.png');
+        background-size: 13px;
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+
     &-title {
         font-size: $font-size + 2px;
         font-weight: 600;

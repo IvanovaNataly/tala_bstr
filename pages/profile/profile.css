@@ -214,6 +214,8 @@ body {
     height: 100%;
     margin-left: 3px;
     background-color: #e5ebf1;
+    background-image: url("../../img/home.png");
+    background-position: center center;
     border: none; }
   .header-filters-list {
     font-size: 17px px;
@@ -405,7 +407,17 @@ body {
   .profile-card-expand, .profile-card-collapse {
     font-size: 12px;
     color: #3a95c4;
-    margin-top: 15px; }
+    height: 15px;
+    line-height: 15px;
+    margin-top: 15px;
+    padding-right: 24px;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: right center; }
+  .profile-card-expand {
+    background-image: url("../../img/show_more.png"); }
+  .profile-card-collapse {
+    background-image: url("../../img/show_less.png"); }
   .profile-card-list {
     margin-right: 20px;
     margin-left: 20px;
@@ -592,7 +604,8 @@ body {
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
-        -o-transform: rotate(45deg); }
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg); }
   .status .completed {
     color: #ffffff;
     background-color: #b8d592; }
@@ -820,7 +833,17 @@ body {
       color: #74818a;
       overflow: hidden; }
     .modal-side-item-expand, .modal-side-item-collapse {
-      color: #3a95c4; }
+      color: #3a95c4;
+      height: 17px;
+      line-height: 17px;
+      padding-right: 17px;
+      background-size: 17px;
+      background-repeat: no-repeat;
+      background-position: right center; }
+    .modal-side-item-expand {
+      background-image: url("../../img/show_more.png"); }
+    .modal-side-item-collapse {
+      background-image: url("../../img/show_less.png"); }
   .modal-side .collapsed {
     height: 0;
     opacity: 0;
@@ -1051,6 +1074,43 @@ body {
       text-align: left;
       width: calc(100% / 3 * 2);
       color: #3a95c4; }
+  .profile-fields-full {
+    padding-left: 24px;
+    position: relative;
+    overflow: hidden; }
+    .profile-fields-full:before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+      background: url("../../img/arrow.png") 0 0 no-repeat;
+      background-position: center center;
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+      position: absolute;
+      top: 0;
+      left: 0; }
+  .profile-fields .full-up:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .profile-fields-edit {
+    padding-right: 15px;
+    background-image: url("../../img/edit.png");
+    background-size: 13px;
+    background-repeat: no-repeat;
+    background-position: right center; }
+  .profile-fields-remove {
+    padding-right: 15px;
+    background-image: url("../../img/remove.png");
+    background-size: 13px;
+    background-repeat: no-repeat;
+    background-position: right center; }
   .profile-fields-title {
     font-size: 18px;
     font-weight: 600;

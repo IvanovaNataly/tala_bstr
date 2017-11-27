@@ -175,6 +175,8 @@ body {
         height: 100%;
         margin-left: 3px;
         background-color: $bg-filters;
+        background-image: url('../../img/home.png');
+        background-position: center center;
         border: none;
     }
 
@@ -339,7 +341,21 @@ body {
     &-collapse {
         font-size: $font-size - 4px;
         color: $active-color;
+        height: 15px;
+        line-height: 15px;
         margin-top: 15px;
+        padding-right: 24px;
+        background-size: 15px;
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+
+    &-expand {
+        background-image: url('../../img/show_more.png');
+    }
+
+    &-collapse {
+        background-image: url('../../img/show_less.png');
     }
 
     &-list {

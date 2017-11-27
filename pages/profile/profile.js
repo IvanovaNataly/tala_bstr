@@ -35,6 +35,7 @@ $(document).ready(function() {
 		$(this).attr('aria-expanded', function(_, attr){
 			return !(attr == 'true')
 		});
+        $(this).toggleClass('full-up');
         $(this).closest('.profile-fields-line').find('.profile-fields-list').toggleClass('expanded');
     });
 
