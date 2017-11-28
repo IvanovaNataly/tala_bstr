@@ -12,31 +12,13 @@ $(document).ready(function() {
         $(".status-index-tooltip").remove();
     });
 
-    //modal side bar expand and collapse
-	$('.modal-side-item-expand').on('click', function(event) {
-		$(this).attr('aria-expanded', function(_, attr){
-			return !(attr == 'true')
-		});
-        $(this).parent().find('.collapsed, .expanded').toggleClass('collapsed').toggleClass('expanded');
-        $(this).toggleClass('modal-side-item-expand modal-side-item-collapse');
-    });
-
-	//right sidebar profile card - expand and collapse students details
+    //right sidebar profile card - expand and collapse students details
     $('.profile-card-expand').on('click', function(event) {
 		$(this).attr('aria-expanded', function(_, attr){
 			return !(attr == 'true')
 		});
         $(this).closest('.profile-card').find('.collapsed, .expanded').toggleClass('collapsed').toggleClass('expanded');
         $(this).toggleClass('profile-card-expand profile-card-collapse');
-    });
-
-    //profile fields area - expand and collapse lines in the table
-    $('.profile-fields-full').on('click', function(event) {
-		$(this).attr('aria-expanded', function(_, attr){
-			return !(attr == 'true')
-		});
-        $(this).toggleClass('full-up');
-        $(this).closest('.profile-fields-line').find('.profile-fields-list').toggleClass('expanded');
     });
 
     //toggle collapse instructions list on the left side
@@ -56,5 +38,23 @@ $(document).ready(function() {
         }
     });
 
+    //fields list
+    $('.target-view').on('click', function(event) {
+        var $details = $(this).closest('.target-details').find('.target-fields');
+        $(this).attr('aria-expanded', function(_, attr){
+            return !(attr == 'true')
+        });
+        // $('.target-fields').addClass('collapsed', 'overflow-hidden');
+        $details.toggleClass('collapsed');
+
+        if ( !$details.hasClass('overflow-hidden') ) {
+            $details.toggleClass('overflow-hidden');
+        }
+        else {
+            setTimeout(function () {
+                $details.toggleClass('overflow-hidden');
+            }, 1000) //transition's duration
+        }
+    });
 
 });

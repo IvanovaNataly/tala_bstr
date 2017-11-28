@@ -35,14 +35,21 @@
         margin-top: 20px;
         &-line {
             @include flexbox;
-            @include flex-wrap(no-wrap);
+            @include flex-wrap(nowrap);
             @include justify-content(flex-start);
+            &:nth-last-child(2) .target-calendar-cell:not(.line-header) {
+                border-bottom: 1px solid $border-color;
+            }
         }
 
         &-cell:not(.line-header) {
             width: 60px;
             height: 60px;
-            border: 1px solid $border-color;
+            border-top: 1px solid $border-color;
+            border-right: 1px solid $border-color;
+            &:last-child {
+                border-left: 1px solid $border-color;
+            }
         }
 
         .line-header {
@@ -55,7 +62,8 @@
         }
 
         .filled {
-            border: none;
+            border-right: none;
+            border-left: none;
             background-color: $color;
         }
 
@@ -69,6 +77,42 @@
     }
 }
 
+@mixin targetDetails {
+    display: block;
+    width: 252px;
+    line-height: normal;
+    background-color: $light-color;
+    padding: 20px 25px;
+    border: 1px solid $tooltip-border;
+    @include box-shadow(0, 2px, 13px, 0, rgba(0, 0, 0, 0.17));
+    @include border-radius(3px);
+    position: absolute;
+    left: -273px;
+    top: calc(322px / 2 * (-1) + 23px ); // 322px = height of the div in absolute position; 23px = half of the height of the parent element
+
+    .target-fields-item-details-arrow {
+        @include arrowVertical;
+    }
+
+    .target-fields-item-details-set:not(:last-child) {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $border-color;
+    }
+
+    .target-fields-item-details-title {
+        color: $font-light;
+        line-height: 20px;
+        font-size: $font-size + 2px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .target-fields-item-details-data {
+        font-size: $font-size;
+    }
+}
+
 .profile-target.green{
     @include target($green);
 }
@@ -79,6 +123,87 @@
     @include target($yellow);
 }
 
+.target-details {
+    .target-view {
+        width: 10px;
+        height: 10px;
+        margin-right: 10px;
+        background-image: url('../../img/arrow.png');
+        background-size: 10px 6px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .target-container {
+        position: relative;
+    }
+
+    .target-fields {
+        font-size: $font-size + 2px;
+        width: 270px;
+        height: auto;
+        max-height: 600px;
+        padding-right: 20px;
+        padding-left: 20px;
+        background-color: $light-color;
+        border: 1px solid $tooltip-border;
+        @include box-shadow(0, 2px, 13px, 0, rgba(0, 0, 0, 0.17));
+        @include border-radius(3px);
+        @include transition(1s, linear);
+        position: absolute;
+        top: 10px;
+        left: -128px;
+
+        .target-fields-arrow {
+            @include arrow(up);
+        }
+
+        &-title {
+            margin-top: 20px;
+        }
+
+        &-list {
+            margin-top: 17px;
+        }
+        &-item {
+            height: 45px;
+            line-height: 45px;
+            border-top: 1px solid $border-color;
+            position: relative;
+
+            &:last-child {
+                margin-bottom: 20px;
+                border-bottom: none;
+            }
+
+            .target-fields-item-details {
+                display: none;
+            }
+
+            .control:hover {
+                .target-fields-item-details {
+                    @include targetDetails;
+                }
+            }
+
+            input[type="checkbox"]:focus {
+                & ~ .target-fields-item-details {
+                    @include targetDetails;
+                }
+            }
+        }
+    }
+
+    .collapsed {
+        max-height: 0;
+        border-width: 0;
+    }
+
+    .overflow-hidden {
+        overflow: hidden;
+    }
+}
+
 .profile-new-target {
     width: 138px;
     height: 40px;
@@ -86,4 +211,10 @@
     color: $font-light;
     margin-top: 24px;
     background-color: $border-color;
+}
+
+
+
+.control {
+    @include checkbox($green);
 }

@@ -157,3 +157,145 @@
     background-color: $light-color;
     @include box-shadow;
 }
+
+@mixin arrow($arrow-position: bottom) {
+    width: 70px;
+    height: 16px;
+    margin-left: -35px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    @if $arrow-position == bottom {
+        bottom: -16px;
+    } @else {
+        top: -16px;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 20px;
+        @if $arrow-position == bottom {
+            top: -20px;
+        } @else {
+            bottom: -20px;
+        }
+        width: 25px;
+        height: 25px;
+        background: $light-color;
+        border: 1px solid $tooltip-border;
+        -webkit-box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+        -moz-box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+        box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+        @include transform(45deg);
+    }
+}
+
+@mixin arrowVertical($arrow-position: right) {
+    width: 16px;
+    height: 70px;
+    margin-top: -35px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    @if $arrow-position == right {
+        right: -16px;
+    } @else {
+        top: -16px;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        @if $arrow-position == right {
+            left: -20px;
+        } @else {
+            right: -20px;
+        }
+        width: 25px;
+        height: 25px;
+        background: $light-color;
+        border: 1px solid $tooltip-border;
+        -webkit-box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+        -moz-box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+        box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+        @include transform(45deg);
+    }
+}
+
+@mixin checkbox($color: $green) {
+    display: block;
+    padding-right: 30px;
+    position: relative;
+    cursor: pointer;
+
+    input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    &_indicator {
+        position: absolute;
+        top: 29%;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background: $light-color;
+        border: 2px solid $check-box-border;
+        @include border-radius(50%);
+    }
+
+    //hover and focus states
+    &:hover input ~ .control_indicator {
+        background: $check-box-hover;
+    }
+
+    //checked state
+    input:checked ~ .control_indicator {
+        background: $color;
+        border: none;
+    }
+
+    //hover state whilst checked
+    &:hover input:not([disabled]):checked ~ .control_indicator,
+    input:checked:focus ~ .control_indicator {
+        background: $color;
+    }
+
+    //disabled state
+    input:disabled ~ .control_indicator {
+        pointer-events: none;
+        opacity: 0.6;
+        background: $check-box-hover;
+    }
+
+    //check mark div
+    &_indicator:after {
+        position: absolute;
+        display: none;
+        content: '';
+    }
+
+    //show check mark
+    input:checked ~ .control_indicator:after {
+        display: block;
+    }
+
+    //checkbox tick
+    &_checkbox .control_indicator:after {
+        width: 5px;
+        height: 10px;
+        border: solid $light-color;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        top: 4px;
+        left: 8px;
+    }
+
+    //disabled tick colour
+    &_checkbox input:disabled ~ .control_indicator:after {
+        border-color: $check-box-disabled-tick;
+    }
+}

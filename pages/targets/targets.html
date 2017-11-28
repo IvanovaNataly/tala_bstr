@@ -149,7 +149,7 @@
                 <li class="navigation-item">
                     <a class="navigation-item-link" href="">פרטים אישיים</a>
                 </li>
-                <li class="navigation-item active">
+                <li class="navigation-item">
                     <a class="navigation-item-link" href="">פרופיל התלמיד/ה
                         <span class="navigation-item-status">(ריק)</span>
                     </a>
@@ -157,7 +157,7 @@
                 <li class="navigation-item">
                     <a class="navigation-item-link" href="">תמיכות והתאמות</a>
                 </li>
-                <li class="navigation-item">
+                <li class="navigation-item active">
                     <a class="navigation-item-link" href="">מטרות ויעדים</a>
                 </li>
                 <li class="navigation-item">
@@ -200,18 +200,98 @@
                             <p class="profile-target-title-name">מוטוריקה גסה</p>
                         </h4>
                         <div class="target-details">
-                            <p class="target-summary">ביחרו לאילו תחומים המטרה מתייחסת: 2 תחומים</p>
-                            <div class="target-fields hidden">
-                                <h5 class="target-fields-title">סמנו תחום אחד או יותר אליהם המטרה מתייחסת</h5>
-                                <ul class="target-fields-list">
-                                    <li class="target-fields-item">
-                                        <label class="control control--checkbox">קוגניטיבי ומטא - קוגניטיבי
-                                            <input type="checkbox"></input>
-                                            <div class="control__indicator"></div>
-                                        </label>
-                                    </li>
-                                </ul>
+                            <div class="target-summary">ביחרו לאילו תחומים המטרה מתייחסת: 2 תחומים
+                                <button class="target-view" aria-expanded="false" aria-controls="targetFields1"></button>
                             </div>
+                            <div class="target-container">
+                                <div id="targetFields1" class="target-fields collapsed overflow-hidden">
+                                    <div class="target-fields-arrow"></div>
+                                    <h5 class="target-fields-title">סמנו תחום
+                                        <strong class="strong">אחד או יותר </strong>אליהם המטרה מתייחסת
+                                    </h5>
+                                    <ul class="target-fields-list">
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">קוגניטיבי ומטא - קוגניטיבי
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">חברתי בין אישי
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">בריאות ומיניות
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">לימודי - לשון והבעה
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                                <!--a window appears on hover on the item-->
+                                                <div class="target-fields-item-details">
+                                                    <div class="target-fields-item-details-arrow"></div>
+                                                    <dl class="target-fields-item-details-set">
+                                                        <dt class="target-fields-item-details-title">איפה מוקדי הכח של נדב?
+                                                        </dt>
+                                                        <dd class="target-fields-item-details-data">
+                                                            <p>שטף ודיוק בקריאה</p>
+                                                            <p>הפקת משמעות ברמה הגלויה</p>
+                                                            <p>הפקת משמעות ברמה הסמויה</p>
+                                                            <p>הבנת הוראות כתובות</p>
+                                                            <p>בעה בכתב- כתיבת סיכום, תמצית, תשובה מלאה, חיבור</p>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="target-fields-item-details-set">
+                                                        <dt class="target-fields-item-details-title">במה חשוב לחזק את נדב?
+                                                        </dt>
+                                                        <dd class="target-fields-item-details-data">
+                                                            <p>הבנת הראות בעל פה</p>
+                                                            <p>פיתוח שאלה</p>
+                                                            <p>הבעה בעל פה</p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">לימודי - מדעים
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">תנועתי - מוטורי - חושי
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">עבודה וקהילה
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">טיפול עצמי ואחזקת בית
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">יצוג עצמי והתנהלות בפעילויות
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -275,18 +355,98 @@
                             <p class="profile-target-title-name">מוטוריקה גסה</p>
                         </h4>
                         <div class="target-details">
-                            <p class="target-summary">ביחרו לאילו תחומים המטרה מתייחסת: 4 תחומים</p>
-                            <div class="target-fields hidden">
-                                <h5 class="target-fields-title">סמנו תחום אחד או יותר אליהם המטרה מתייחסת</h5>
-                                <ul class="target-fields-list">
-                                    <li class="target-fields-item">
-                                        <label class="control control--checkbox">קוגניטיבי ומטא - קוגניטיבי
-                                            <input type="checkbox"></input>
-                                            <div class="control__indicator"></div>
-                                        </label>
-                                    </li>
-                                </ul>
+                            <div class="target-summary">ביחרו לאילו תחומים המטרה מתייחסת: 2 תחומים
+                                <button class="target-view" aria-expanded="false" aria-controls="targetFields2"></button>
                             </div>
+                            <div class="target-container">
+                                <div id="targetFields2" class="target-fields collapsed overflow-hidden">
+                                    <div class="target-fields-arrow"></div>
+                                    <h5 class="target-fields-title">סמנו תחום
+                                        <strong class="strong">אחד או יותר </strong>אליהם המטרה מתייחסת
+                                    </h5>
+                                    <ul class="target-fields-list">
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">קוגניטיבי ומטא - קוגניטיבי
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">חברתי בין אישי
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">בריאות ומיניות
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">לימודי - לשון והבעה
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                                <!--a window appears on hover on the item-->
+                                                <div class="target-fields-item-details">
+                                                    <div class="target-fields-item-details-arrow"></div>
+                                                    <dl class="target-fields-item-details-set">
+                                                        <dt class="target-fields-item-details-title">איפה מוקדי הכח של נדב?
+                                                        </dt>
+                                                        <dd class="target-fields-item-details-data">
+                                                            <p>שטף ודיוק בקריאה</p>
+                                                            <p>הפקת משמעות ברמה הגלויה</p>
+                                                            <p>הפקת משמעות ברמה הסמויה</p>
+                                                            <p>הבנת הוראות כתובות</p>
+                                                            <p>בעה בכתב- כתיבת סיכום, תמצית, תשובה מלאה, חיבור</p>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="target-fields-item-details-set">
+                                                        <dt class="target-fields-item-details-title">במה חשוב לחזק את נדב?
+                                                        </dt>
+                                                        <dd class="target-fields-item-details-data">
+                                                            <p>הבנת הראות בעל פה</p>
+                                                            <p>פיתוח שאלה</p>
+                                                            <p>הבעה בעל פה</p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">לימודי - מדעים
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">תנועתי - מוטורי - חושי
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">עבודה וקהילה
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">טיפול עצמי ואחזקת בית
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">יצוג עצמי והתנהלות בפעילויות
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -319,6 +479,22 @@
                             <div class="target-calendar-cell"></div>
                             <div class="target-calendar-cell"></div>
                             <div class="target-calendar-cell"></div>
+                            <div class="target-calendar-cell"></div>
+                            <div class="target-calendar-cell"></div>
+                        </li>
+
+                        <li class="target-calendar-line">
+                            <div class="target-calendar-cell line-header">יעד 3</div>
+                            <div class="target-calendar-cell"></div>
+                            <div class="target-calendar-cell"></div>
+                            <div class="target-calendar-cell"></div>
+                            <div class="target-calendar-cell"></div>
+                            <div class="target-calendar-cell"></div>
+                            <div class="target-calendar-cell"></div>
+                            <div class="target-calendar-cell filled"></div>
+                            <div class="target-calendar-cell filled"></div>
+                            <div class="target-calendar-cell filled"></div>
+                            <div class="target-calendar-cell filled"></div>
                             <div class="target-calendar-cell"></div>
                             <div class="target-calendar-cell"></div>
                         </li>
@@ -350,18 +526,98 @@
                             <p class="profile-target-title-name">מוטוריקה גסה</p>
                         </h4>
                         <div class="target-details">
-                            <p class="target-summary">ביחרו לאילו תחומים המטרה מתייחסת: 2 תחומים</p>
-                            <div class="target-fields hidden">
-                                <h5 class="target-fields-title">סמנו תחום אחד או יותר אליהם המטרה מתייחסת</h5>
-                                <ul class="target-fields-list">
-                                    <li class="target-fields-item">
-                                        <label class="control control--checkbox">קוגניטיבי ומטא - קוגניטיבי
-                                            <input type="checkbox"></input>
-                                            <div class="control__indicator"></div>
-                                        </label>
-                                    </li>
-                                </ul>
+                            <div class="target-summary">ביחרו לאילו תחומים המטרה מתייחסת: 2 תחומים
+                                <button class="target-view" aria-expanded="false" aria-controls="targetFields3"></button>
                             </div>
+                            <div class="target-container">
+                                <div id="targetFields3" class="target-fields collapsed overflow-hidden">
+                                    <div class="target-fields-arrow"></div>
+                                    <h5 class="target-fields-title">סמנו תחום
+                                        <strong class="strong">אחד או יותר </strong>אליהם המטרה מתייחסת
+                                    </h5>
+                                    <ul class="target-fields-list">
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">קוגניטיבי ומטא - קוגניטיבי
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">חברתי בין אישי
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">בריאות ומיניות
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">לימודי - לשון והבעה
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                                <!--a window appears on hover on the item-->
+                                                <div class="target-fields-item-details">
+                                                    <div class="target-fields-item-details-arrow"></div>
+                                                    <dl class="target-fields-item-details-set">
+                                                        <dt class="target-fields-item-details-title">איפה מוקדי הכח של נדב?
+                                                        </dt>
+                                                        <dd class="target-fields-item-details-data">
+                                                            <p>שטף ודיוק בקריאה</p>
+                                                            <p>הפקת משמעות ברמה הגלויה</p>
+                                                            <p>הפקת משמעות ברמה הסמויה</p>
+                                                            <p>הבנת הוראות כתובות</p>
+                                                            <p>בעה בכתב- כתיבת סיכום, תמצית, תשובה מלאה, חיבור</p>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl class="target-fields-item-details-set">
+                                                        <dt class="target-fields-item-details-title">במה חשוב לחזק את נדב?
+                                                        </dt>
+                                                        <dd class="target-fields-item-details-data">
+                                                            <p>הבנת הראות בעל פה</p>
+                                                            <p>פיתוח שאלה</p>
+                                                            <p>הבעה בעל פה</p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">לימודי - מדעים
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">תנועתי - מוטורי - חושי
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">עבודה וקהילה
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">טיפול עצמי ואחזקת בית
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                        <li class="target-fields-item">
+                                            <label class="control control_checkbox">יצוג עצמי והתנהלות בפעילויות
+                                                <input type="checkbox"></input>
+                                                <div class="control_indicator"></div>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -417,6 +673,7 @@
 
                     <button class="profile-target-add">יעד נוסף +</button>
                 </li>
+
             </ul>
 
             <button class="profile-new-target">+ הוספת מטרה</button>
