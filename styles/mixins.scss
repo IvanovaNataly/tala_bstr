@@ -248,7 +248,8 @@
     }
 
     //hover and focus states
-    &:hover input ~ .control_indicator {
+    &:hover input ~ .control_indicator,
+    input:focus ~ .control_indicator {
         background: $check-box-hover;
     }
 

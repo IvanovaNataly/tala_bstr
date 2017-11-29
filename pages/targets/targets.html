@@ -127,7 +127,7 @@
                 </li>
             </ul>
             <div class="status">
-                <p class="status-title">:סטטוס תכנית לימודים לשנת תשע"ז</p>
+                <p class="status-title">סטטוס תכנית לימודים לשנת תשע"ז</p>
                 <div class="status-wrapper">
                     <div class="status-index completed" data-tooltip="ממתין לאישור של מנהלת">1</div>
                     <div class="status-index active" data-tooltip="ממתין לאישור של מנהלת">2</div>
@@ -298,7 +298,9 @@
                     <ul class="target-calendar">
                         <li class="target-calendar-line">
                             <div class="target-calendar-cell line-header">יעד 1</div>
-                            <div class="target-calendar-cell filled"></div>
+                            <div class="target-calendar-cell filled">
+                                <a href="" class="target-calendar-cell-link" data-toggle="modal" data-target="#myModal"></a>
+                            </div>
                             <div class="target-calendar-cell filled"></div>
                             <div class="target-calendar-cell filled"></div>
                             <div class="target-calendar-cell filled"></div>
@@ -729,6 +731,139 @@
 
     </div>
 </footer>
+
+<!--Modal -->
+<div id="myModal" class="modal fade in" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <div class="modal-subtitle">
+                    <dl>
+                        <dt class="modal-subtitle-title">מטרה:</dt>
+                        <dd class="modal-subtitle-data">מוטוריקה גסה</dd>
+                    </dl>
+                </div>
+                <h2 id="modalTitle" class="modal-title">הגדרת יעד 1</h2>
+                <dl class="modal-fields">
+                    <dt class="modal-fields-title">תחומים: לימודי -</dt>
+                    <dd class="modal-fields-data">הבעה ולשון, עבודה וקהילה</dd>
+                </dl>
+            </div>
+
+
+            <form action="" class="modal-form">
+                <div class="modal-container">
+                    <div class="modal-top">
+                        <div class="modal-field area">
+                            <h3 class="modal-field-title">הגדירו יעד אופרטיבי</h3>
+                            <label for="focus" class="sr-only">הגדירו יעד אופרטיבי</label>
+                            <textarea id="focus" name="focus" class="modal-field-text" aria-multiline="true" placeholder="כתבו כאן את היעד למטרה..."></textarea>
+                        </div>
+
+                        <div class="modal-side area">
+                            <h3 class="modal-field-title">זמן להשלמת היעד</h3>
+                            <div class="modal-side-filters">
+                                <label for="start" class="header-filters-item-title">התחלה בחודש:</label>
+                                <select id="start" name="start" class="header-filters-item-data">
+                                    <option value="9">ספטמבר</option>
+                                    <option value="10">אוקטובר</option>
+                                    <option value="11">נובמבר</option>
+                                    <option value="12">דצמבר</option>
+                                </select>
+                            </div>
+                            <div class="modal-side-filters">
+                                <label for="end" class="header-filters-item-title">שנת לימודים:</label>
+                                <select id="end" name="end" class="header-filters-item-data">
+                                    <option value="9">ספטמבר</option>
+                                    <option value="10">אוקטובר</option>
+                                    <option value="11">נובמבר</option>
+                                    <option value="12">דצמבר</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-main area">
+                        <h3 class="modal-field-title">הגדירו דרכים להשגת היעד</h3>
+                        <ul class="way-list">
+                            <li class="way-item">
+                                <h4 class="way-title">דרך 1 להשגת היעד</h4>
+                                <fieldset class="way-body">
+                                    <label for="wayPerson" class="way-person-text">מי אחראית להשגת היעד?</label>
+                                    <select id="wayPerson" name="wayPerson" class="header-filters-item-data">
+                                        <option value="0">בחר מתוך הרשימה</option>
+                                        <option value="1">בחר מתוך הרשימה</option>
+                                        <option value="2">בחר מתוך הרשימה</option>
+                                        <option value="3">בחר מתוך הרשימה</option>
+                                    </select>
+                                    <label for="wayDescription" class="sr-only">תיאור דרך להשגת היעד</label>
+                                    <textarea id="wayDescription" name="wayDescription" class="way-description" aria-multiline="true" placeholder="איריס תעזור לנדב בחזרה על התנועות  הרגליים והידים בקוארדינציה"></textarea>
+                                </fieldset>
+                            </li>
+
+                            <li class="way-item">
+                                <h4 class="way-title">דרך 2 להשגת היעד</h4>
+                                <fieldset class="way-body">
+                                    <label for="wayPerson" class="way-person-text">מי אחראית להשגת היעד?</label>
+                                    <select id="wayPerson" name="wayPerson" class="header-filters-item-data">
+                                        <option value="0">בחר מתוך הרשימה</option>
+                                        <option value="1">בחר מתוך הרשימה</option>
+                                        <option value="2">בחר מתוך הרשימה</option>
+                                        <option value="3">בחר מתוך הרשימה</option>
+                                    </select>
+                                    <label for="wayDescription" class="sr-only">תיאור דרך להשגת היעד</label>
+                                    <textarea id="wayDescription" name="wayDescription" class="way-description" aria-multiline="true" placeholder="איריס תעזור לנדב בחזרה על התנועות  הרגליים והידים בקוארדינציה"></textarea>
+                                </fieldset>
+                            </li>
+
+                            <li class="way-item">
+                                <h4 class="way-title">דרך 3 להשגת היעד</h4>
+                                <fieldset class="way-body">
+                                    <label for="wayPerson" class="way-person-text">מי אחראית להשגת היעד?</label>
+                                    <select id="wayPerson" name="wayPerson" class="header-filters-item-data">
+                                        <option value="0">בחר מתוך הרשימה</option>
+                                        <option value="1">בחר מתוך הרשימה</option>
+                                        <option value="2">בחר מתוך הרשימה</option>
+                                        <option value="3">בחר מתוך הרשימה</option>
+                                    </select>
+                                    <label for="wayDescription" class="sr-only">תיאור דרך להשגת היעד</label>
+                                    <textarea id="wayDescription" name="wayDescription" class="way-description" aria-multiline="true" placeholder="איריס תעזור לנדב בחזרה על התנועות  הרגליים והידים בקוארדינציה"></textarea>
+                                </fieldset>
+                            </li>
+
+                            <li class="way-item">
+                                <h4 class="way-title">דרך 4 להשגת היעד</h4>
+                                <fieldset class="way-body">
+                                    <label for="wayPerson" class="way-person-text">מי אחראית להשגת היעד?</label>
+                                    <select id="wayPerson" name="wayPerson" class="header-filters-item-data">
+                                        <option value="0">בחר מתוך הרשימה</option>
+                                        <option value="1">בחר מתוך הרשימה</option>
+                                        <option value="2">בחר מתוך הרשימה</option>
+                                        <option value="3">בחר מתוך הרשימה</option>
+                                    </select>
+                                    <label for="wayDescription" class="sr-only">תיאור דרך להשגת היעד</label>
+                                    <textarea id="wayDescription" name="wayDescription" class="way-description" aria-multiline="true" placeholder="איריס תעזור לנדב בחזרה על התנועות  הרגליים והידים בקוארדינציה"></textarea>
+                                </fieldset>
+                            </li>
+                        </ul>
+
+                        <button class="btn-add">+ הוספת דרך</button>
+
+                    </div>
+                </div>
+
+                <div class="modal-button-wrapper">
+                    <button id="save" class="btn-save" type="submit">שמור</button>
+                    <button class="btn-cancel" type="button">ביטול</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 
 <script src="../../js/jquery-3.2.1.js"></script>
 <script src="../../js/bootstrap-3.3.7/bootstrap.js"></script>
