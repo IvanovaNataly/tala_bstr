@@ -291,7 +291,6 @@
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -300,6 +299,42 @@
                             <div class="target-calendar-cell line-header">יעד 1</div>
                             <div class="target-calendar-cell filled">
                                 <a href="" class="target-calendar-cell-link" data-toggle="modal" data-target="#myModal"></a>
+                                <!--floating note on hover-->
+                                <div id="targetNote1" class="target-note">
+                                    <div class="target-note-arrow"></div>
+                                    <h5 class="target-note-title">יעד 1 </h5>
+                                    <ul class="target-note-main">
+                                        <li class="target-note-ways">2 דרכים</li>
+                                        <li class="target-note-tutors">איריס לוי, ארמנד יזרעלי</li>
+                                    </ul>
+                                    <p class="target-note-description">נדב ירד גרם מדרגות בהשגחה תוך אחיזת מעקה בדגם רציפרוקלי ברצף</p>
+                                    <p class="target-note-description">פרק הזמן להשלמת היעד
+                                        <span class="target-note-description-period">ספטמרב-מרץ</span>
+                                    </p>
+
+                                    <ul class="target-note-list">
+                                        <li class="target-note-item">
+                                            <h6 class="target-note-item-title">דרך 1 להשגת היעד</h6>
+                                            <p class="target-note-item-tutor">איריס לוי / טיפול בתנועה</p>
+                                            <p class="target-note-item-description">איריס תעזור לנדב בחזרה על התנועות הרגליים והידיים בקוארדינציה</p>
+                                        </li>
+                                        <li class="target-note-item">
+                                            <h6 class="target-note-item-title">דרך 1 להשגת היעד</h6>
+                                            <p class="target-note-item-tutor">איריס לוי / טיפול בתנועה</p>
+                                            <p class="target-note-item-description">איריס תעזור לנדב בחזרה על התנועות הרגליים והידיים בקוארדינציה</p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="target-note-footer">
+                                        <div class="target-note-footer-item">
+                                            <time class="target-note-footer-date">20 ביולי 2017 כ"ז בתמוז תשע"ז 10:31</time>
+                                            <p class="target-summary-footer-tutor">ישראל כהן, מחנך הכיתה</p>
+                                        </div>
+                                        <button class="profile-fields-edit">עריכה</button>
+                                        <button class="profile-fields-remove">מחיקה</button>
+
+                                    </div>
+                                </div>
                             </div>
                             <div class="target-calendar-cell filled"></div>
                             <div class="target-calendar-cell filled"></div>
@@ -357,7 +392,7 @@
                             <p class="profile-target-title-name">מוטוריקה גסה</p>
                         </h4>
                         <div class="target-details">
-                            <div class="target-summary">ביחרו לאילו תחומים המטרה מתייחסת: 2 תחומים
+                            <div class="target-note">ביחרו לאילו תחומים המטרה מתייחסת: 2 תחומים
                                 <button class="target-view" aria-expanded="false" aria-controls="targetFields2"></button>
                             </div>
                             <div class="target-container">
@@ -850,20 +885,20 @@
                                     </fieldset>
                                 </li>
 
-                                <li class="way-item">
-                                    <h4 class="way-title">דרך 4 להשגת היעד</h4>
-                                    <fieldset class="way-body">
-                                        <label for="wayPerson5" class="way-person-text">מי אחראית להשגת היעד?</label>
-                                        <select id="wayPerson5" name="wayPerson5" class="header-filters-item-data">
-                                            <option value="0">בחר מתוך הרשימה</option>
-                                            <option value="1">בחר מתוך הרשימה</option>
-                                            <option value="2">בחר מתוך הרשימה</option>
-                                            <option value="3">בחר מתוך הרשימה</option>
-                                        </select>
-                                        <label for="wayDescription5" class="sr-only">תיאור דרך להשגת היעד</label>
-                                        <textarea id="wayDescription5" name="wayDescription5" class="way-description" aria-multiline="true" placeholder="איריס תעזור לנדב בחזרה על התנועות  הרגליים והידים בקוארדינציה"></textarea>
-                                    </fieldset>
-                                </li>
+                                <!--<li class="way-item">-->
+                                    <!--<h4 class="way-title">דרך 4 להשגת היעד</h4>-->
+                                    <!--<fieldset class="way-body">-->
+                                        <!--<label for="wayPerson5" class="way-person-text">מי אחראית להשגת היעד?</label>-->
+                                        <!--<select id="wayPerson5" name="wayPerson5" class="header-filters-item-data">-->
+                                            <!--<option value="0">בחר מתוך הרשימה</option>-->
+                                            <!--<option value="1">בחר מתוך הרשימה</option>-->
+                                            <!--<option value="2">בחר מתוך הרשימה</option>-->
+                                            <!--<option value="3">בחר מתוך הרשימה</option>-->
+                                        <!--</select>-->
+                                        <!--<label for="wayDescription5" class="sr-only">תיאור דרך להשגת היעד</label>-->
+                                        <!--<textarea id="wayDescription5" name="wayDescription5" class="way-description" aria-multiline="true" placeholder="איריס תעזור לנדב בחזרה על התנועות  הרגליים והידים בקוארדינציה"></textarea>-->
+                                    <!--</fieldset>-->
+                                <!--</li>-->
                             </ul>
                             <button class="btn-add">+ הוספת דרך</button>
                         </div>

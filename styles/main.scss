@@ -127,6 +127,21 @@ body {
 .btn-edit {
     display: inline-block;
     color: $font-light;
+    padding-right: 15px;
+    background-image: url('../../img/edit.png');
+    background-size: 13px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.btn-remove {
+    display: inline-block;
+    color: $font-light;
+    padding-right: 15px;
+    background-image: url('../../img/remove.png');
+    background-size: 13px;
+    background-repeat: no-repeat;
+    background-position: right center;
 }
 
 .content {
