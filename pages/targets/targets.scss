@@ -227,24 +227,42 @@
 
 //floating window on hover on filled cells of the target
 .target-note {
-    display: none;
+    //display: none;
 }
 
-.filled:hover {
+.filled {
     position: relative;
     .target-note {
         display: block;
         width: 533px;
+        padding: 23px 20px;
         background-color: $light-color;
         border: 1px solid $tooltip-border;
         @include box-shadow(0, 2px, 13px, 0, rgba(0, 0, 0, 0.17));
         @include border-radius(3px);
         position: absolute;
-        top: 10px;
-        left: 50%;
+        top: 60px;
+        right: 0;
+        z-index: 1;
 
         &-arrow {
             @include arrow(up);
+        }
+
+        &-title {
+            font-size: $font-size + 2px;
+            text-align: center;
+            color: $green;
+        }
+
+        &-main {
+            font-size: $font-size + 2px;
+            text-align: center;
+            color: $green;
+        }
+
+        &-ways {
+            font-weight: 600;
         }
     }
 }
