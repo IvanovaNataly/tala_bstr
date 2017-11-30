@@ -2,6 +2,7 @@
 
 @import '../../styles/main';
 
+//target visible block with table
 @mixin target($color: $green) {
     .profile-target-head {
         @include flexbox;
@@ -79,8 +80,28 @@
             line-height: 30px;
         }
     }
+
+    //floating note appears on hover on every filled cell
+    .target-note {
+        display: none;
+    }
+
+    .filled:hover {
+        position: relative;
+
+        .target-note {
+            @include targetNote($color);
+        }
+    }
+
+    //check-boxes - color according to target's color
+    .control {
+        @include checkbox($color);
+    }
+
 }
 
+//floating div that openes horrizontaly - tips for check-box
 @mixin targetDetails {
     display: block;
     width: 252px;
@@ -95,7 +116,7 @@
     top: calc(322px / 2 * (-1) + 23px ); // 322px = height of the div in absolute position; 23px = half of the height of the parent element
 
     .target-fields-item-details-arrow {
-        @include arrowVertical;
+        @include arrowHorizontal;
     }
 
     .target-fields-item-details-set:not(:last-child) {
@@ -114,6 +135,102 @@
 
     .target-fields-item-details-data {
         font-size: $font-size;
+    }
+}
+
+//floating note appears on hover on every filled cell
+@mixin targetNote($color) {
+    display: block;
+    width: 533px;
+    padding: 23px 20px;
+    background-color: $light-color;
+    border: 1px solid $tooltip-border;
+    @include box-shadow(0, 2px, 13px, 0, rgba(0, 0, 0, 0.17));
+    @include border-radius(3px);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    z-index: 1;
+    &-arrow {
+        @include arrow(up);
+    }
+    &-title {
+        font-size: $font-size + 2px;
+        text-align: center;
+        color: $color;
+    }
+    &-main {
+        font-size: $font-size + 2px;
+        text-align: center;
+        color: $color;
+        line-height: 30px;
+    }
+    &-ways {
+        display: inline-block;
+        font-weight: 600;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            height: 20px;
+            padding-left: 10px;
+            border-left: 1px solid $color;
+            vertical-align: middle;
+        }
+    }
+    &-tutors {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    &-description {
+        font-size: $font-size + 2px;
+        font-weight: 700;
+        line-height: 25px;
+        &-period {
+            color: $font-light;
+        }
+    }
+    &-list {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        @include flexbox;
+        @include flex-wrap(wrap);
+    }
+    &-item {
+        width: 60%;
+        line-height: 20px;
+        padding-left: 40px;
+        @include flex-basis(50%);
+        &-title {
+            font-size: $font-size + 2px;
+            font-weight: 600;
+            color: $font-light;
+            margin-bottom: 5px;
+        }
+        &-tutor {
+            font-weight: 600;
+        }
+
+    }
+    &-footer {
+        color: $font-light;
+        @include flexbox;
+        @include justify-content(flex-end);
+        @include align-items(flex-end);
+        &-item {
+            @include flex-grow(1);
+        }
+        .btn-edit {
+            margin-left: 40px;
+            @include flex-grow(0);
+        }
+        .btn-remove {
+            @include flex-grow(0);
+        }
     }
 }
 
@@ -216,57 +333,6 @@
     margin-top: 24px;
     background-color: $border-color;
 }
-
-.control {
-    @include checkbox($green);
-}
-
-.target-calendar-line {
-
-}
-
-//floating window on hover on filled cells of the target
-.target-note {
-    //display: none;
-}
-
-.filled {
-    position: relative;
-    .target-note {
-        display: block;
-        width: 533px;
-        padding: 23px 20px;
-        background-color: $light-color;
-        border: 1px solid $tooltip-border;
-        @include box-shadow(0, 2px, 13px, 0, rgba(0, 0, 0, 0.17));
-        @include border-radius(3px);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        z-index: 1;
-
-        &-arrow {
-            @include arrow(up);
-        }
-
-        &-title {
-            font-size: $font-size + 2px;
-            text-align: center;
-            color: $green;
-        }
-
-        &-main {
-            font-size: $font-size + 2px;
-            text-align: center;
-            color: $green;
-        }
-
-        &-ways {
-            font-weight: 600;
-        }
-    }
-}
-
 
 //modal - rules for targets page
 .modal {

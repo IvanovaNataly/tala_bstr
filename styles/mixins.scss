@@ -191,7 +191,7 @@
     }
 }
 
-@mixin arrowVertical($arrow-position: right) {
+@mixin arrowHorizontal($arrow-position: right) {
     width: 16px;
     height: 70px;
     margin-top: -35px;
