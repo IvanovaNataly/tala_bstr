@@ -162,18 +162,18 @@ body {
 .btn-edit {
   display: inline-block;
   color: #74818a;
-  padding-right: 15px;
+  padding-right: 18px;
   background-image: url("../../img/edit.png");
-  background-size: 13px;
+  background-size: 13px 15px;
   background-repeat: no-repeat;
   background-position: right center; }
 
 .btn-remove {
   display: inline-block;
   color: #74818a;
-  padding-right: 15px;
+  padding-right: 19px;
   background-image: url("../../img/remove.png");
-  background-size: 13px;
+  background-size: 13px 15px;
   background-repeat: no-repeat;
   background-position: right center; }
 
@@ -209,6 +209,11 @@ body {
         content: "|";
         padding-right: 5px;
         padding-left: 5px; }
+    .header-navigation .search {
+      padding-right: 20px;
+      background-image: url("../../img/search.png");
+      background-repeat: no-repeat;
+      background-position: center right; }
   .header-title {
     font-size: 44px;
     height: calc(130px - 10px  - 15px - 33px - 10px);
@@ -434,8 +439,8 @@ body {
     color: #3a95c4;
     height: 15px;
     line-height: 15px;
-    margin-top: 15px;
-    padding-right: 24px;
+    margin-top: 12px;
+    padding-right: 20px;
     background-size: 15px;
     background-repeat: no-repeat;
     background-position: right center; }
@@ -684,48 +689,6 @@ body {
   color: #74818a;
   padding: 20px;
   border-top: 1px solid #e2e2e2; }
-
-.instructions {
-  position: absolute;
-  top: 160px;
-  left: -268px;
-  -webkit-transition: all 0.8s ease-out;
-  -moz-transition: all 0.8s ease-out;
-  -ms-transition: all 0.8s ease-out;
-  -o-transition: all 0.8s ease-out;
-  transition: all 0.8s ease-out; }
-  .instructions .flag {
-    text-align: center;
-    font-size: 18px;
-    color: #ffffff;
-    width: 87px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #74818a;
-    position: absolute;
-    right: -87px;
-    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0; }
-  .instructions .ready-to-open {
-    background-color: #f7ba45; }
-  .instructions-list {
-    color: #74818a;
-    width: 268px;
-    padding-right: 20px;
-    padding-left: 20px;
-    border-right: 5px solid #74818a;
-    background-color: #ffffff; }
-  .instructions-item {
-    padding-top: 30px;
-    padding-bottom: 30px; }
-    .instructions-item:not(:last-child) {
-      border-bottom: 1px solid #e2e2e2; }
-  .instructions.expanded {
-    left: 0px; }
 
 .modal-dialog {
   width: 1003px;

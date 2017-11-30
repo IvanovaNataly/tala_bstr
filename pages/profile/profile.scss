@@ -140,41 +140,25 @@
     }
 
     &-full {
-        padding-left: 24px;
+        padding-left: 16px;
         position: relative;
         overflow: hidden;
         &:before {
             content: "";
-            width: 20px;
-            height: 20px;
-            background-size: 20px 20px;
-            background: url('../../img/arrow.png') 0 0 no-repeat;
+            width: 10px;
+            height: 6px;
+            background-size: 6px 10px;
+            background: url('../../img/arrow_blue.png') 0 0 no-repeat;
             background-position: center center;
             @include transform(90deg);
             position: absolute;
-            top: 0;
+            top: 6px;
             left: 0;
         }
     }
 
     .full-up:before {
         @include transform(180deg);
-    }
-
-    &-edit {
-        padding-right: 15px;
-        background-image: url('../../img/edit.png');
-        background-size: 13px;
-        background-repeat: no-repeat;
-        background-position: right center;
-    }
-
-    &-remove {
-        padding-right: 15px;
-        background-image: url('../../img/remove.png');
-        background-size: 13px;
-        background-repeat: no-repeat;
-        background-position: right center;
     }
 
     &-title {
@@ -263,7 +247,7 @@
             color: $active-color;
             height: 17px;
             line-height: 17px;
-            padding-right: 17px;
+            padding-right: 23px;
             background-size: 17px;
             background-repeat: no-repeat;
             background-position: right center;
@@ -345,6 +329,48 @@
                 border-bottom: 1px solid $active-color;
             }
         }
+    }
+}
+
+//instructions with a flag (left side of the screen)
+.instructions {
+    position: fixed;
+    top: 160px;
+    left: -268px;
+    @include transition(0.8s, ease-out);
+    .flag {
+        text-align: center;
+        font-size: $font-size + 2px;
+        color: $light-color;
+        width: 87px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: $font-light;
+        position: absolute;
+        right: -87px;
+        @include box-shadow;
+        @include border-radius(0);
+    }
+    .ready-to-open {
+        background-color: $yellow;
+    }
+    &-list {
+        color: $font-light;
+        width: 268px;
+        padding-right: 20px;
+        padding-left: 20px;
+        border-right: 5px solid $font-light;
+        background-color: $light-color;
+    }
+    &-item {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        &:not(:last-child) {
+            border-bottom: 1px solid $border-color;
+        }
+    }
+    &.expanded {
+        left: 0px;
     }
 }
 
