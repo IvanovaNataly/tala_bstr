@@ -952,7 +952,7 @@ body {
       display: flex;
       overflow-x: auto; }
     .profile-target.green .filled:hover .target-note-item {
-      width: 60%;
+      width: 50%;
       min-width: 245px;
       line-height: 20px;
       padding-left: 40px;
@@ -1246,7 +1246,7 @@ body {
       display: flex;
       overflow-x: auto; }
     .profile-target.crimson .filled:hover .target-note-item {
-      width: 60%;
+      width: 50%;
       min-width: 245px;
       line-height: 20px;
       padding-left: 40px;
@@ -1540,7 +1540,7 @@ body {
       display: flex;
       overflow-x: auto; }
     .profile-target.yellow .filled:hover .target-note-item {
-      width: 60%;
+      width: 50%;
       min-width: 245px;
       line-height: 20px;
       padding-left: 40px;
