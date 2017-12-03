@@ -774,6 +774,10 @@ body {
   width: calc(100% / 3);
   flex-basis: calc(100% / 3); }
   .profile-target.green .profile-target-title-number {
+    display: block;
+    color: #84b750;
+    font-weight: 600; }
+  .profile-target.green .profile-target-title-label {
     display: inline-block;
     color: #84b750;
     font-weight: 600; }
@@ -1064,6 +1068,10 @@ body {
   width: calc(100% / 3);
   flex-basis: calc(100% / 3); }
   .profile-target.crimson .profile-target-title-number {
+    display: block;
+    color: #b96485;
+    font-weight: 600; }
+  .profile-target.crimson .profile-target-title-label {
     display: inline-block;
     color: #b96485;
     font-weight: 600; }
@@ -1354,6 +1362,10 @@ body {
   width: calc(100% / 3);
   flex-basis: calc(100% / 3); }
   .profile-target.yellow .profile-target-title-number {
+    display: block;
+    color: #f7ba45;
+    font-weight: 600; }
+  .profile-target.yellow .profile-target-title-label {
     display: inline-block;
     color: #f7ba45;
     font-weight: 600; }

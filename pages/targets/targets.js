@@ -38,7 +38,7 @@ $(document).ready(function() {
         }
     });
 
-    //fields list
+    //fields list - opened vertically
     $('.target-view').on('click', function(event) {
         var $details = $(this).closest('.target-details').find('.target-fields');
         $(this).attr('aria-expanded', function(_, attr){
@@ -56,5 +56,13 @@ $(document).ready(function() {
             }, 1000) //transition's duration
         }
     });
+
+    //tooltip on hover on filled cell
+    $('.target-calendar-cell-link').on('focus', function(event) {
+        $(this).closest('.filled').find('.target-note').attr('aria-hidden', 'false');
+    });
+    $('.target-calendar-cell-link').on('focusout', function(event) {
+        $(this).closest('.filled').find('.target-note').attr('aria-hidden', 'true');
+    })
 
 });

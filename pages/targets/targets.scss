@@ -12,6 +12,11 @@
         width: calc(100% / 3);
         flex-basis:  calc(100% / 3);
         &-number {
+            display: block;
+            color: $color;
+            font-weight: 600;
+        }
+        &-label {
             display: inline-block;
             color: $color;
             font-weight: 600;
