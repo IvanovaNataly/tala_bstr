@@ -239,8 +239,8 @@
         width: 50%;
         width: 240px;
         line-height: 20px;
-        padding-left: 40px;
-        @include flex-basis(50%);
+        //padding-left: 40px;
+        //@include flex-basis(50%);
         &-title {
             font-size: $font-size + 2px;
             font-weight: 600;

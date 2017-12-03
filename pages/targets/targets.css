@@ -953,12 +953,7 @@ body {
     .profile-target.green .filled .target-note-item {
       width: 50%;
       width: 240px;
-      line-height: 20px;
-      padding-left: 40px;
-      -webkit-flex-basis: 50%;
-      -moz-flex-basis: 50%;
-      -ms-flex-preferred-size: 50%;
-      flex-basis: 50%; }
+      line-height: 20px; }
       .profile-target.green .filled .target-note-item-title {
         font-size: 18px;
         font-weight: 600;
@@ -1246,12 +1241,7 @@ body {
     .profile-target.crimson .filled .target-note-item {
       width: 50%;
       width: 240px;
-      line-height: 20px;
-      padding-left: 40px;
-      -webkit-flex-basis: 50%;
-      -moz-flex-basis: 50%;
-      -ms-flex-preferred-size: 50%;
-      flex-basis: 50%; }
+      line-height: 20px; }
       .profile-target.crimson .filled .target-note-item-title {
         font-size: 18px;
         font-weight: 600;
@@ -1539,12 +1529,7 @@ body {
     .profile-target.yellow .filled .target-note-item {
       width: 50%;
       width: 240px;
-      line-height: 20px;
-      padding-left: 40px;
-      -webkit-flex-basis: 50%;
-      -moz-flex-basis: 50%;
-      -ms-flex-preferred-size: 50%;
-      flex-basis: 50%; }
+      line-height: 20px; }
       .profile-target.yellow .filled .target-note-item-title {
         font-size: 18px;
         font-weight: 600;
