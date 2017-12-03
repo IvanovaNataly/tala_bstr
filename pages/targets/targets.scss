@@ -224,7 +224,6 @@
         }
     }
     &-list {
-        width: 100%;
         margin-top: 20px;
         margin-bottom: 20px;
         padding-top: 20px;
@@ -237,8 +236,7 @@
     }
     &-item {
         width: 50%;
-        width: 245px;
-        max-width: 245px;
+        min-width: 245px;
         line-height: 20px;
         padding-left: 40px;
         //@include flex-basis(50%);
@@ -251,7 +249,6 @@
         &-tutor {
             font-weight: 600;
         }
-
     }
     &-footer {
         color: $font-light;

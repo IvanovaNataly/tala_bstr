@@ -937,7 +937,6 @@ body {
       .profile-target.green .filled .target-note-description-period {
         color: #74818a; }
     .profile-target.green .filled .target-note-list {
-      width: 100%;
       margin-top: 20px;
       margin-bottom: 20px;
       padding-top: 20px;
@@ -952,8 +951,7 @@ body {
       overflow-x: auto; }
     .profile-target.green .filled .target-note-item {
       width: 50%;
-      width: 245px;
-      max-width: 245px;
+      min-width: 245px;
       line-height: 20px;
       padding-left: 40px; }
       .profile-target.green .filled .target-note-item-title {
@@ -1227,7 +1225,6 @@ body {
       .profile-target.crimson .filled .target-note-description-period {
         color: #74818a; }
     .profile-target.crimson .filled .target-note-list {
-      width: 100%;
       margin-top: 20px;
       margin-bottom: 20px;
       padding-top: 20px;
@@ -1242,8 +1239,7 @@ body {
       overflow-x: auto; }
     .profile-target.crimson .filled .target-note-item {
       width: 50%;
-      width: 245px;
-      max-width: 245px;
+      min-width: 245px;
       line-height: 20px;
       padding-left: 40px; }
       .profile-target.crimson .filled .target-note-item-title {
@@ -1517,7 +1513,6 @@ body {
       .profile-target.yellow .filled .target-note-description-period {
         color: #74818a; }
     .profile-target.yellow .filled .target-note-list {
-      width: 100%;
       margin-top: 20px;
       margin-bottom: 20px;
       padding-top: 20px;
@@ -1532,8 +1527,7 @@ body {
       overflow-x: auto; }
     .profile-target.yellow .filled .target-note-item {
       width: 50%;
-      width: 245px;
-      max-width: 245px;
+      min-width: 245px;
       line-height: 20px;
       padding-left: 40px; }
       .profile-target.yellow .filled .target-note-item-title {
