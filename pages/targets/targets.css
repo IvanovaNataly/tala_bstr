@@ -865,9 +865,11 @@ body {
     width: 60px;
     height: 30px;
     line-height: 30px; }
-.profile-target.green .filled {
+.profile-target.green .target-note {
+  display: none; }
+.profile-target.green .filled:hover {
   position: relative; }
-  .profile-target.green .filled .target-note {
+  .profile-target.green .filled:hover .target-note {
     display: block;
     width: 533px;
     padding: 23px 20px;
@@ -883,7 +885,7 @@ body {
     top: 60px;
     right: 0;
     z-index: 1; }
-    .profile-target.green .filled .target-note-arrow {
+    .profile-target.green .filled:hover .target-note-arrow {
       width: 70px;
       height: 16px;
       margin-left: -35px;
@@ -891,7 +893,7 @@ body {
       position: absolute;
       left: 50%;
       top: -16px; }
-      .profile-target.green .filled .target-note-arrow:after {
+      .profile-target.green .filled:hover .target-note-arrow:after {
         content: "";
         position: absolute;
         left: 20px;
@@ -908,35 +910,35 @@ body {
         -ms-transform: rotate(45deg);
         -o-transform: rotate(45deg);
         transform: rotate(45deg); }
-    .profile-target.green .filled .target-note-title {
+    .profile-target.green .filled:hover .target-note-title {
       font-size: 18px;
       text-align: center;
       color: #84b750; }
-    .profile-target.green .filled .target-note-main {
+    .profile-target.green .filled:hover .target-note-main {
       font-size: 18px;
       text-align: center;
       color: #84b750;
       line-height: 30px; }
-    .profile-target.green .filled .target-note-ways {
+    .profile-target.green .filled:hover .target-note-ways {
       display: inline-block;
       font-weight: 600; }
-      .profile-target.green .filled .target-note-ways:after {
+      .profile-target.green .filled:hover .target-note-ways:after {
         content: "";
         display: inline-block;
         height: 20px;
         padding-left: 10px;
         border-left: 1px solid #84b750;
         vertical-align: middle; }
-    .profile-target.green .filled .target-note-tutors {
+    .profile-target.green .filled:hover .target-note-tutors {
       display: inline-block;
       margin-right: 10px; }
-    .profile-target.green .filled .target-note-description {
+    .profile-target.green .filled:hover .target-note-description {
       font-size: 18px;
       font-weight: 700;
       line-height: 25px; }
-      .profile-target.green .filled .target-note-description-period {
+      .profile-target.green .filled:hover .target-note-description-period {
         color: #74818a; }
-    .profile-target.green .filled .target-note-list {
+    .profile-target.green .filled:hover .target-note-list {
       margin-top: 20px;
       margin-bottom: 20px;
       padding-top: 20px;
@@ -949,19 +951,19 @@ body {
       display: -ms-flexbox;
       display: flex;
       overflow-x: auto; }
-    .profile-target.green .filled .target-note-item {
+    .profile-target.green .filled:hover .target-note-item {
       width: 50%;
       min-width: 245px;
       line-height: 20px;
       padding-left: 40px; }
-      .profile-target.green .filled .target-note-item-title {
+      .profile-target.green .filled:hover .target-note-item-title {
         font-size: 18px;
         font-weight: 600;
         color: #74818a;
         margin-bottom: 5px; }
-      .profile-target.green .filled .target-note-item-tutor {
+      .profile-target.green .filled:hover .target-note-item-tutor {
         font-weight: 600; }
-    .profile-target.green .filled .target-note-footer {
+    .profile-target.green .filled:hover .target-note-footer {
       color: #74818a;
       display: -webkit-box;
       display: -webkit-flex;
@@ -978,20 +980,20 @@ body {
       -webkit-align-items: flex-end;
       -moz-align-items: flex-end;
       align-items: flex-end; }
-      .profile-target.green .filled .target-note-footer-item {
+      .profile-target.green .filled:hover .target-note-footer-item {
         -webkit-box-flex: 1;
         -webkit-flex-grow: 1;
         -moz-flex-grow: 1;
         -ms-flex-positive: 1;
         flex-grow: 1; }
-      .profile-target.green .filled .target-note-footer .btn-edit {
+      .profile-target.green .filled:hover .target-note-footer .btn-edit {
         margin-left: 40px;
         -webkit-box-flex: 0;
         -webkit-flex-grow: 0;
         -moz-flex-grow: 0;
         -ms-flex-positive: 0;
         flex-grow: 0; }
-      .profile-target.green .filled .target-note-footer .btn-remove {
+      .profile-target.green .filled:hover .target-note-footer .btn-remove {
         -webkit-box-flex: 0;
         -webkit-flex-grow: 0;
         -moz-flex-grow: 0;
@@ -1153,9 +1155,11 @@ body {
     width: 60px;
     height: 30px;
     line-height: 30px; }
-.profile-target.crimson .filled {
+.profile-target.crimson .target-note {
+  display: none; }
+.profile-target.crimson .filled:hover {
   position: relative; }
-  .profile-target.crimson .filled .target-note {
+  .profile-target.crimson .filled:hover .target-note {
     display: block;
     width: 533px;
     padding: 23px 20px;
@@ -1171,7 +1175,7 @@ body {
     top: 60px;
     right: 0;
     z-index: 1; }
-    .profile-target.crimson .filled .target-note-arrow {
+    .profile-target.crimson .filled:hover .target-note-arrow {
       width: 70px;
       height: 16px;
       margin-left: -35px;
@@ -1179,7 +1183,7 @@ body {
       position: absolute;
       left: 50%;
       top: -16px; }
-      .profile-target.crimson .filled .target-note-arrow:after {
+      .profile-target.crimson .filled:hover .target-note-arrow:after {
         content: "";
         position: absolute;
         left: 20px;
@@ -1196,35 +1200,35 @@ body {
         -ms-transform: rotate(45deg);
         -o-transform: rotate(45deg);
         transform: rotate(45deg); }
-    .profile-target.crimson .filled .target-note-title {
+    .profile-target.crimson .filled:hover .target-note-title {
       font-size: 18px;
       text-align: center;
       color: #b96485; }
-    .profile-target.crimson .filled .target-note-main {
+    .profile-target.crimson .filled:hover .target-note-main {
       font-size: 18px;
       text-align: center;
       color: #b96485;
       line-height: 30px; }
-    .profile-target.crimson .filled .target-note-ways {
+    .profile-target.crimson .filled:hover .target-note-ways {
       display: inline-block;
       font-weight: 600; }
-      .profile-target.crimson .filled .target-note-ways:after {
+      .profile-target.crimson .filled:hover .target-note-ways:after {
         content: "";
         display: inline-block;
         height: 20px;
         padding-left: 10px;
         border-left: 1px solid #b96485;
         vertical-align: middle; }
-    .profile-target.crimson .filled .target-note-tutors {
+    .profile-target.crimson .filled:hover .target-note-tutors {
       display: inline-block;
       margin-right: 10px; }
-    .profile-target.crimson .filled .target-note-description {
+    .profile-target.crimson .filled:hover .target-note-description {
       font-size: 18px;
       font-weight: 700;
       line-height: 25px; }
-      .profile-target.crimson .filled .target-note-description-period {
+      .profile-target.crimson .filled:hover .target-note-description-period {
         color: #74818a; }
-    .profile-target.crimson .filled .target-note-list {
+    .profile-target.crimson .filled:hover .target-note-list {
       margin-top: 20px;
       margin-bottom: 20px;
       padding-top: 20px;
@@ -1237,19 +1241,19 @@ body {
       display: -ms-flexbox;
       display: flex;
       overflow-x: auto; }
-    .profile-target.crimson .filled .target-note-item {
+    .profile-target.crimson .filled:hover .target-note-item {
       width: 50%;
       min-width: 245px;
       line-height: 20px;
       padding-left: 40px; }
-      .profile-target.crimson .filled .target-note-item-title {
+      .profile-target.crimson .filled:hover .target-note-item-title {
         font-size: 18px;
         font-weight: 600;
         color: #74818a;
         margin-bottom: 5px; }
-      .profile-target.crimson .filled .target-note-item-tutor {
+      .profile-target.crimson .filled:hover .target-note-item-tutor {
         font-weight: 600; }
-    .profile-target.crimson .filled .target-note-footer {
+    .profile-target.crimson .filled:hover .target-note-footer {
       color: #74818a;
       display: -webkit-box;
       display: -webkit-flex;
@@ -1266,20 +1270,20 @@ body {
       -webkit-align-items: flex-end;
       -moz-align-items: flex-end;
       align-items: flex-end; }
-      .profile-target.crimson .filled .target-note-footer-item {
+      .profile-target.crimson .filled:hover .target-note-footer-item {
         -webkit-box-flex: 1;
         -webkit-flex-grow: 1;
         -moz-flex-grow: 1;
         -ms-flex-positive: 1;
         flex-grow: 1; }
-      .profile-target.crimson .filled .target-note-footer .btn-edit {
+      .profile-target.crimson .filled:hover .target-note-footer .btn-edit {
         margin-left: 40px;
         -webkit-box-flex: 0;
         -webkit-flex-grow: 0;
         -moz-flex-grow: 0;
         -ms-flex-positive: 0;
         flex-grow: 0; }
-      .profile-target.crimson .filled .target-note-footer .btn-remove {
+      .profile-target.crimson .filled:hover .target-note-footer .btn-remove {
         -webkit-box-flex: 0;
         -webkit-flex-grow: 0;
         -moz-flex-grow: 0;
@@ -1441,9 +1445,11 @@ body {
     width: 60px;
     height: 30px;
     line-height: 30px; }
-.profile-target.yellow .filled {
+.profile-target.yellow .target-note {
+  display: none; }
+.profile-target.yellow .filled:hover {
   position: relative; }
-  .profile-target.yellow .filled .target-note {
+  .profile-target.yellow .filled:hover .target-note {
     display: block;
     width: 533px;
     padding: 23px 20px;
@@ -1459,7 +1465,7 @@ body {
     top: 60px;
     right: 0;
     z-index: 1; }
-    .profile-target.yellow .filled .target-note-arrow {
+    .profile-target.yellow .filled:hover .target-note-arrow {
       width: 70px;
       height: 16px;
       margin-left: -35px;
@@ -1467,7 +1473,7 @@ body {
       position: absolute;
       left: 50%;
       top: -16px; }
-      .profile-target.yellow .filled .target-note-arrow:after {
+      .profile-target.yellow .filled:hover .target-note-arrow:after {
         content: "";
         position: absolute;
         left: 20px;
@@ -1484,35 +1490,35 @@ body {
         -ms-transform: rotate(45deg);
         -o-transform: rotate(45deg);
         transform: rotate(45deg); }
-    .profile-target.yellow .filled .target-note-title {
+    .profile-target.yellow .filled:hover .target-note-title {
       font-size: 18px;
       text-align: center;
       color: #f7ba45; }
-    .profile-target.yellow .filled .target-note-main {
+    .profile-target.yellow .filled:hover .target-note-main {
       font-size: 18px;
       text-align: center;
       color: #f7ba45;
       line-height: 30px; }
-    .profile-target.yellow .filled .target-note-ways {
+    .profile-target.yellow .filled:hover .target-note-ways {
       display: inline-block;
       font-weight: 600; }
-      .profile-target.yellow .filled .target-note-ways:after {
+      .profile-target.yellow .filled:hover .target-note-ways:after {
         content: "";
         display: inline-block;
         height: 20px;
         padding-left: 10px;
         border-left: 1px solid #f7ba45;
         vertical-align: middle; }
-    .profile-target.yellow .filled .target-note-tutors {
+    .profile-target.yellow .filled:hover .target-note-tutors {
       display: inline-block;
       margin-right: 10px; }
-    .profile-target.yellow .filled .target-note-description {
+    .profile-target.yellow .filled:hover .target-note-description {
       font-size: 18px;
       font-weight: 700;
       line-height: 25px; }
-      .profile-target.yellow .filled .target-note-description-period {
+      .profile-target.yellow .filled:hover .target-note-description-period {
         color: #74818a; }
-    .profile-target.yellow .filled .target-note-list {
+    .profile-target.yellow .filled:hover .target-note-list {
       margin-top: 20px;
       margin-bottom: 20px;
       padding-top: 20px;
@@ -1525,19 +1531,19 @@ body {
       display: -ms-flexbox;
       display: flex;
       overflow-x: auto; }
-    .profile-target.yellow .filled .target-note-item {
+    .profile-target.yellow .filled:hover .target-note-item {
       width: 50%;
       min-width: 245px;
       line-height: 20px;
       padding-left: 40px; }
-      .profile-target.yellow .filled .target-note-item-title {
+      .profile-target.yellow .filled:hover .target-note-item-title {
         font-size: 18px;
         font-weight: 600;
         color: #74818a;
         margin-bottom: 5px; }
-      .profile-target.yellow .filled .target-note-item-tutor {
+      .profile-target.yellow .filled:hover .target-note-item-tutor {
         font-weight: 600; }
-    .profile-target.yellow .filled .target-note-footer {
+    .profile-target.yellow .filled:hover .target-note-footer {
       color: #74818a;
       display: -webkit-box;
       display: -webkit-flex;
@@ -1554,20 +1560,20 @@ body {
       -webkit-align-items: flex-end;
       -moz-align-items: flex-end;
       align-items: flex-end; }
-      .profile-target.yellow .filled .target-note-footer-item {
+      .profile-target.yellow .filled:hover .target-note-footer-item {
         -webkit-box-flex: 1;
         -webkit-flex-grow: 1;
         -moz-flex-grow: 1;
         -ms-flex-positive: 1;
         flex-grow: 1; }
-      .profile-target.yellow .filled .target-note-footer .btn-edit {
+      .profile-target.yellow .filled:hover .target-note-footer .btn-edit {
         margin-left: 40px;
         -webkit-box-flex: 0;
         -webkit-flex-grow: 0;
         -moz-flex-grow: 0;
         -ms-flex-positive: 0;
         flex-grow: 0; }
-      .profile-target.yellow .filled .target-note-footer .btn-remove {
+      .profile-target.yellow .filled:hover .target-note-footer .btn-remove {
         -webkit-box-flex: 0;
         -webkit-flex-grow: 0;
         -moz-flex-grow: 0;

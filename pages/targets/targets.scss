@@ -116,10 +116,10 @@
 
     //floating note appears on hover on every filled cell
     .target-note {
-        //display: none;
+        display: none;
     }
 
-    .filled {
+    .filled:hover {
         position: relative;
 
         .target-note {
@@ -231,7 +231,6 @@
         border-top: 1px solid $border-color;
         border-bottom: 1px solid $border-color;
         @include flexbox;
-        //@include flex-wrap(nowrap);
         overflow-x: auto;
     }
     &-item {
@@ -239,7 +238,6 @@
         min-width: 245px;
         line-height: 20px;
         padding-left: 40px;
-        //@include flex-basis(50%);
         &-title {
             font-size: $font-size + 2px;
             font-weight: 600;
