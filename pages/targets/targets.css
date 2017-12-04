@@ -286,6 +286,8 @@ body {
       display: inline-block;
       color: #3a95c4;
       border: none; }
+    .header-filters-item .choice-student {
+      max-width: 85px; }
 
 .footer {
   color: #d7e0ea;
