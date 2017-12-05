@@ -684,7 +684,8 @@ body {
   line-height: 33px;
   margin: 10px 20px 20px 20px;
   background-color: #ffffff;
-  border: 1px solid #3a95c4; }
+  border: 1px solid #3a95c4;
+  padding: 0px; }
 
 .legend {
   text-align: center;

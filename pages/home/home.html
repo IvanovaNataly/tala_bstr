@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tala</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/bootstrap-3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="wrapper">
+        <img class="logo" alt="מדינת ישראל, משרד החינוך" src="../../img/Logo_Minister.png">
+        <nav class="header-navigation">
+            <ul class="header-navigation-list">
+                <li class="header-navigation-item search">חיפוש</li>
+                <li class="header-navigation-item">הזדהות</li>
+                <li class="header-navigation-item">العربية</li>
+                <li class="header-navigation-item">
+                    <img class="header-navigation-item-logo" alt="משרד החינוך לשירותך" src="../../img/Logo_Minister_2.png">
+                </li>
+            </ul>
+        </nav>
+
+        <h1 class="header-title">תוכנית אישית לתלמיד</h1>
+
+        <div class="header-bar">
+            <a class="header-home" href=""></a>
+
+            <ul class="header-filters-list">
+
+                <li class="header-filters-item static">
+                    <dl class="header-filters-item-group">
+                        <dt class="header-filters-item-title">מוסד חינוכי:</dt>
+                        <dd class="header-filters-item-data">בן גוריון</dd>
+                    </dl>
+                </li>
+
+                <li class="header-filters-item static">
+                    <dl class="header-filters-item-group">
+                        <dt class="header-filters-item-title">סמל מוסד:</dt>
+                        <dd class="header-filters-item-data">12378</dd>
+                    </dl>
+                </li>
+
+                <li class="header-filters-item">
+                    <label for="year" class="header-filters-item-title">שנת לימודים:</label>
+                    <select id="year" name="year" class="header-filters-item-data choice-year">
+                        <option value="1">תשע"ו</option>
+                        <option value="2">תשע"ז</option>
+                    </select>
+                </li>
+
+                <li class="header-filters-item">
+                    <label for="student" class="header-filters-item-title">התלמיד/ה:</label>
+                    <select id="student" name="student" class="header-filters-item-data choice-student">
+                        <option value="1">נדב אלון</option>
+                        <option value="2">נועם ברוך</option>
+                        <option value="3">נדב אלון</option>
+                        <option value="4">ילד עם שם ארוך מאוד</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main class="content wrapper">
+    <section class="area">
+        <h2 class="title">
+            <label for="className" class="title-label">שם כיתה/גן: </label>
+            <select id="className" name="className" class="title-data">
+                <option value="1">ב1</option>
+                <option value="2">ב2</option>
+            </select>
+        </h2>
+
+        <ul class="students-manage">
+            <li class="students-manage-item">
+                <label for="changeStatusFilter" class="students-manage-filter-label sr-only">סימון כרטיסיות</label>
+                <select id="changeStatusFilter" name="changeStatusFilter" class="students-manage-filter-data">
+                    <option value="0">-</option>
+                    <option value="all">הכל</option>
+                    <option value="none">אף אחד</option>
+                    <option value="1">סטטוס ראשון</option>
+                    <option value="2">סטטוס שני</option>
+                    <option value="3">סטטוס שלילי</option>
+                    <option value="4">סטטוס רביעי</option>
+                    <option value="5">סטטוס חמישי</option>
+                </select>
+            </li>
+
+            <li class="students-manage-item">
+                <div class="students-manage-status">
+                    <label for="changeStatusAction" class="students-manage-status-label">שינוי סטטוס</label>
+                    <select id="changeStatusAction" name="changeStatusAction" class="students-manage-status-data">
+                        <option value="default">---בחירה---</option>
+                        <option value="students">עבור התלמידים:</option>
+                        <option value="1">סטטוס ראשון</option>
+                        <option value="2">סטטוס שני</option>
+                        <option value="3">סטטוס שלילי</option>
+                        <option value="4">סטטוס רביעי</option>
+                        <option value="5">סטטוס חמישי</option>
+                    </select>
+                </div>
+                <button class="students-manage-status-btn"><span>שמירה</span></button>
+            </li>
+
+            <li class="students-manage-item">
+                <label for="searchStudents" class="sr-only">חופיש תלמיד/ה</label>
+                <input id="searchStudents" type="text" class="students-manage-search" placeholder="חופיש תלמיד/ה"/>
+            </li>
+
+            <li class="students-manage-item">
+                <div class="students-manage-view">
+                    <label for="representationFilter" class="students-manage-view-label">תצוגה:</label>
+                    <select id="representationFilter" name="representationFilter" class="students-manage-view-data">
+                        <option value="all">כל הסטטוסים</option>
+                        <option value="1">סטטוס ראשון</option>
+                        <option value="2">סטטוס שני</option>
+                        <option value="3">סטטוס שלילי</option>
+                        <option value="4">סטטוס רביעי</option>
+                        <option value="5">סטטוס חמישי</option>
+                    </select>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="students">
+        <ul class="students-list">
+            <li class="students-card area">
+                <!--//checkbox-->
+                <div class="students-card-checkbox">
+                    <label class="control control_checkbox">
+                        <input type="checkbox">
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+
+                <!--photo-->
+                <div class="students-card-photo">
+                    <img src="../../img/stan.jpeg" alt="תמונה של תלמיד" class="students-card-photo-container"></img>
+                    <div class="students-card-photo-hover"></div>
+                </div>
+
+                <!--name and personal number-->
+                <div class="profile-card-head">
+                    <h3 class="profile-card-name">Stan</h3>
+                    <dl class="profile-card-number">
+                        <dt class="profile-card-title">ת.ז.:</dt>
+                        <dd class="profile-card-data">33266889</dd>
+                    </dl>
+                </div>
+
+                <!--details-->
+                <ul class="profile-card-list">
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">שנת לימודים</dt>
+                            <dd class="profile-card-data">2</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מוגבלות ראשית:</dt>
+                            <dd class="profile-card-data">קשב וריכוז</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מסגרת תכנית:</dt>
+                            <dd class="profile-card-data">שילוב</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="status">
+                    <p class="status-title">סטטוס תכנית לימודים לשנת תשע"ז</p>
+                    <div class="status-wrapper">
+                        <div class="status-index completed" data-tooltip="ממתין לאישור של מנהלת">1</div>
+                        <div class="status-index active" data-tooltip="ממתין לאישור של מנהלת">2</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">3</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">4</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">5</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">6</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="students-card area">
+                <!--//checkbox-->
+                <div class="students-card-checkbox">
+                    <label class="control control_checkbox">
+                        <input type="checkbox">
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+
+                <!--photo-->
+                <div class="students-card-photo">
+                    <img src="../../img/kyle.png" alt="תמונה של תלמיד" class="students-card-photo-container"></img>
+                    <div class="students-card-photo-hover"></div>
+                </div>
+
+                <!--name and personal number-->
+                <div class="profile-card-head">
+                    <h3 class="profile-card-name">Kyle</h3>
+                    <dl class="profile-card-number">
+                        <dt class="profile-card-title">ת.ז.:</dt>
+                        <dd class="profile-card-data">33266889</dd>
+                    </dl>
+                </div>
+
+                <!--details-->
+                <ul class="profile-card-list">
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">שנת לימודים</dt>
+                            <dd class="profile-card-data">2</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מוגבלות ראשית:</dt>
+                            <dd class="profile-card-data">קשב וריכוז</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מסגרת תכנית:</dt>
+                            <dd class="profile-card-data">שילוב</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="status">
+                    <p class="status-title">סטטוס תכנית לימודים לשנת תשע"ז</p>
+                    <div class="status-wrapper">
+                        <div class="status-index completed" data-tooltip="ממתין לאישור של מנהלת">1</div>
+                        <div class="status-index active" data-tooltip="ממתין לאישור של מנהלת">2</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">3</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">4</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">5</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">6</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="students-card area">
+                <!--//checkbox-->
+                <div class="students-card-checkbox">
+                    <label class="control control_checkbox">
+                        <input type="checkbox">
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+
+                <!--photo-->
+                <div class="students-card-photo">
+                    <img src="../../img/wendy.jpg" alt="תמונה של תלמיד" class="students-card-photo-container"></img>
+                    <div class="students-card-photo-hover"></div>
+                </div>
+
+                <!--name and personal number-->
+                <div class="profile-card-head">
+                    <h3 class="profile-card-name">Wendy</h3>
+                    <dl class="profile-card-number">
+                        <dt class="profile-card-title">ת.ז.:</dt>
+                        <dd class="profile-card-data">33266889</dd>
+                    </dl>
+                </div>
+
+                <!--details-->
+                <ul class="profile-card-list">
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">שנת לימודים</dt>
+                            <dd class="profile-card-data">2</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מוגבלות ראשית:</dt>
+                            <dd class="profile-card-data">קשב וריכוז</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מסגרת תכנית:</dt>
+                            <dd class="profile-card-data">שילוב</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="status">
+                    <p class="status-title">סטטוס תכנית לימודים לשנת תשע"ז</p>
+                    <div class="status-wrapper">
+                        <div class="status-index completed" data-tooltip="ממתין לאישור של מנהלת">1</div>
+                        <div class="status-index active" data-tooltip="ממתין לאישור של מנהלת">2</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">3</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">4</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">5</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">6</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="students-card area">
+                <!--//checkbox-->
+                <div class="students-card-checkbox">
+                    <label class="control control_checkbox">
+                        <input type="checkbox">
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+
+                <!--photo-->
+                <div class="students-card-photo">
+                    <img src="../../img/cartman.jpg" alt="תמונה של תלמיד" class="students-card-photo-container"></img>
+                    <div class="students-card-photo-hover"></div>
+                </div>
+
+                <!--name and personal number-->
+                <div class="profile-card-head">
+                    <h3 class="profile-card-name">Cartman</h3>
+                    <dl class="profile-card-number">
+                        <dt class="profile-card-title">ת.ז.:</dt>
+                        <dd class="profile-card-data">33266889</dd>
+                    </dl>
+                </div>
+
+                <!--details-->
+                <ul class="profile-card-list">
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">שנת לימודים</dt>
+                            <dd class="profile-card-data">2</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מוגבלות ראשית:</dt>
+                            <dd class="profile-card-data">קשב וריכוז</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מסגרת תכנית:</dt>
+                            <dd class="profile-card-data">שילוב</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="status">
+                    <p class="status-title">סטטוס תכנית לימודים לשנת תשע"ז</p>
+                    <div class="status-wrapper">
+                        <div class="status-index completed" data-tooltip="ממתין לאישור של מנהלת">1</div>
+                        <div class="status-index active" data-tooltip="ממתין לאישור של מנהלת">2</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">3</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">4</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">5</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">6</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="students-card area">
+                <!--//checkbox-->
+                <div class="students-card-checkbox">
+                    <label class="control control_checkbox">
+                        <input type="checkbox">
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+
+                <!--photo-->
+                <div class="students-card-photo">
+                    <img src="../../img/kenny.jpg" alt="תמונה של תלמיד" class="students-card-photo-container"></img>
+                    <div class="students-card-photo-hover"></div>
+                </div>
+
+                <!--name and personal number-->
+                <div class="profile-card-head">
+                    <h3 class="profile-card-name">Kenny</h3>
+                    <dl class="profile-card-number">
+                        <dt class="profile-card-title">ת.ז.:</dt>
+                        <dd class="profile-card-data">33266889</dd>
+                    </dl>
+                </div>
+
+                <!--details-->
+                <ul class="profile-card-list">
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">שנת לימודים</dt>
+                            <dd class="profile-card-data">2</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מוגבלות ראשית:</dt>
+                            <dd class="profile-card-data">קשב וריכוז</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מסגרת תכנית:</dt>
+                            <dd class="profile-card-data">שילוב</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="status">
+                    <p class="status-title">סטטוס תכנית לימודים לשנת תשע"ז</p>
+                    <div class="status-wrapper">
+                        <div class="status-index completed" data-tooltip="ממתין לאישור של מנהלת">1</div>
+                        <div class="status-index active" data-tooltip="ממתין לאישור של מנהלת">2</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">3</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">4</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">5</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">6</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="students-card area">
+                <!--//checkbox-->
+                <div class="students-card-checkbox">
+                    <label class="control control_checkbox">
+                        <input type="checkbox">
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+
+                <!--photo-->
+                <div class="students-card-photo">
+                    <img src="../../img/photo_back_1.png" alt="תמונה של תלמיד איננה" class="students-card-photo-container"></img>
+                    <div class="students-card-photo-hover"></div>
+                </div>
+
+                <!--name and personal number-->
+                <div class="profile-card-head">
+                    <h3 class="profile-card-name">יהלי אורי</h3>
+                    <dl class="profile-card-number">
+                        <dt class="profile-card-title">ת.ז.:</dt>
+                        <dd class="profile-card-data">33266889</dd>
+                    </dl>
+                </div>
+
+                <!--details-->
+                <ul class="profile-card-list">
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">שנת לימודים</dt>
+                            <dd class="profile-card-data">2</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מוגבלות ראשית:</dt>
+                            <dd class="profile-card-data">קשב וריכוז</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מסגרת תכנית:</dt>
+                            <dd class="profile-card-data">שילוב</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="status">
+                    <p class="status-title">סטטוס תכנית לימודים לשנת תשע"ז</p>
+                    <div class="status-wrapper">
+                        <div class="status-index completed" data-tooltip="ממתין לאישור של מנהלת">1</div>
+                        <div class="status-index active" data-tooltip="ממתין לאישור של מנהלת">2</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">3</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">4</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">5</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">6</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="students-card area">
+                <!--//checkbox-->
+                <div class="students-card-checkbox">
+                    <label class="control control_checkbox">
+                        <input type="checkbox">
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+
+                <!--photo-->
+                <div class="students-card-photo">
+                    <img src="../../img/photo_back_2.png" alt="תמונה של תלמיד איננה" class="students-card-photo-container"></img>
+                    <div class="students-card-photo-hover"></div>
+                </div>
+
+                <!--name and personal number-->
+                <div class="profile-card-head">
+                    <h3 class="profile-card-name">יהלי אורי</h3>
+                    <dl class="profile-card-number">
+                        <dt class="profile-card-title">ת.ז.:</dt>
+                        <dd class="profile-card-data">33266889</dd>
+                    </dl>
+                </div>
+
+                <!--details-->
+                <ul class="profile-card-list">
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">שנת לימודים</dt>
+                            <dd class="profile-card-data">2</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מוגבלות ראשית:</dt>
+                            <dd class="profile-card-data">קשב וריכוז</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מסגרת תכנית:</dt>
+                            <dd class="profile-card-data">שילוב</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="status">
+                    <p class="status-title">סטטוס תכנית לימודים לשנת תשע"ז</p>
+                    <div class="status-wrapper">
+                        <div class="status-index completed" data-tooltip="ממתין לאישור של מנהלת">1</div>
+                        <div class="status-index active" data-tooltip="ממתין לאישור של מנהלת">2</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">3</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">4</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">5</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">6</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="students-card area">
+                <!--//checkbox-->
+                <div class="students-card-checkbox">
+                    <label class="control control_checkbox">
+                        <input type="checkbox">
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+
+                <!--photo-->
+                <div class="students-card-photo">
+                    <img src="../../img/photo_back_2.png" alt="תמונה של תלמיד" class="students-card-photo-container"></img>
+                    <div class="students-card-photo-hover"></div>
+                </div>
+
+                <!--name and personal number-->
+                <div class="profile-card-head">
+                    <h3 class="profile-card-name">יהלי אורי</h3>
+                    <dl class="profile-card-number">
+                        <dt class="profile-card-title">ת.ז.:</dt>
+                        <dd class="profile-card-data">33266889</dd>
+                    </dl>
+                </div>
+
+                <!--details-->
+                <ul class="profile-card-list">
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">שנת לימודים</dt>
+                            <dd class="profile-card-data">2</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מוגבלות ראשית:</dt>
+                            <dd class="profile-card-data">קשב וריכוז</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מסגרת תכנית:</dt>
+                            <dd class="profile-card-data">שילוב</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="status">
+                    <p class="status-title">סטטוס תכנית לימודים לשנת תשע"ז</p>
+                    <div class="status-wrapper">
+                        <div class="status-index completed" data-tooltip="ממתין לאישור של מנהלת">1</div>
+                        <div class="status-index active" data-tooltip="ממתין לאישור של מנהלת">2</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">3</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">4</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">5</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">6</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="students-card area">
+                <!--//checkbox-->
+                <div class="students-card-checkbox">
+                    <label class="control control_checkbox">
+                        <input type="checkbox">
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+
+                <!--photo-->
+                <div class="students-card-photo">
+                    <img src="../../img/photo_back_1.png" alt="תמונה של תלמיד" class="students-card-photo-container"></img>
+                    <div class="students-card-photo-hover"></div>
+                </div>
+
+                <!--name and personal number-->
+                <div class="profile-card-head">
+                    <h3 class="profile-card-name">יהלי אורי</h3>
+                    <dl class="profile-card-number">
+                        <dt class="profile-card-title">ת.ז.:</dt>
+                        <dd class="profile-card-data">33266889</dd>
+                    </dl>
+                </div>
+
+                <!--details-->
+                <ul class="profile-card-list">
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">שנת לימודים</dt>
+                            <dd class="profile-card-data">2</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מוגבלות ראשית:</dt>
+                            <dd class="profile-card-data">קשב וריכוז</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מסגרת תכנית:</dt>
+                            <dd class="profile-card-data">שילוב</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="status">
+                    <p class="status-title">סטטוס תכנית לימודים לשנת תשע"ז</p>
+                    <div class="status-wrapper">
+                        <div class="status-index completed" data-tooltip="ממתין לאישור של מנהלת">1</div>
+                        <div class="status-index active" data-tooltip="ממתין לאישור של מנהלת">2</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">3</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">4</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">5</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">6</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="students-card area">
+                <!--//checkbox-->
+                <div class="students-card-checkbox">
+                    <label class="control control_checkbox">
+                        <input type="checkbox">
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+
+                <!--photo-->
+                <div class="students-card-photo">
+                    <img src="../../img/photo_back_2.png" alt="תמונה של תלמיד" class="students-card-photo-container"></img>
+                    <div class="students-card-photo-hover"></div>
+                </div>
+
+                <!--name and personal number-->
+                <div class="profile-card-head">
+                    <h3 class="profile-card-name">יהלי אורי</h3>
+                    <dl class="profile-card-number">
+                        <dt class="profile-card-title">ת.ז.:</dt>
+                        <dd class="profile-card-data">33266889</dd>
+                    </dl>
+                </div>
+
+                <!--details-->
+                <ul class="profile-card-list">
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">שנת לימודים</dt>
+                            <dd class="profile-card-data">2</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מוגבלות ראשית:</dt>
+                            <dd class="profile-card-data">קשב וריכוז</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מסגרת תכנית:</dt>
+                            <dd class="profile-card-data">שילוב</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="status">
+                    <p class="status-title">סטטוס תכנית לימודים לשנת תשע"ז</p>
+                    <div class="status-wrapper">
+                        <div class="status-index completed" data-tooltip="ממתין לאישור של מנהלת">1</div>
+                        <div class="status-index active" data-tooltip="ממתין לאישור של מנהלת">2</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">3</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">4</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">5</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">6</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="students-card area">
+                <!--//checkbox-->
+                <div class="students-card-checkbox">
+                    <label class="control control_checkbox">
+                        <input type="checkbox">
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+
+                <!--photo-->
+                <div class="students-card-photo">
+                    <img src="../../img/photo_back_1.png" alt="תמונה של תלמיד" class="students-card-photo-container"></img>
+                    <div class="students-card-photo-hover"></div>
+                </div>
+
+                <!--name and personal number-->
+                <div class="profile-card-head">
+                    <h3 class="profile-card-name">יהלי אורי</h3>
+                    <dl class="profile-card-number">
+                        <dt class="profile-card-title">ת.ז.:</dt>
+                        <dd class="profile-card-data">33266889</dd>
+                    </dl>
+                </div>
+
+                <!--details-->
+                <ul class="profile-card-list">
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">שנת לימודים</dt>
+                            <dd class="profile-card-data">2</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מוגבלות ראשית:</dt>
+                            <dd class="profile-card-data">קשב וריכוז</dd>
+                        </dl>
+                    </li>
+                    <li class="profile-card-list-item">
+                        <dl>
+                            <dt class="profile-card-title">מסגרת תכנית:</dt>
+                            <dd class="profile-card-data">שילוב</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="status">
+                    <p class="status-title">סטטוס תכנית לימודים לשנת תשע"ז</p>
+                    <div class="status-wrapper">
+                        <div class="status-index completed" data-tooltip="ממתין לאישור של מנהלת">1</div>
+                        <div class="status-index active" data-tooltip="ממתין לאישור של מנהלת">2</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">3</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">4</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">5</div>
+                        <div class="status-index" data-tooltip="ממתין לאישור של מנהלת">6</div>
+                    </div>
+                </div>
+            </li>
+
+
+
+        </ul>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <nav class="footer-nav wrapper">
+        <ul class="footer-nav-list">
+            <ll class="footer-nav-item">
+                <h4 class="footer-nav-item-title">כותרת</h4>
+                <ul>
+                    <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                    <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                    <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                </ul>
+            </ll>
+            <ll class="footer-nav-item">
+                <h4 class="footer-nav-item-title">כותרת</h4>
+                <ul>
+                    <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                    <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                    <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                </ul>
+            </ll>
+            <ll class="footer-nav-item">
+                <h4 class="footer-nav-item-title">כותרת</h4>
+                <ul>
+                    <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                    <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                    <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                </ul>
+            </ll>
+            <ll class="footer-nav-item">
+                <h4 class="footer-nav-item-title">כותרת</h4>
+                <ul>
+                    <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                    <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                    <li class="footer-nav-item-link">פירוט הלינק כאן</li>
+                </ul>
+            </ll>
+        </ul>
+    </nav>
+    <div class="footer-legal">
+        <ul class="footer-legal-list wrapper">
+            <li class="footer-legal-item">כל הזכויות שמורות למשרד החינוך</li>
+            <li class="footer-legal-item">חוק חופש המידע</li>
+            <li class="footer-legal-item">אקו"ם</li>
+            <li class="footer-legal-item">תנאי שומוש</li>
+            <li class="footer-legal-item">Terms of use</li>
+        </ul>
+
+    </div>
+</footer>
+
+<!--Modal -->
+<div id="myModal" class="modal fade" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-describedby="descriptionClose"></button>
+                <div id="descriptionClose" class="sr-only">Closing this window will discard any information entered and return you back to the main page</div>
+                <div class="modal-subtitle">הערכת פרופיל</div>
+                <h2 id="modalTitle" class="modal-title">לימודי</h2>
+            </div>
+
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+
+
+                        <div class="modal-main col-lg-8">
+
+                        </div>
+
+                        <!--sidebar-->
+                        <div class="modal-side col-lg-4">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../../js/jquery-3.2.1.js"></script>
+<script src="../../js/bootstrap-3.3.7/bootstrap.js"></script>
+<script src="home.js"></script>
+
+</body>
+</html>

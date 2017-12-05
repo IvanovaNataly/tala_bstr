@@ -1,0 +1,187 @@
+//Ministry of Education -Tala
+
+@import '../../styles/main';
+@mixin select($item-height: 33px) {
+    overflow: hidden;
+
+    .option:first-child,
+    &:hover .option:not(:first-child){
+        height: $item-height;
+        line-height: $item-height;
+        z-index: 1;
+    }
+
+    .option:not(:first-child) {
+        height: 0;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@mixin selectLabelled($item-height: 33px) {
+    line-height: $item-height;
+    @include inline-flex;
+    @include justify-content(flex-start);
+
+    dt {
+        margin-left: 10px;
+    }
+
+    .select {
+        color: dodgerblue;
+        @include select($item-height);
+    }
+}
+
+
+.title {
+    &-label {
+        font-weight: 300;
+    }
+    &-data {
+        color: $active-color;
+        border: none;
+        option {
+            font-size: $font-size;
+            color: $font-color;
+        }
+    }
+}
+
+.students-manage {
+    height: 32px;
+    line-height: 32px;
+    &-item {
+        display: inline-block;
+        height: 100%;
+        margin-left: 20px;
+        vertical-align: top;
+    }
+    &-filter-data {
+        width: 50px;
+        height: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+        border: 1px solid $border-color;
+    }
+    &-status {
+        display: inline-block;
+        font-size: $font-size - 1px;
+        height: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+        vertical-align: top;
+        border: 1px solid $border-color;
+
+        &-data {
+            height: 100%;
+            border: none;
+            padding-right: 10px;
+        }
+    }
+    &-status-btn {
+        display: inline-block;
+        font-size: $font-size + 4px;
+        color: $light-color;
+        width: 92px;
+        height: 100%;
+        margin-right: 10px;
+        background-color: $active-color;
+        vertical-align: center;
+    }
+    &-search {
+        width: 400px;
+        height: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+        border: 1px solid $border-color;
+    }
+    &-view {
+        padding-left: 20px;
+        select {
+            border: none;
+        }
+    }
+}
+
+.students-list {
+    margin: 0 auto;
+    @include flexbox;
+    @include flex-direction;
+    @include flex-wrap;
+    @include justify-content(flex-start);
+}
+
+.students-card {
+    width: 270px;
+    padding: 30px 24px 0 24px;
+    @include flex-grow;
+    @include flex-shrink(0);
+    position: relative;
+
+    &:not(:nth-child(4n)) {
+        margin-left: 20px;
+    }
+
+    //check-box
+    &-checkbox {
+        position: absolute;
+        top: 20px;
+        right: 24px;
+        .control {
+            height: 30px;
+            @include checkbox($active-color, 30px, 7px, 14px, 6px, 12px);
+            .control_indicator {
+                top: 0;
+            }
+        }
+    }
+
+    &-photo {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+        &-container {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 2px solid $border-color;
+            @include border-radius(50%);
+        }
+        &:hover .students-card-photo-hover {
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            background-color: $light-color;
+            background-image: url('../../img/camera.png');
+            background-size: 42px 32px;
+            background-repeat: no-repeat;
+            background-position: center;
+            overflow: auto;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            opacity: 0.45;
+        }
+    }
+
+    .profile-card-list-item:last-child {
+        padding-bottom: 20px;
+    }
+
+    .profile-card-head {
+        text-align: center;
+        margin-top: 14px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .profile-card-list,
+    .status {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+

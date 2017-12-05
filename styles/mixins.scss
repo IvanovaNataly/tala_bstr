@@ -236,7 +236,7 @@
     }
 }
 
-@mixin checkbox($color: $green) {
+@mixin checkbox($color: $green, $size: 20px, $tikWidth: 5px, $tikHeight: 10px, $tikTop: 4px, $tikLeft: 8px ) {
     display: block;
     padding-right: 30px;
     position: relative;
@@ -252,8 +252,8 @@
         position: absolute;
         top: 29%;
         right: 0;
-        width: 20px;
-        height: 20px;
+        width: $size;
+        height: $size;
         background: $light-color;
         border: 2px solid $check-box-border;
         @include border-radius(50%);
@@ -298,13 +298,13 @@
 
     //checkbox tick
     &_checkbox .control_indicator:after {
-        width: 5px;
-        height: 10px;
+        width: $tikWidth;
+        height: $tikHeight;
         border: solid $light-color;
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
-        top: 4px;
-        left: 8px;
+        top: $tikTop;
+        left: $tikLeft;
     }
 
     //disabled tick colour
