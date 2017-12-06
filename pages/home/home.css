@@ -790,13 +790,16 @@ body {
     font-size: 15px;
     height: 100%;
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 10px;
     vertical-align: top;
     border: 1px solid #e2e2e2; }
     .students-manage-status-data {
+      color: #3a95c4;
       height: 100%;
       border: none;
       padding-right: 10px; }
+      .students-manage-status-data option {
+        color: #000000; }
   .students-manage-status-btn {
     display: inline-block;
     font-size: 20px;
