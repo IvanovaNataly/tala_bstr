@@ -164,7 +164,7 @@ body {
   color: #74818a;
   padding-right: 18px;
   background-image: url("../../img/edit.png");
-  background-size: 13px 15px;
+  background-size: 12px 14px;
   background-repeat: no-repeat;
   background-position: right center; }
 
@@ -173,7 +173,7 @@ body {
   color: #74818a;
   padding-right: 19px;
   background-image: url("../../img/remove.png");
-  background-size: 13px 15px;
+  background-size: 12px 14px;
   background-repeat: no-repeat;
   background-position: right center; }
 
@@ -955,5 +955,10 @@ body {
   .students-card .status {
     margin-right: 0;
     margin-left: 0; }
+
+.checked {
+  -webkit-box-shadow: 0 3px 9.6px 0.4px rgba(58, 149, 196, 0.5);
+  -moz-box-shadow: 0 3px 9.6px 0.4px rgba(58, 149, 196, 0.5);
+  box-shadow: 0 3px 9.6px 0.4px rgba(58, 149, 196, 0.5); }
 
 /*# sourceMappingURL=home.css.map */

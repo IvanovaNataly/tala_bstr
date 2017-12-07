@@ -189,3 +189,6 @@
     }
 }
 
+.checked {
+    @include box-shadow(0, 3px, 9.6px, 0.4px, rgba(58, 149, 196, 0.5));
+}
